@@ -1,0 +1,40 @@
+site_name: Yanran 的技术笔记
+site_url: https://yanran425.github.io/Yanran425_Ob/
+repo_url: https://github.com/yanran425/Yanran425_Ob
+repo_name: yanran425/Yanran425_Ob
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换暗色
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换亮色
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang:
+        - zh
