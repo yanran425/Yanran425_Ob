@@ -1,17 +1,13 @@
-# Welcome to MkDocs
+---
+hide:
+  - tags
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# 欢迎来到 Yanran_Ob
 
-## Commands
+这里是我的技术学习笔记，主要涵盖：
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- **ITDev** —— 编程语言、开发工具、工程实践
+- **AIDev** —— 大模型、机器学习、AI 应用
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+从顶部导航选择感兴趣的分类，或用右上角搜索框直接查找。
