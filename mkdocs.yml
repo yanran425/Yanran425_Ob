@@ -1,40 +1,102 @@
+# ===== 站点基本信息 =====
 site_name: Yanran_Ob
 site_url: https://yanran425.github.io/Yanran425_Ob/
 repo_url: https://github.com/yanran425/Yanran425_Ob
-repo_name: yanran425/Yanran425_Ob
 
+# ===== 主题外观 =====
 theme:
   name: material
   language: zh
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - search.highlight
-    - content.code.copy
-    - toc.integrate
+
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: 切换到浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
+      accent: deep purple
       toggle:
         icon: material/brightness-7
-        name: 切换暗色
-    - scheme: slate
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: indigo
+      accent: deep purple
       toggle:
         icon: material/brightness-4
-        name: 切换亮色
+        name: 切换到跟随系统
 
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
-  - admonition
-  - toc:
-      permalink: true
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
 
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+# ===== 插件 =====
 plugins:
   - search:
-      lang:
-        - zh
+      lang: zh
+  - awesome-pages
+  - tags:
+      tags_file: tags.md
+
+# ===== Markdown 增强 =====
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      pygments_lang_class: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# ===== 其他 =====
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yanran425
+
+copyright: Copyright &copy; 2021 Yanran
