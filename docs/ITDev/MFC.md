@@ -2,7 +2,7 @@
 coding: UTF-8
 title: MFC
 date: 2026-03-22T23:03:00
-updated: 2026-07-17T23:50:57
+updated: 2026-07-18T00:34:02
 tags:
 share: true
 ---
@@ -17,7 +17,7 @@ share: true
 ![600](../assets/MFC.png)
 
 - Win32程序需要加头文件`#include<windows.h>`
-- 主要的步骤是：
+- 主要步骤是：
 1. WinMain函数的定义
 2. 创建窗口
 3. 消息循环
