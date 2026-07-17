@@ -58,6 +58,14 @@ plugins:
   - awesome-pages
   - tags:
       tags_file: tags.md
+  - glightbox:
+      touchNavigation: true       # 移动端支持滑动
+      loop: false                  # 到最后一张不循环
+      effect: zoom                 # 弹窗打开效果：缩放
+      zoomable: true               # 支持滚轮缩放
+      draggable: true              # 支持拖拽
+      width: 90%                   # 弹窗最大宽度
+      auto_caption: false          # 不自动把 alt 当作标题
 
 # ===== Markdown 增强 =====
 markdown_extensions:
