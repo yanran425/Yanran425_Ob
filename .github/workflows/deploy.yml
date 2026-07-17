@@ -12,12 +12,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: |
+
+      - name: 安装 mkdocs 相关依赖
+        run: |
           pip install \
             mkdocs-material \
             mkdocs-awesome-pages-plugin \
+            mkdocs-glightbox \
             jieba
-      - run: mkdocs gh-deploy --force
+
+      - name: 安装图片压缩工具
+        run: sudo apt-get update && sudo apt-get install -y pngquant
+
+      - name: 压缩 docs/ 下的 PNG（仅 CI 临时文件，不推回仓库）
+        run: |
+          find docs -name "*.png" -exec \
+            pngquant --force --ext .png --quality 65-85 --skip-if-larger {} \;
+
+      - name: 部署到 gh-pages
+        run: mkdocs gh-deploy --force
