@@ -17,7 +17,7 @@ share: true
 ![600](../assets/MFC.png)
 
 - Win32程序需要加头文件`#include<windows.h>`
-- 主要步骤是：
+- 主要的dddddddddd步骤是：
 1. WinMain函数的定义
 2. 创建窗口
 3. 消息循环
