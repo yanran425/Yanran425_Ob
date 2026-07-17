@@ -14,7 +14,7 @@ share: true
 - windows识别的主函数入口是WinMain函数
 - 消息机制图
 
-![600](../assets/MFC.png)
+![](../assets/MFC.png)
 
 - Win32程序需要加头文件`#include<windows.h>`
 - 主要步骤是：
@@ -65,11 +65,11 @@ char *p = tmp.GetBuffer();
 ```
 - C++中的String与MFC中的CString不能直接转换，只能通过char* 来过度转换
 
-![800](../assets/MFC-2.png)
+![](../assets/MFC-2.png) 
 
-![800](../assets/MFC-4.png)
+![](../assets/MFC-4.png)
 
-![800](../assets/MFC-3.png)
+![](../assets/MFC-3.png)
 
 - 用基类的OnOK()函数，执行基类中的EndDialog(IDOK)函数，作用是关闭对话框，并把IDOK作为对话框的返回值，返回给调用对话（DoModal）的地方。
 
@@ -84,7 +84,7 @@ char *p = tmp.GetBuffer();
 
 ### 3.2 MFC窗口创建
 
-![600](../assets/MFC-5.png)
+![](../assets/MFC-5.png)
 
 ### 3.3 消息映射机制
 
@@ -96,7 +96,7 @@ char *p = tmp.GetBuffer();
 2. 通过放置标识消息的宏来执行消息映射，相应的类将在对BEGIN_MESSAGE_MAP和END_MESSAGE_MAP的调用之间处理消息。
 3. 对应消息处理函数分别在类中声明，类外定义：
 
-![600](../assets/MFC-1.png)
+![](../assets/MFC-1.png)
 
 ### 3.4 向导式MFC
 
