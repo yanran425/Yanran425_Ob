@@ -2,23 +2,23 @@
 coding: UTF-8
 title: Claude
 date: 2026-07-12T20:44:10
-updated: 2026-07-18T03:36:00
+updated: 2026-08-01T20:49:06
 tags: []
 share: true
 ---
 
 # Claude
 
-## 1. Claude Desktop
+## 1.Claude Desktop
 
-### 1.1 应用程序本体
+### 1.1应用程序本体
 
 ```
 /Applications/Claude.app# 应用主体（748 MB）
 /opt/homebrew/Caskroom/claude/1.18286.0,.../# Homebrew cask 数据
 ```
 
-### 1.2 用户数据（配置、会话、VM 等）
+### 1.2用户数据（配置、会话、VM 等）
 
 ```
 ~/Library/Application Support/Claude/          # 1P 模式数据（292 MB）
@@ -30,7 +30,7 @@ share: true
 └── ...
 ```
 
-### 1.3 缓存和日志
+### 1.3缓存和日志
 
 ```
 ~/Library/Caches/com.anthropic.claude/         # 缓存
@@ -39,7 +39,7 @@ share: true
 ~/Library/WebKit/com.anthropic.claude/         # WebKit 数据
 ```
 
-### 1.4 核心配置文件
+### 1.4核心配置文件
 
 ```
 claude_desktop_config.json
@@ -88,7 +88,7 @@ Preferences
 
 - **能否清理：** 删了会重置为默认设置
 
-### 1.5 会话和数据存储
+### 1.5会话和数据存储
 
 ```
 
@@ -161,7 +161,7 @@ Session Storage/
 	- UI 临时数据
 - **能否清理：** 关闭应用后可以清理
 
-### 1.6 VM 和代码执行
+### 1.6VM 和代码执行
 
 ```
 vm_bundles/
@@ -196,7 +196,7 @@ git-worktrees.json
 - **例子：** 当你让 Claude 在隔离的 Git worktree 中工作时，信息记录在这里。
 - **能否清理：** 如果不用 worktree 功能可以删
 
-### 1.7 缓存文件
+### 1.7缓存文件
 
 ```
 Cache/
@@ -230,7 +230,7 @@ fcache
 - **作用：** 文件缓存索引。
 - **能否清理：** 安全清理
 
-### 1.8 网络和安全
+### 1.8网络和安全
 
 ```
 Cookies
@@ -272,7 +272,7 @@ Network Persistent State
 
 - **能否清理：** 建议不删
 
-### 1.9 调试和错误报告
+### 1.9调试和错误报告
 
 ```
 Crashpad/
@@ -291,7 +291,7 @@ sentry/
 	- 性能监控数据
 **能否清理：** 完全安全
 
-### 1.10 其他
+### 1.10其他
 
 ```
 window-state.json
@@ -324,9 +324,9 @@ title-gen/
 
 - **能否清理：** 通常可以清理
 
-## 2. Claude Desktop 清理
+## 2.Claude Desktop 清理
 
-### 2.1 安全清理
+### 2.1安全清理
 
 ```bash
 
@@ -355,7 +355,7 @@ rm -f fcache
 rm -f .DS_Store
 ```
 
-### 2.2 酌情清理
+### 2.2酌情清理
 
 ```bash
 ## 2.2.1 旧的会话数据（先查看大小）
@@ -382,7 +382,7 @@ rm -f ~/Library/Application\ Support/Claude-3p/DIPS
 rm -f ~/Library/Application\ Support/Claude-3p/DIPS-wal
 ```
 
-###  2.3 不要删除
+###  2.3不要删除
 
 ```bash
 # VM 镜像
@@ -411,9 +411,9 @@ configLibrary/                 # 配置库
 ~/Library/Preferences/com.anthropic.claude.plist  # 系统偏好
 ```
 
-## 3. Claude Code CLI
+## 3.Claude Code CLI
 
-### 3.1 应用程序本体
+### 3.1应用程序本体
 
 ```
 /opt/homebrew/Caskroom/claude-code/2.1.169/    # 二进制文件（221.9 MB）
@@ -422,7 +422,7 @@ configLibrary/                 # 配置库
 /opt/homebrew/bin/claude                       # 符号链接（指向上面）
 ```
 
-### 3.2 用户数据
+### 3.2用户数据
 
 ```
 ~/.claude/
@@ -443,7 +443,7 @@ configLibrary/                 # 配置库
 └── memory/                          # 记忆数据
 ```
 
-### 3.3 文件详解
+### 3.3文件详解
 
 #### `settings.json`
 
@@ -585,9 +585,9 @@ ls -lah ~/.claude/shell-snapshots/
 - **作用：** 结构化的记忆存储
 - **能删吗：** 会丢失记忆数据
 
-## 4. Claude code清理
+## 4.Claude code清理
 
-### 4.1 完全安全清理
+### 4.1完全安全清理
 
 - 不影响任何功能，自动重建
 
@@ -612,7 +612,7 @@ rm -rf ~/.local/state/claude/ 2>/dev/null       # XDG 状态文件
 rm -rf ~/Library/Saved\ Application\ State/com.anthropic.claude-code.savedState/ 2>/dev/null
 ```
 
-### 4.2 有取舍的清理
+### 4.2有取舍的清理
 
 - 会丢失历史记录，但不影响功能
 

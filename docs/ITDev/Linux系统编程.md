@@ -9,9 +9,9 @@ share: true
 
 # Linux系统编程
 
-## 1. 函数
+## 1.函数
 
-### 1.1 open/close
+### 1.1open/close
 
 ```cpp
 int open(const char *pathname, int flags);
@@ -25,7 +25,7 @@ return: 成功返回文件打开得到的文件描述符，失败则返回-1，�
 int close(int fd);
 ```
 
-### 1.2 read/write
+### 1.2read/write
 
 ```cpp
 ssize_t read(int fd, void buf[.count], size_t count);
@@ -43,7 +43,7 @@ return: 成功返回写入的字节数(0表示已经全部写入)，失败返回
 
 > [!NOTE] 预读入缓输出
 
-### 1.3 fcntl
+### 1.3fcntl
 
 - 改变一个已打开文件的访问控制属性。
 
@@ -53,7 +53,7 @@ cmd可以为`F_GETFL`和`F_SETFL`，用于获取与设置属性信息（file fla
 返回值flags是位图表示文件属性。
 ```
 
-### 1.4 lseek
+### 1.4lseek
 
 - 读和写用的同一个偏移地址
 - 使用lseek获取、拓展文件大小（要想真实改文件大小，必须得有IO操作）
@@ -64,20 +64,20 @@ off_t lseek(int fd, off_t offset, int whence);
 whence: SEEK_SET|SEEK_CUR|SEEK_END
 ```
 
-### 1.5 truncate
+### 1.5truncate
 
 ```cpp
 int truncate(const char *path, off_t length);
 ```
 
-## 2. 进程
+## 2.进程
 
-### 2.1 PCB
+### 2.1PCB
 
 - PCB即进程控制块，本质是一个任务结构体。其中有一个成员是指针，指向一个数组，这个数组叫做“文件描述符表”，记录文件的状态。文件描述表中每一行是一个文件描述符（key:value形式），其中每个值指向一个文件描述结构体。
 - 一个进程能打开的最大文件数最大是1024（0-1023），其中0代表`STDIN_FILENO`，1代表`STDOUT_FILENO`，2代表`STDERR_FILENO`，操作者打开的文件一般从3开始排序到1023，其优先使用表中可用的最小的编号。
 
-### 2.2 阻塞与非阻塞
+### 2.2阻塞与非阻塞
 
 - 阻塞与非阻塞是文件的属性。
 - 读常规文件是不会阻塞的，读设备文件和网络文件有可能会阻塞。

@@ -2,14 +2,14 @@
 coding: UTF-8
 title: MFC
 date: 2026-03-22T23:03:00
-updated: 2026-07-18T01:53:13
+updated: 2026-08-01T21:00:04
 tags:
 share: true
 ---
 
 # MFC
 
-## 1. Windows消息机制
+## 1.Windows消息机制
 
 - windows识别的主函数入口是WinMain函数
 - 消息机制图
@@ -32,9 +32,9 @@ share: true
 //6.处理消息（窗口过程）
 ```
 
-## 2. 注意事项
+## 2.注意事项
 
-### 2.1 多字节与宽字节
+### 2.1多字节与宽字节
 
 - 一个字符对应一个字节->多字节 ASCII
 - 一个字符对应多个字节->宽字节 Unicode
@@ -65,7 +65,7 @@ char *p = tmp.GetBuffer();
 ```
 - C++中的String与MFC中的CString不能直接转换，只能通过char* 来过度转换
 
-![](../assets/MFC-2.png) 
+![](../assets/MFC-2.png)
 
 ![](../assets/MFC-4.png)
 
@@ -73,20 +73,20 @@ char *p = tmp.GetBuffer();
 
 - 用基类的OnOK()函数，执行基类中的EndDialog(IDOK)函数，作用是关闭对话框，并把IDOK作为对话框的返回值，返回给调用对话（DoModal）的地方。
 
-## 3. MFC
+## 3.MFC
 
-### 3.1 基础知识
+### 3.1基础知识
 
 - 文档介绍：MFC基础教程
 - 微软基础类库：Microsoft Foundation Classes
 - 编写MFC程序需要包含`#include<afxwin.h>`
 - 类库中文手册：VC++之MFC类库中文手册
 
-### 3.2 MFC窗口创建
+### 3.2MFC窗口创建
 
 ![](../assets/MFC-5.png)
 
-### 3.3 消息映射机制
+### 3.3消息映射机制
 
 - 消息映射是一个将消息和成员函数相互关联的表。
 - 框架窗口接收到一个鼠标左击消息，MFC将搜索这个窗口的消息映射，如果存在一个处理`WM_LBUTTONDOWN`的处理程序，那么就调用`OnLButtonDown`。
@@ -98,7 +98,7 @@ char *p = tmp.GetBuffer();
 
 ![](../assets/MFC-1.png)
 
-### 3.4 向导式MFC
+### 3.4向导式MFC
 
 生成的MFC项目共有4个类：
 1. App(一般不用写)

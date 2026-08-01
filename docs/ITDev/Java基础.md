@@ -41,7 +41,7 @@ share: true
 
 ## 3.命名空间
 
-### 3.1 包
+### 3.1包
 
 1. package说明
 
@@ -79,24 +79,24 @@ share: true
 - java.net包 – 该包是Java语言中的网络包，里面提供了大量网络编程相关的类等。如：ServerSocket类、Socket类、…
 - java.sql 包 – 该包是Java语言中的数据包，里面提供了大量操作数据库的类和接口等。如：DriverManager类、Connection接口、
 
-### 3.2 classpath
+### 3.2classpath
 
 - `classpath`是JVM用到的一个环境变量，它用来指示JVM如何搜索`class`。所以，`classpath`就是一组目录的集合，它设置的搜索路径与操作系统相关。
 - 在IDE中运行Java程序，IDE自动传入的`-cp`参数是当前工程的`bin`目录和引入的jar包。而在命令行中应当明确指出，例如`  java -cp .;C:\work\project1\bin;C:\shared abc.xyz.Hello `。（`-cp`也可以写全就是`-classpath`）
 
-### 3.3 jar
+### 3.3jar
 
 - 如果有很多`.class`文件，散落在各层目录中，肯定不便于管理。如果能把目录打一个包，变成一个文件，就方便多了。
 - jar包就是用来干这个事的，它可以把`package`组织的目录层级，以及各个目录下的所有文件（包括`.class`文件和其他文件）都打成一个jar文件，这样一来，无论是备份，还是发给客户，就简单多了。`java -cp ./hello.jar abc.xyz.Hello`
 
 > [!NOTE] jar只是用于存放class的容器，它并不关心class之间的依赖。
 
-### 3.4 class版本
+### 3.4class版本
 
 - Java 8，Java 11，Java 17，是指JDK的版本，也就是JVM的版本，更确切地说，就是`java.exe`这个程序的版本。
 - Java 11对应的class文件版本是55，而Java 17对应的class文件版本是61。
 
-### 3.5 模块（Module）
+### 3.5模块（Module）
 
 - 一个大型Java程序会生成自己的jar文件，同时引用依赖的第三方jar文件，而JVM自带的Java标准库，实际上也是以jar文件形式存放的，这个文件叫`rt.jar`，一共有60多M。所以要运行main函数就得设置`classpath`搜索好多路径的jar包。
 
@@ -106,7 +106,7 @@ share: true
 
 ---
 
-## 4. Boxing
+## 4.Boxing
 
 实际上，因为包装类型非常有用，Java核心库为每种基本类型都提供了对应的包装类型：
 
@@ -123,7 +123,7 @@ share: true
 
 > [!NOTE] 所有的包装类型都是不变类。`BigInteger`和`Integer`、`Long`一样，也是不可变类，总是使用compareTo()比较两个BigDecimal的值，不要使用equals()！
 
-## 5. Enum
+## 5.Enum
 
 `enum`定义的类型就是`class`，只不过它有以下几个特点：
 
@@ -134,7 +134,7 @@ share: true
 
 ---
 
-## 6. Exception
+## 6.Exception
 
 1. Java标准库定义的常用异常包括：
 
@@ -186,7 +186,7 @@ TRACE
 | org.apache.commons.logging.Log        | org.slf4j.Logger        |
 | org.apache.commons.logging.LogFactory | org.slf4j.LoggerFactory |
 
-## 7. Reflection
+## 7.Reflection
 
 1. 基础定义
 
@@ -210,15 +210,15 @@ String s = new Double(123.456); // compile error!\
 
 > [!Note] 其中Java为每个类（class）都创建了一个实例（Class），这个实例与其他实例不同，它的实例类型是Class类型，这个实例记录了class的完整信息。
 
-## 8. Maven
+## 8.Maven
 
-### 8.1 基础配置
+### 8.1基础配置
 
 - 本地仓库地址路径的配置
 - 下载包与插件时的镜像源的配置
 - 指定javajdk版本的配置
 
-### 8.2 Maven指令
+### 8.2Maven指令
 
 ```
 mvn compile
@@ -240,34 +240,34 @@ mvn archetype:generate -DgroupId=com.demo -DartifactId=web-project -DarchetypeAr
 
 ```
 
-### 8.3 Maven工程结构
+### 8.3Maven工程结构
 
 ![](../assets/Java%E5%9F%BA%E7%A1%80.png)
 ![](../assets/Java%E5%9F%BA%E7%A1%80-1.png)
 
-### 8.4 Maven依赖范围
+### 8.4Maven依赖范围
 
 ![](../assets/Java%E5%9F%BA%E7%A1%80-2.png)
 ![](../assets/Java%E5%9F%BA%E7%A1%80-3.png)
 
-### 8.5 Maven主要功能
+### 8.5Maven主要功能
 
 1. 提供了一套标准化的项目结构
 2. 提供了一套标准化的构建流程（编译，测试，打包，发布）
 3. 提供了一套依赖管理机制
 
-### 8.6 Maven模型
+### 8.6Maven模型
 
 ![](../assets/Java%E5%9F%BA%E7%A1%80-4.png)
 
-## 9. Spring
+## 9.Spring
 
-### 9.1 Spring体系结构
+### 9.1Spring体系结构
 
 - Spring是分层的JavaSE/EE应用full-stack轻量级开源框架，以IoC(Inverse Of Control:反转控制)和AOP(Aspect Oriented Programming:面向切面编程)为内核。
 - ![](../assets/Java%E5%9F%BA%E7%A1%80-5.png)
 
-### 9.2 Spring的开发示例
+### 9.2Spring的开发示例
 
 1. 开发原理
 		![](../assets/Java%E5%9F%BA%E7%A1%80-6.png)
@@ -286,7 +286,7 @@ mvn archetype:generate -DgroupId=com.demo -DartifactId=web-project -DarchetypeAr
 		- 工厂静态方法
 		- 工厂实例方法
 
-### 9.3 依赖注入
+### 9.3依赖注入
 
 1. Bean的依赖注入（Dependency Injection，它是Spring框架核心IOC的具体实现）
 2. 注入方法
@@ -319,11 +319,11 @@ mvn archetype:generate -DgroupId=com.demo -DartifactId=web-project -DarchetypeAr
 <import>标签：导入其他的Spring的分文件
 ```
 
-### 9.4 Application Context
+### 9.4Application Context
 
 ![](../assets/Java%E5%9F%BA%E7%A1%80-10.png)
 
-### 9.5 注解开发
+### 9.5注解开发
 
 1. 原始注解
 		![](../assets/Java%E5%9F%BA%E7%A1%80-11.png)
@@ -332,7 +332,7 @@ mvn archetype:generate -DgroupId=com.demo -DartifactId=web-project -DarchetypeAr
 2. 新注解
 		![](../assets/Java%E5%9F%BA%E7%A1%80-13.png)
 
-### 9.6 SpringJunit
+### 9.6SpringJunit
 
 - Spring每次测试都需要先创建容器，然后再拿到bean进行测试，否则会出现空指针。
 - 因此
@@ -340,9 +340,9 @@ mvn archetype:generate -DgroupId=com.demo -DartifactId=web-project -DarchetypeAr
 	- 将需要测试的Bean直接在测试类中进行注入
 -
 
-## 10 JavaWeb
+## 10JavaWeb
 
-### 10.1 简介
+### 10.1简介
 
 1. 关系
 		![](../assets/Java%E5%9F%BA%E7%A1%80-14.png)
@@ -353,7 +353,7 @@ mvn archetype:generate -DgroupId=com.demo -DartifactId=web-project -DarchetypeAr
 3. 数据库查询
 		![](../assets/Java%E5%9F%BA%E7%A1%80-15.png)
 
-### 10.2 JDBC
+### 10.2JDBC
 
 1. JDBC就是使用JAVA语言操作关系型数据库的一套API
 		![](../assets/Java%E5%9F%BA%E7%A1%80-16.png)
@@ -366,7 +366,7 @@ mvn archetype:generate -DgroupId=com.demo -DartifactId=web-project -DarchetypeAr
 5. 缺点
 		![](../assets/Java%E5%9F%BA%E7%A1%80-20.png)
 
-### 10.3 数据源（连接池）
+### 10.3数据源（连接池）
 
 - 常见的数据源：DBCP、C3P0、BoneCP、Druid
 
@@ -394,23 +394,23 @@ mvn archetype:generate -DgroupId=com.demo -DartifactId=web-project -DarchetypeAr
 - 增删改查数据
 	![](../assets/Java%E5%9F%BA%E7%A1%80-22.png)
 
-## 11 MyBatis
+## 11MyBatis
 
-### 11.1 MyBatis是什么
+### 11.1MyBatis是什么
 
 - MyBatis是一款持久层框架，用于简化JDBC开发
 - 持久层是负责将数据保存到数据库的那一层代码
 
 > [!Note] JaveEE的三层架构：表现层、业务层、持久层
 
-### 11.2 MaBatis简化
+### 11.2MaBatis简化
 
 6. 处理JDBC连接过程的硬编码问题：配置文件
 7. 处理JDBC连接过程的操作繁琐问题：自动完成
 
 > [!Summary] MyBatis免除了几乎所有的JDBC代码以及设置参数和获取结果集的工作
 
-### 11.3 Mapper代理开发
+### 11.3Mapper代理开发
 
 - 目的
 	1. 解决原生方式中的硬编码
@@ -420,6 +420,6 @@ mvn archetype:generate -DgroupId=com.demo -DartifactId=web-project -DarchetypeAr
 - 步骤要求
 	![](../assets/Java%E5%9F%BA%E7%A1%80-24.png)
 
-### 11.4 MyBatis核心配置文件
+### 11.4MyBatis核心配置文件
 
 ![](../assets/Java%E5%9F%BA%E7%A1%80-25.png)

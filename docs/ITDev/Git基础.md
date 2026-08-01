@@ -9,13 +9,13 @@ share: true
 
 # Git基础
 
-## 1. 图示
+## 1.图示
 
 ![](../assets/Git%E5%9F%BA%E7%A1%80.png)
 
 ![](../assets/Git%E5%9F%BA%E7%A1%80-1.png)
 
-## 2. 指令
+## 2.指令
 
 | 作用|指令|
 |:---:|:---|
@@ -44,7 +44,7 @@ share: true
 
 - alias git-log='git log --all --graph --abbrev-commit --pretty=oneline'
 
-## 3. 冲突
+## 3.冲突
 
 ![](../assets/Git%E5%9F%BA%E7%A1%80-2.png)
 - 远程分支也是分支，合并冲突的解决方法与本地分支合并冲突的解决方法一致。
