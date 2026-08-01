@@ -9,12 +9,12 @@ share: true
 
 # Ollama
 
-## 2.1 说明
+## 2.1说明
 
 - 开源的大模型管理平台，提供`client`和`webui`两种管理方式。
 - 充分利用本地资源，既可以用CPU也可以使用GPU
 
-## 2.2 指令
+## 2.2指令
 
 ```
 ollama list
