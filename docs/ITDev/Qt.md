@@ -9,7 +9,7 @@ share: true
 
 # Qt
 
-## 1. 基础介绍
+## 1.基础介绍
 
 - Qt是一个跨平台的C++图形用户界面应用程序框架。它为应用程序开发者提供建立艺术级图形界面所需的所有功能。它是完全面向对象的，很容易扩展，并且允许真正的组件编程。
 - 1991 奇趣科技
@@ -31,9 +31,9 @@ share: true
 	5. VLC多媒体播放器
 	6. VirtualBox虚拟机软件
 
-## 2. 框架说明
+## 2.框架说明
 
-### 2.1 窗口类
+### 2.1窗口类
 
 - 窗口共有3种基类
 1. QWidget
@@ -50,7 +50,7 @@ share: true
 - `a.exec()`是让应用程序对象（有且仅有1个）进入消息循环机制中，让代码阻塞到当前行。
 -
 
-### 2.2 工程文件
+### 2.2工程文件
 
 - .pro文件
 - Qt包含的模块
@@ -102,7 +102,7 @@ HEADERS += \
 CONFIG += c++17
 ```
 
-## 3. 对象树
+## 3.对象树
 
 - 控件的基类也是窗口类，需要严格指定各个窗口间的关系。
 - QObject是以对象树的形式组织起来的。
@@ -120,14 +120,14 @@ CONFIG += c++17
 
 > [!NOTE] 非控件或窗口的类的对象也可以设置父对象，其也可以被Qt托管析构。
 
-## 4. 窗口坐标体系
+## 4.窗口坐标体系
 
 - 以左上角为原点（0,0），X向右增加，Y向下增加。
 - 对于嵌套窗口，其坐标是相对于父窗口来说的。
 
-## 5. 信号和槽
+## 5.信号和槽
 
-### 5.1 原理
+### 5.1原理
 
 - 信号槽是 Qt 框架引以为豪的机制之一。所谓信号槽，实际就是观察者模式。**当某个事件发生之后**，比如，按钮检测到自己被点击了一下，**它就会发出一个信号（signal）**。这种发出是没有目的的，类似广播。**如果有对象对这个信号感兴趣，它就会使用连接（connect）函数**，意思是，**将想要处理的信号和自己的一个函数（称为槽（slot））绑定来处理这个信号**。也就是说，**当信号发出时，被连接的槽函数会自动被回调**。这就类似观察者模式：当发生了感兴趣的事件，某一个操作就会被自动触发。
 - 信号槽的优点：松散耦合。信号发送端和接收端本来是没有关联的，通过connect连接将两端耦合在了一起。
@@ -140,7 +140,7 @@ CONFIG += c++17
 
 > [!NOTE] 控件或者是窗口对象可以有一些被触发的事件，触发这些事件就会发出相应的信号，大多数情况下事件和消息合并处理统一为消息；接收方监听到指定消息后执行相应的槽函数。
 
-### 5.2 自定义信号和槽
+### 5.2自定义信号和槽
 
 - 自定义信号：
 	1. 写到signals下
@@ -175,7 +175,7 @@ CONFIG += c++17
 
 > [!NOTE] 目标是希望发送者发出信号，监听者接收信号并执行相应的槽函数。期间也可以实现信号连接信号，槽函数内部再发起新的信号。本质是由于信号与槽都是函数，都能写入connect函数中。
 
-### 5.3 Lambda表达式
+### 5.3Lambda表达式
 
 - 使用Lambda表达式设置槽函数可以实现槽函数获取其他来源的数据做参数。
 
@@ -188,21 +188,21 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 );
 ```
 
-### 5.4 总结
+### 5.4总结
 
 - 如果槽函数无需明确接收方对象，则可以省略接收方对象这个参数。所以在Lambda表达式中大多数情况下都可以省略第三个参数。
 
 ![](../assets/Qt-1.png)
 
-## 6. QMainWindow
+## 6.QMainWindow
 
-### 6.1 简介
+### 6.1简介
 
 - QMainWindow是一个为用户提供主窗口程序的类，包含一个菜单栏（menu bar）、多个工具栏(tool bars)、多个锚接部件/浮动窗口(dock widgets)、一个状态栏(status bar)及一个中心部件(central widget)，是许多应用程序的基础，如文本编辑器，图片编辑器等。
 
 ![](../assets/Qt-2.png)
 
-### 6.2 常见栏目
+### 6.2常见栏目
 
 - 菜单栏最多只能有1个，创建时不能new QMenuBar，要使用其约束的单例创建方法 MenuBar()。状态栏，中心部件同样最多只能有1个。
 - 各控件均需要绑定到主窗口上。
@@ -211,7 +211,7 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 - 状态栏可以加Label等Widget子类。
 - 铆接部件本身就是Widget子类。
 
-## 7. 资源文件
+## 7.资源文件
 
 - Qt添加资源文件需要先创建资源板块，会生成xxx.qrc的资源文件板块，然后在该资源文件板块中添加资源文件并设置其前缀。
 - 使用Qt资源
@@ -220,9 +220,9 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 	3. 在UI界面中图形化选择
 - 在代码中使用Action时用ui->xxxAction即可索引到。
 
-## 8. 对话框
+## 8.对话框
 
-### 8.1 QMessageBox
+### 8.1QMessageBox
 
 - Qt已经封装好的对话框QMessageBox
 	1. QMessageBox::critical（错误对话框）
@@ -232,7 +232,7 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 
 > [!Note] QMessageBox类有静态成员函数，直接使用静态成员函数就可以创建对话框，创建的对话框都是模态对话框，并且自动show，无需再调用exec或者show
 
-### 8.2 自定义对话框
+### 8.2自定义对话框
 
 - 自定义对话框：QDialog
 	1. 模态对话框（dlg.exec();），有阻塞功能
@@ -243,7 +243,7 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 		2. 设置属性为关闭即释放，否则可能存在内存泄漏
 		3. 调用show()展示窗口
 
-### 8.3 标准对话框
+### 8.3标准对话框
 
 - Qt已经内置好的
 	1. QColorDialog：选择颜色
@@ -253,28 +253,28 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 	5. QMessageBox：消息对话框
 	6. QProgressDialog：显示操作过程
 
-## 9. 控件及使用
+## 9.控件及使用
 
-### 9.1 布局
+### 9.1布局
 
 1. 利用容器组合控件（可省略，但是为了便于控制还是组合起来再布局更好）
 2. 容器内垂直水平网格布局
 3. 巧用弹簧
 
-### 9.2 按钮
+### 9.2按钮
 
 1. 普通按钮
 2. 工具按钮（带icon）
 3. 单项选择按钮
 4. 多项选择按钮
 
-### 9.3 复合控件
+### 9.3复合控件
 
  1. 列表
  2. 树结构
  3. 表格
 
-### 9.4 组合控件（容器）
+### 9.4组合控件（容器）
 
 1. 组盒子
 2. 滚动区域
@@ -284,7 +284,7 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 6. 边框
 7. 浮动窗口
 
-### 9.5 输入控件
+### 9.5输入控件
 
 1. 下拉框
 2. 字体下拉框
@@ -298,7 +298,7 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 10. 水平/垂直滚动条
 11. 进度条
 
-### 9.6 显示控件
+### 9.6显示控件
 
 1. Label（也可以显示图片、动图）
 2. 浏览器文本
@@ -307,14 +307,14 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 5. 时刻展示
 6. 进度展示
 
-### 9.7 自定义控件
+### 9.7自定义控件
 
 - 自定义控件时要选“从类设计图形”，则会生成相应的UI和C++类，类中可以提供一些对外的功能函数。
 - 主窗口想要使用自定义控件（类），则新建目标控件的UI对象（通常为Widget）,接着将该对象提升为目标控件的类。
 
-## 10. 事件
+## 10.事件
 
-### 10.1 鼠标事件
+### 10.1鼠标事件
 
 - 事件：QEvent，有很多枚举值
 - 鼠标事件是事件中常用的一类
@@ -324,7 +324,7 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 - mousePressEvent()，mouseReleaseEvent()，mouseMoveEvent()
 - 其中mouseMoveEvent函数是当鼠标被追踪时才会检测，例如可能是按键摁下才开始追踪。即默认追踪状态是false，要想时刻追踪移动，需要设置为true。this->setMouseTracking(true);
 
-### 10.2 定时器
+### 10.2定时器
 
 - 定时器的目标是：每隔多久发送一次某个信号
 - 事件的方式
@@ -335,7 +335,7 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 	2. 紧接着用connect对信号进行处理即可。
 	3. 当有多个定时器的时候再创建新的QTimer对象即可。
 
-### 10.3 Qt事件
+### 10.3Qt事件
 
 - 事件主要分为两种：
 
@@ -353,7 +353,7 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 
 > [!NOTE] 应用程序接收到事件后并不是直接调用相应的执行函数，而是先将事件对象扔给event函数进行事件分发。这个event函数接收的参数是QEvent类型的对象，返回值是bool类型。如果返回true，则说明该分发器已经把这个事件处理了（**这里其实就可以人为的重写分发器函数实现拦截事件和直接处理事件**），如果是false，则说明没处理，得把参数这个对象转发给具体操作的事件处理程序并调用。
 
-### 10.4 事件分发器
+### 10.4事件分发器
 
 - 一般来说，我们定义的类继承常用的Widget或者Label类，重写event函数时写自己要监听的事件的逻辑，不关注的事件交给父类（常用的Widget或者Label类）的默认event事件处理，否则会导致自己定义的类只能监听自己想要的事件。
 - e.type()可以判断是什么类型的事件
@@ -363,7 +363,7 @@ connect(btn6, &QPushButton::clicked, [btn6](QString foodName="wy")
 
 - ![](../assets/Qt-3.png)
 
-### 10.5 事件过滤器
+### 10.5事件过滤器
 
 - 在程序将事件分发到事件分类器前，利用过滤器做拦截。
 
@@ -384,9 +384,9 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 
 - ![](../assets/Qt-4.png)
 
-## 11. 绘图
+## 11.绘图
 
-### 11.1 绘图事件
+### 11.1绘图事件
 
 - 绘图事件其实是默认执行的，eventFilter没有过滤掉，event函数分发事件到paintEvent()并调用，只不过这个函数默认是空，所以相当于不绘图，要想绘图直接重写该函数即可。
 - 过程
@@ -402,12 +402,12 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 - ![](../assets/Qt-5.png)
 - Qt 的绘图系统实际上是，使用QPainter在QPainterDevice上进行绘制，它们之间使用QPaintEngine进行通讯（也就是翻译QPainter的指令）。
 
-### 11.2 手动调用绘图事件
+### 11.2手动调用绘图事件
 
 - 重新调用绘图事件，并不能直接显示的调用paintEvent函数，因为它需要参数，必须是事件触发的，而不是显示逻辑调用。
 - 重新调用绘图事件，应该使用update()或者repaint()，该函数会重新调用paintEvent函数。
 
-### 11.3 绘图设备
+### 11.3绘图设备
 
 - 绘图设备是指继承QPaintDevice的子类。常用的是四个这样的类，分别是QPixmap、QBitmap、QImage和 QPicture。其中，
 	1. QPixmap专门为图像在屏幕上的显示做了优化
@@ -418,9 +418,9 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 - 可以新建一个QPixmap的绘图设备，在其上绘制后保存至本地。
 - 可以在QWidget绘图设备上绘制QPixmap绘图设备，类似于纸叠纸
 
-## 12. 文件
+## 12.文件
 
-### 12.1 文件读写
+### 12.1文件读写
 
 - 文件读取对话框：QString path = QFileDialog::getOpenFileName(this,"打开文件","./");
 - 读过程
@@ -435,7 +435,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 	3. 写入内容：file.write("aaaaaaaaa");
 	4. 关闭文件对象：file.close();
 
-### 12.2 文件信息
+### 12.2文件信息
 
 - 文件信息类：QFileInfo
 - 过程
@@ -443,9 +443,9 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 	2. 获取其信息：info.size()<<info.suffix()<<info.fileName()<<info.filePath()<<info.birthTime()<<info.lastModified();，size输出的是字节的大小,data返回的是QDateTime。
 	3. 输出内容：qDebug()<<info.birthTime().toString("yyyy/MMdd hh:mm:ss")<<info.lastModified();，注意格式转换
 
-## 13. 核心类
+## 13.核心类
 
-### 13.1 基础数据类型
+### 13.1基础数据类型
 
 |**C++ 类型**|**Qt 对应类型**|**说明**|
 |---|---|---|
@@ -456,7 +456,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |`float`/`double`|`float`/`double`|完全兼容，Qt 中无替代类型。|
 |`void*`|`QVariant`|`QVariant` 是类型安全的通用容器，可存储多种数据类型（类似 `std::any`）。|
 
-### 13.2 预处理与宏
+### 13.2预处理与宏
 
 |**C++ 特性**|**Qt 对应特性**|**说明**|
 |---|---|---|
@@ -464,7 +464,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |`assert()`|`Q_ASSERT()`|Qt 的断言宏，支持调试模式下的条件检查。|
 |`__FILE__`/`__LINE__`|`Q_FUNC_INFO`|`Q_FUNC_INFO` 提供函数名、文件名和行号信息。|
 
-### 13.3 面向对象特性
+### 13.3面向对象特性
 
 |**C++ 特性**|**Qt 对应特性**|**说明**|
 |---|---|---|
@@ -472,7 +472,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |虚函数|正常使用|Qt 类可使用 C++ 虚函数机制，同时信号槽基于元对象系统实现动态绑定。|
 |抽象类|正常使用|Qt 支持纯虚函数定义抽象接口。|
 
-### 13.4 模板与泛型编程
+### 13.4模板与泛型编程
 
 |**C++ 特性**|**Qt 对应特性**|**说明**|
 |---|---|---|
@@ -480,7 +480,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |`std::function`|`std::function` 或 `QtConcurrent`|Qt 提供 `QtConcurrent` 处理异步任务，也可直接使用 C++11 的 `std::function`。|
 |`lambda` 表达式|完全支持|Qt 5+ 支持 C++11 lambda，可用于信号槽连接（如 `connect(sender, &Sender::signal, [=](){...})`）。|
 
-### 13.5 容器类
+### 13.5容器类
 
 |**STL 类型**|**Qt 对应类**|**特点**|
 |---|---|---|
@@ -499,7 +499,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 - QStack是基于QVector实现
 - QQueue是基于QList实现
 
-### 13.6 字符串处理
+### 13.6字符串处理
 
 |**STL 类型**|**Qt 对应类**|**特点**|
 |---|---|---|
@@ -508,7 +508,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |`std::stringstream`|`QStringBuilder`|高效字符串拼接（使用 `%` 操作符），或 `QString::arg()` 格式化。|
 |`std::regex`|`QRegularExpression`|Qt 的正则表达式类，功能更强大，性能更优（基于 PCRE）。|
 
-### 13.7 文件与 IO
+### 13.7文件与 IO
 
 |**STL 类型**|**Qt 对应类**|**特点**|
 |---|---|---|
@@ -518,7 +518,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |`std::ofstream`|`QFile` + `QTextStream`|写入文件（文本模式）。|
 |文件路径处理|`QDir`/`QFileInfo`|Qt 提供跨平台的文件路径处理，自动处理不同操作系统的路径分隔符。|
 
-### 13.8 智能指针
+### 13.8智能指针
 
 |**STL 类型**|**Qt 对应类**|**特点**|
 |---|---|---|
@@ -526,14 +526,14 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |`std::shared_ptr<T>`|`QSharedPointer<T>`|共享所有权的智能指针，通过引用计数管理内存。|
 |`std::weak_ptr<T>`|`QWeakPointer<T>`|弱引用，不控制对象生命周期，用于解决循环引用问题。|
 
-### 13.9 日期与时间
+### 13.9日期与时间
 
 |**STL 类型**|**Qt 对应类**|**特点**|
 |---|---|---|
 |`std::chrono`|`QDateTime`/`QTime`|日期时间处理，支持时区转换、格式化输出、计时器功能。|
 |`std::time_t`|`QDateTime::toTime_t()`|与 Unix 时间戳互转。|
 
-### 13.10 并发与多线程
+### 13.10并发与多线程
 
 |**C++ 特性**|**Qt 对应特性**|**说明**|
 |---|---|---|
@@ -543,7 +543,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |`std::atomic`|`QAtomicInteger`|Qt 的原子操作类，提供平台无关的原子操作。|
 |`std::future`|`QFuture`|`QFuture` 与 `QtConcurrent` 配合，处理异步计算结果。|
 
-### 13.11 网络编程
+### 13.11网络编程
 
 |**STL 类型**|**Qt 对应类**|**特点**|
 |---|---|---|
@@ -553,14 +553,14 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |HTTP 客户端|`QNetworkAccessManager`|支持 HTTP/HTTPS 请求，处理 Cookie、SSL 等。|
 |WebSocket|`QWebSocket`|Qt 5.3+ 提供的 WebSocket 协议实现。|
 
-### 13.12 异常处理
+### 13.12异常处理
 
 |**C++ 特性**|**Qt 对应特性**|**说明**|
 |---|---|---|
 |`try/catch`|完全支持|Qt 代码可正常使用 C++ 异常处理机制，但 Qt 自身很少抛出异常（更倾向返回错误码）。|
 |`std::exception`|完全支持|Qt 代码可抛出和捕获标准异常，或自定义异常类。|
 
-### 13.13 内存管理
+### 13.13内存管理
 
 |**C++ 特性**|**Qt 对应特性**|**说明**|
 |---|---|---|
@@ -568,7 +568,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |智能指针 (`std::unique_ptr`, `std::shared_ptr`)|`QScopedPointer`, `QSharedPointer`|Qt 提供类似智能指针，与 Qt 对象的生命周期管理更兼容。|
 |对象树|Qt 特有机制|Qt 对象通过父子关系形成对象树，父对象销毁时自动销毁所有子对象。|
 
-### 13.14 元编程与反射
+### 13.14元编程与反射
 
 |**C++ 特性**|**Qt 对应特性**|**说明**|
 |---|---|---|
@@ -576,7 +576,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |反射机制|Qt 元对象系统|通过 `Q_OBJECT` 宏和 `QMetaObject` 类，支持运行时类型信息、属性访问和信号槽。|
 |RTTI (`typeid`, `dynamic_cast`)|正常使用|Qt 类可使用 C++ RTTI，但元对象系统提供更强大的类型信息。|
 
-### 13.15 GUI 与用户界面
+### 13.15GUI 与用户界面
 
 |**C++ 特性**|**Qt 对应特性**|**说明**|
 |---|---|---|
@@ -584,16 +584,16 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 |事件循环|`QCoreApplication::exec()`|Qt 应用程序的核心，处理窗口事件、定时器等。|
 |信号与回调|Qt 信号槽机制|比 C++ 回调函数更灵活，支持类型安全的跨线程通信。|
 
-### 13.16 国际化与本地化
+### 13.16国际化与本地化
 
 |**C++ 特性**|**Qt 对应特性**|**说明**|
 |---|---|---|
 |无标准方案|`QString` + `Qt Linguist`|`QString` 存储 Unicode 文本，`Qt Linguist` 工具生成翻译文件（.ts/.qm）。|
 |字符串编码转换|`QTextCodec`|处理不同字符编码间的转换（如 UTF-8、GBK、Latin1 等）。|
 
-## 14. 其他类
+## 14.其他类
 
-### 14.1 QProcess
+### 14.1QProcess
 
 `QProcess` 是 Qt 中管理外部进程的核心类，封装了进程启动、通信、终止等功能，常用方法如下：
 
@@ -613,7 +613,7 @@ bool myMainWindow::eventFilter(QObject *watched, QEvent *event){...}
 ||`readyReadStandardError()`|子进程有错误输出时触发|
 ||`finished(int exitCode)`|子进程结束时触发|
 
-### 14.2 动画
+### 14.2动画
 
 - QPropertyAnimation
 ```cpp
@@ -625,7 +625,7 @@ animation->setEasingCurve(QEasingCurve::OutCurve);
 animation->start();
 ```
 
-### 14.3 音效
+### 14.3音效
 
 - QSound
 - 需要包含新的模块multimedia
@@ -636,7 +636,7 @@ startSound->play();
 ```
 - 可以设置循环播放的次数，设为-1表示一直循环。
 
-### 14.4 QTextEdit
+### 14.4QTextEdit
 
 |**特性**|**QTextEdit**|**QPlainTextEdit**|
 |---|---|---|
@@ -647,11 +647,11 @@ startSound->play();
 |**适用场景**|文档编辑器、聊天窗口（需显示富文本）|代码编辑器、日志查看器（大文本、无格式需求）|
 |**常用 API**|`setHtml()`, `insertHtml()`|`setPlainText()`, `appendPlainText()`|
 
-### 14.5 QConcurrent
+### 14.5QConcurrent
 
 在 Qt 项目中，`#include <QtConcurrent/QtConcurrent>` 引入的是 **QtConcurrent 模块**，它提供了一组高级 API，用于简化**并行编程**（多线程任务），让开发者无需手动管理线程池和低级线程同步细节。
 
-#### 14.5.1 QtConcurrent 模块的核心功能
+#### 14.5.1QtConcurrent 模块的核心功能
 
 QtConcurrent 模块提供了三种主要的并行编程模式：
 1. `QtConcurrent::run()`
@@ -709,7 +709,7 @@ QtConcurrent 模块提供了三种主要的并行编程模式：
     int sum = future.result(); // 获取最终总和
     ```
 
-#### 14.5.2 QFuture 与 QFutureWatcher
+#### 14.5.2QFuture 与 QFutureWatcher
 
 - **`QFuture`**：表示异步操作的结果，提供查询状态（如 `isFinished()`）、获取结果（如 `result()`）等功能。
 - **`QFutureWatcher`**：用于监视 `QFuture` 的进度，支持信号槽机制，适合与 UI 交互。
@@ -723,7 +723,7 @@ QtConcurrent 模块提供了三种主要的并行编程模式：
     watcher->setFuture(future); // 设置要监视的 future
     ```
 
-#### 14.5.3 使用场景
+#### 14.5.3使用场景
 
 QtConcurrent 适用于以下场景：
 
@@ -731,7 +731,7 @@ QtConcurrent 适用于以下场景：
 - **数据并行**：对大量数据进行并行处理（如图像 / 视频处理、科学计算）。
 - **任务并行**：同时执行多个独立任务（如多文件压缩、多 API 调用）。
 
-#### 14.5.4 与手动管理线程的对比
+#### 14.5.4与手动管理线程的对比
 
 |**特性**|**QtConcurrent**|**手动管理线程（QThread）**|
 |---|---|---|
@@ -740,7 +740,7 @@ QtConcurrent 适用于以下场景：
 |**与 UI 交互**|友好（通过 `QFutureWatcher` 和信号槽）|需谨慎（避免直接在子线程操作 UI）|
 |**资源控制**|自动管理线程池，优化资源使用|需手动调整线程数量，可能导致资源浪费|
 
-## 15. 字符串转换
+## 15.字符串转换
 
 |类型|所属语言 / 库|编码方式|内存管理方式|特点与用途|
 |---|---|---|---|---|
@@ -838,7 +838,7 @@ CStringW cstr(wstr.c_str());
 |二进制数据|是（若 `\0` 是有效数据）|`sizeof(data)` 或手动指定字节数|`char data[] = { 'A', '\0', 'B' }`;<br>`QByteArray::fromRawData(data, 3);`|
 |带 `\0` 的字符串|是|手动指定完整长度|`const char* s = "Hello\0World";`  <br>`QByteArray::fromRawData(s, 11);`|
 
-## 16. Qt事件的更深理解
+## 16.Qt事件的更深理解
 
 - Qt平台将系统产生的消息转变成Qt事件
 1. Qt事件是一个QEvent（或子类）的对象。一个事件就是一个对象
@@ -847,7 +847,7 @@ CStringW cstr(wstr.c_str());
 4. Qt事件用于描述程序内部或外部发生的对应动作（描述的是操作系统发生来的消息，一个系统消息对应着一个消息事件）
 5. 任意QObject对象都具备时间处理的能力
 
-## 17. GUI应用程序的事件处理流程
+## 17.GUI应用程序的事件处理流程
 
 1. Qt事件产生后会立即被分发到QWidget对象（QObject的子类，如按键QPushButton对象等）
 2. QWidget对象其内部会有一个event(QEVent*)函数被调用，进行事件处理
@@ -870,7 +870,7 @@ CStringW cstr(wstr.c_str());
 10. `QPushButton` 继承自 `QObject`，通过 `clicked()` 信号通知所有关联的槽函数。
 11. 与 `clicked()` 信号关联的槽函数（如 `onButtonClicked()`）被调用，执行用户的业务逻辑。
 
-## 18. Qt事件处理的五个层次
+## 18.Qt事件处理的五个层次
 
 1. 重写paintEvent()、mousePressEvent()等事件处理函数。这是最普通、最简单的形式，同时功能也最简单。
 2. 重写event()函数。event()函数是所有对象的事件入口，QObject和QWidget中的实现，默认是把事件传递给特定的事件处理函数。
@@ -878,13 +878,13 @@ CStringW cstr(wstr.c_str());
 4. 在QCoreApplication::instance()上面安装事件过滤器。该过滤器将过滤所有对象的所有事件，因此和notify()函数一样强大，但是它更灵活，因为可以安装多个过滤器。全局的事件过滤器可以看到 disabled 组件上面发出的鼠标事件。全局过滤器有一个问题：只能用在主线程。
 5. 重写QCoreApplication::notify()函数。这是最强大的，和全局事件过滤器一样提供完全控制，并且不受线程的限制。但是全局范围内只能有一个被使用（因为QCoreApplication是单例的）。
 
-## 19. QObject三大职责
+## 19.QObject三大职责
 
 1. 内存管理
 2. 内省(intropection)
 3. 事件处理机制
 
-## 20. 事件和信号对比
+## 20.事件和信号对比
 
 > [!NOTE] 先有事件（QEvent），再有信号（SIGNAL）
 
