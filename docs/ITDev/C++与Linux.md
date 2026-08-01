@@ -2,7 +2,7 @@
 coding: UTF-8
 title: C++与Linux
 date: 2026-03-22T23:39:23
-updated: 2026-07-17T02:23:39
+updated: 2026-08-01T21:11:34
 tags: []
 share: true
 ---
@@ -191,7 +191,7 @@ SET(CMAKE_C_FLAGS_RELEASE "$ENV{CFLAGS} -O3 -Wall")
 	1. 制作编译文件：`gcc -c xxx.c -o xxx.o -fPIC`（源码需要生成与位置无关的代码）
 	2. 制作库：`gcc -shared -o libname.so file1.o file2.o ...`
 	3. 使用时要指定所使用的动态库：`gcc test.c -o test -l name -L ./lib`（-l后加库名，-L后加库的路径）
-- 动态链接库使用时的问题及四种解决方法：[2.3 链接器](./%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91.md##2.3%2520%E9%93%BE%E6%8E%A5%E5%99%A8)
+- 动态链接库使用时的问题及四种解决方法：
 	1. 在当前终端中执行`export LD_LIBRARY_PATH=动态库路径`，环境变量是跟着进程走的，当开启新的终端时就启动新的进程，需要再次执行该指令。不然动态连接器无法找到指定的动态库。
 	2. 配置bash可以永久生效，在`./bashrc`文件中写入`export LD_LIBRARY_PATH=动态库路径`（建议绝对路径）并保存。然后`source ./bashrc`。
 	3. 把动态库放入`/lib`或者`/lib64`下。可以通过`ldd 可执行文件`查看所需的动态库。
