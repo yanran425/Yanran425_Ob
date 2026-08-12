@@ -2,16 +2,12 @@
 coding: UTF-8
 title: Ollama
 date: 2026-07-18T03:36:19
-updated: 2026-08-12T20:20:30
+updated: 2026-08-12T21:12:04
 tags: []
 share: true
 ---
 
 # Ollama
-
-## 2.多进程/多线程
-
-![](../assets/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png)
 
 ## 2.1说明
 
