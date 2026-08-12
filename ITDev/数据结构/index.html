@@ -1,0 +1,3149 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yanran425.github.io/Yanran425_Ob/ITDev/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+      
+      
+        <link rel="prev" href="../%E6%95%B0%E6%8D%AE%E5%BA%93/">
+      
+      
+        <link rel="next" href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>数据结构 - Yanran_Ob</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Yanran_Ob" class="md-header__button md-logo" aria-label="Yanran_Ob" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yanran_Ob
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数据结构
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="切换到浅色模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple" aria-label="切换到深色模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_2" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple" aria-label="切换到跟随系统" type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换到跟随系统" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yanran425/Yanran425_Ob" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  欢迎来到 Yanran_Ob
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../C%2B%2B%E4%B8%8ELinux/" class="md-tabs__link">
+          
+  
+  
+  ITDev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AIDev/Claude/" class="md-tabs__link">
+          
+  
+  
+  AIDev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Tools/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  标签索引
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yanran_Ob" class="md-nav__button md-logo" aria-label="Yanran_Ob" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Yanran_Ob
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yanran425/Yanran425_Ob" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到 Yanran_Ob
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITDev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ITDev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E4%B8%8ELinux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++与Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++基础入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++学习路线
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++提高编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++核心编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Java%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux系统编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Qt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Thead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    操作系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.树结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.树结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2二叉树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3二叉搜索树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4节点序号关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5平衡二叉搜索树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16avl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6AVL树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7红黑树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8平衡多路查找树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9B树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10B+树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11B*树
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.红黑树意义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.哈希
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.哈希表
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.哈希表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1存储/查询过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2底层数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3冲突解决
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3冲突解决">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1链表法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2开放寻址法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3链表 + 红黑树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.4其他方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.5总结对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4装填因子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5哈希表的实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6例题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6例题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.1题目
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.2解答
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.堆
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.堆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1基础定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2堆化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2堆化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1上浮（用于插入元素后）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2下沉（用于删除根节点后）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机编译
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIDev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIDev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/Claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/LLM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/Ollama/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ollama
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    科研学术
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E7%BD%91%E5%9D%80%E9%9B%86%E5%90%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网址集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标签索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.树结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.树结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2二叉树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3二叉搜索树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4节点序号关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5平衡二叉搜索树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16avl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6AVL树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7红黑树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8平衡多路查找树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9B树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10B+树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11B*树
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.红黑树意义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.哈希
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.哈希表
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.哈希表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1存储/查询过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2底层数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3冲突解决
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3冲突解决">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1链表法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2开放寻址法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3链表 + 红黑树
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.4其他方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.5总结对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4装填因子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5哈希表的实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6例题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6例题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.1题目
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.2解答
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.堆
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.堆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1基础定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2堆化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2堆化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1上浮（用于插入元素后）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2下沉（用于删除根节点后）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">数据结构<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<h2 id="1">1.树结构<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<h3 id="11">1.1定义<a class="headerlink" href="#11" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>树（Tree） 是由n（n≥0）个节点组成的有限集合，满足：</p>
+<ol>
+<li>有且仅有一个根节点（Root）（无父节点）；</li>
+<li>除根节点外，其余节点分为若干个互不相交的子集，每个子集仍是一棵树（称为子树（Subtree））；</li>
+<li>节点之间通过边（Edge） 连接，不存在环路。</li>
+</ol>
+</li>
+<li>
+<p>节点（Node）：树的基本单元，包含数据和指向子节点的引用；</p>
+</li>
+<li>父节点 / 子节点：若节点 A 直接指向节点 B，则 A 是 B 的父节点，B 是 A 的子节点（类比父子关系）；</li>
+<li>兄弟节点：同一父节点的子节点互称兄弟（类比兄弟姐妹）；</li>
+<li>叶子节点（Leaf）：没有子节点的节点（类比家族中的 “晚辈”）；</li>
+<li>节点的深度（Depth）：从根节点到当前节点的边数（根节点深度为 0）；</li>
+<li>节点的高度（Height）：从当前节点到最深叶子节点的边数（叶子节点高度为 0）；</li>
+<li>树的高度：从树的叶子节点开始计数，直到根节点。通常情况下，叶子节点的高度为0，然后向上逐层增加。因此，只有一个根节点的树高度为0，如果树为空（没有节点），则高度为-1。</li>
+<li>树的深度：从树的根节点开始计数，直到最深的叶子节点。根节点的深度为0，然后向下逐层增加。</li>
+<li>度：当前节点下的子节点个数</li>
+<li>节点的层（Level）：深度 + 1（根节点为第 1 层）。</li>
+<li>树的层数：与节点的深度类似，但计数起点为1。也就是说，根节点位于第1层。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.png" data-desc-position="bottom"><img alt="" src="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.png"></a></p>
+<ul>
+<li>数据在计算机中的存储结构主要为顺序存储结构、链式存储结构、索引存储结构、散列存储结构，其中链式存储结构最常见的示例是链表与树，链式存储结构主要有以下特点：<ul>
+<li>优点：逻辑相邻的节点物理上不必相邻，插入、删除灵活，只需改变节点中的指针指向</li>
+<li>缺点：存储空间利用率低，需通过指针维护节点间的逻辑关系；查找效率比顺序存储慢</li>
+</ul>
+</li>
+</ul>
+<h3 id="12">1.2二叉树<a class="headerlink" href="#12" title="Permanent link">¶</a></h3>
+<ul>
+<li>二叉树是最基础的树结构，每个节点最多有 2 个子节点（左子节点和右子节点），即度（子节点数量）≤2。左侧子树节点称为“左子树”（left subtree），右侧子树节点称为“右子树”（right subtree）。</li>
+<li>二叉树的特点<ul>
+<li>至少有一个节点(根节点)</li>
+<li>每个节点最多有两颗子树，即每个节点的度小于3。</li>
+<li>左子树和右子树是有顺序的，次序不能任意颠倒。</li>
+<li>即使树中某节点只有一棵子树，也要区分它是左子树还是右子树。</li>
+</ul>
+</li>
+<li>满二叉树（Full Binary Tree）：所有非叶子节点都有 2 个子节点，且叶子节点在同一层。</li>
+<li>完全二叉树（Complete Binary Tree）：叶子节点从左到右依次填充，且除最后一层外，其余层都是满的；最后一层的叶子节点靠左排列（适合用数组存储，如堆）。</li>
+</ul>
+<h3 id="13">1.3二叉搜索树<a class="headerlink" href="#13" title="Permanent link">¶</a></h3>
+<ul>
+<li>二叉搜索树（又称二叉排序树，二叉查找树，（Binary Search Tree, BST））是有序的二叉树，满足：<ol>
+<li>左子树中所有节点的值 &lt; 根节点的值；</li>
+<li>右子树中所有节点的值 &gt; 根节点的值；</li>
+<li>左、右子树也必须是二叉搜索树。</li>
+</ol>
+</li>
+<li>核心特性：<ol>
+<li>查找高效：通过比较目标值与根节点，可快速缩小范围（类似二分查找）；</li>
+<li>中序遍历（左→根→右）结果为升序序列。</li>
+</ol>
+</li>
+<li>二叉查找树的查询效率介于O(log n)~O(n)之间，理想的排序情况下查询效率为O(log n),极端情况下BST就是一个链表结构(如下图)，此时元素查找的效率相等于链表查询O(n)。</li>
+<li>问题：若插入数据有序（如 1,2,3,4），BST 会退化为链表（所有节点只有右子节点），此时查找时间复杂度从 O (logn) 恶化到 O (n)。</li>
+</ul>
+<h3 id="14">1.4节点序号关系<a class="headerlink" href="#14" title="Permanent link">¶</a></h3>
+<ul>
+<li>在根节点序号为 1 的完全二叉树中，节点的序号与层次（深度）存在严格对应关系：第k层（层次从 1 开始）的节点序号范围是 [2^(k-1), 2^k - 1]。
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>第 1 层（根节点）：序号1（范围[2^0, 2^1-1] = [1,1]）；
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>第 2 层：序号2、3（范围[2^1, 2^2-1] = [2,3]）；
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>第 3 层：序号4、5、6、7（范围[2^2, 2^3-1] = [4,7]）；
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>第k层：共2^(k-1)个节点，序号从2^(k-1)到2^k - 1。
+</code></pre></div></td></tr></tbody></table></div></li>
+<li>⌊log₂a⌋ = ⌊log₂b⌋意味着：节点a和b在完全二叉树的同一层次（深度相同）。</li>
+<li>节点x的父节点序号为⌊x/2⌋</li>
+</ul>
+<h3 id="15">1.5平衡二叉搜索树<a class="headerlink" href="#15" title="Permanent link">¶</a></h3>
+<ul>
+<li>为解决 BST 退化问题，平衡二叉搜索树（Balanced Tree）通过控制左右子树高度差，维持 O (logn) 的高效操作。</li>
+<li>核心思想：插入 / 删除后若失衡，通过旋转调整结构。
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1.png" data-desc-position="bottom"><img alt="" src="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1.png"></a></li>
+</ul>
+<h3 id="16avl">1.6AVL树<a class="headerlink" href="#16avl" title="Permanent link">¶</a></h3>
+<ul>
+<li>AVL树最早的平衡二叉搜索树，由Adelson-Velskii和Landis在1962年提出。</li>
+<li>AVL 树是严格平衡的二叉搜索树，要求：左右子树的高度差（平衡因子）绝对值 ≤ 1（平衡因子 = 左子树高度 - 右子树高度）。</li>
+<li>失衡与旋转：当插入 / 删除导致某节点平衡因子＞1 或＜-1 时，需通过旋转修复。有 4 种基础旋转：
+<div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">LL</span><span class="w"> </span><span class="n">旋转</span><span class="err">（</span><span class="n">左左失衡</span><span class="err">）：</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="n">失衡节点的左子树的左子树过深</span><span class="err">（</span><span class="n">平衡因子</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="err">）。</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">操作</span><span class="err">：</span><span class="n">将失衡节点的左子树作为新根</span><span class="err">，</span><span class="n">失衡节点作为新根的右子节点</span><span class="err">，</span><span class="n">新根原右子树作为失衡节点的左子树</span><span class="err">。</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">RR</span><span class="w"> </span><span class="n">旋转</span><span class="err">（</span><span class="n">右右失衡</span><span class="err">）：</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">失衡节点的右子树的右子树过深</span><span class="err">（</span><span class="n">平衡因子</span><span class="w"> </span><span class="o">=</span><span class="mi">-2</span><span class="err">）。</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="n">操作</span><span class="err">：</span><span class="n">与</span><span class="w"> </span><span class="n">LL</span><span class="w"> </span><span class="n">对称</span><span class="err">，</span><span class="n">将失衡节点的右子树作为新根</span><span class="err">，</span><span class="n">失衡节点作为新根的左子节点</span><span class="err">。</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">LR</span><span class="w"> </span><span class="n">旋转</span><span class="err">（</span><span class="n">左右失衡</span><span class="err">）：</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="n">失衡节点的左子树的右子树过深</span><span class="err">（</span><span class="n">平衡因子</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="err">）。</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="n">操作</span><span class="err">：</span><span class="n">先对左子树做</span><span class="w"> </span><span class="n">RR</span><span class="w"> </span><span class="n">旋转</span><span class="err">，</span><span class="n">再对失衡节点做</span><span class="w"> </span><span class="n">LL</span><span class="w"> </span><span class="n">旋转</span><span class="err">（</span><span class="n">两步旋转</span><span class="err">）。</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">RL</span><span class="w"> </span><span class="n">旋转</span><span class="err">（</span><span class="n">右左失衡</span><span class="err">）：</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="n">失衡节点的右子树的左子树过深</span><span class="err">（</span><span class="n">平衡因子</span><span class="w"> </span><span class="o">=</span><span class="mi">-2</span><span class="err">）。</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="n">操作</span><span class="err">：</span><span class="n">先对右子树做</span><span class="w"> </span><span class="n">LL</span><span class="w"> </span><span class="n">旋转</span><span class="err">，</span><span class="n">再对失衡节点做</span><span class="w"> </span><span class="n">RR</span><span class="w"> </span><span class="n">旋转</span><span class="err">（</span><span class="n">两步旋转</span><span class="err">）。</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+<li>特点：<ol>
+<li>严格平衡，查询效率极高（O (logn)）；</li>
+<li>但旋转频繁（插入 / 删除可能多次旋转），适合查询多、修改少的场景（如数据库索引早期）。</li>
+</ol>
+</li>
+<li>总结：由于插入(或删除)一个节点时需要扫描两趟树，一次向下查找插入点，一次向上平衡树，所以AVL树不如下面介绍的红黑树效率高，也不如红黑树常用。(也就是说为了保持平衡，平衡二叉树定义节点的左子树和右子树的高度差不大于1，这种规定过于严格，导致在做插入或删除操作时需要自底向上逐层检查节点的平衡性(高度差)，因此效率较低)</li>
+</ul>
+<h3 id="17">1.7红黑树<a class="headerlink" href="#17" title="Permanent link">¶</a></h3>
+<ul>
+<li>红黑树（Red-Black Tree）是弱平衡的二叉搜索树，通过颜色规则维持平衡（不严格控制高度差，而是保证最长路径≤最短路径的 2 倍）。</li>
+<li>核心规则：<ol>
+<li>每个节点非红即黑；</li>
+<li>根节点是黑的；</li>
+<li>叶子节点（NIL 节点，空节点）是黑的；</li>
+<li>红节点的子节点必为黑（无连续红节点）；</li>
+<li>从任意节点到其所有叶子节点的路径中，黑节点数量相同（黑平衡）。</li>
+</ol>
+</li>
+<li>失衡修复：插入 / 删除后若违反规则，通过变色和旋转（LL/RR/LR/RL，与 AVL 类似）修复。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-2.png" data-desc-position="bottom"><img alt="" src="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-2.png"></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">特性</th>
+<th style="text-align: left;">AVL树</th>
+<th style="text-align: left;">红黑树</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">平衡严格性</td>
+<td style="text-align: left;">严格（平衡因子≤1）</td>
+<td style="text-align: left;">宽松（最长路径≤2 倍）</td>
+</tr>
+<tr>
+<td style="text-align: center;">旋转次数</td>
+<td style="text-align: left;">多（插入最多 2 次，删除可能 O (logn)）</td>
+<td style="text-align: left;">少（插入最多 2 次，删除最多 3 次）</td>
+</tr>
+<tr>
+<td style="text-align: center;">适用场景</td>
+<td style="text-align: left;">查询密集</td>
+<td style="text-align: left;">插入 / 删除密集</td>
+</tr>
+</tbody>
+</table>
+<h3 id="18">1.8平衡多路查找树<a class="headerlink" href="#18" title="Permanent link">¶</a></h3>
+<ul>
+<li>BST、AVL、红黑树都是典型的二叉查找树结构，其查找的时间复杂度与树高相关。那么降低树高自然对查找效率是有所帮助的。另外还有一个比较实际的问题：就是在大量数据存储中实现查询的场景下，平衡二叉树由于树深度过大而造成磁盘IO读写过于频繁，进而导致效率低下。那么如何减少树的深度（当然不能减少查询数据量），一个基本的想法就是：<ol>
+<li>每个节点存储多个元素&nbsp;（但元素数量不能无限多，否则查找就退化成了节点内部的线性查找了）。</li>
+<li>摒弃二叉树结构而采用多分支(多叉)树（由于节点内元素数量不能无限多，自然子树的数量也就不会无限多了）。</li>
+</ol>
+</li>
+</ul>
+<h3 id="19b">1.9B树<a class="headerlink" href="#19b" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>B树（B-Tree）是为磁盘或其他直接存储的辅助设备而设计的一种平衡搜索树。B树类似于红黑树，但它们在降低磁盘I/O操作次数方面要更好一些。</p>
+</li>
+<li>
+<p>一棵m阶的B-Tree有如下特性：&nbsp;
+　　1. 每个节点最多有m个孩子。&nbsp;
+　　2. 除了根节点和叶子节点外，其它每个节点至少有Ceil(m/2)个孩子。&nbsp;
+　　3. 若根节点不是叶子节点，则至少有2个孩子&nbsp;
+　　4. 所有叶子节点都在同一层，且不包含其它关键字信息&nbsp;
+　　5. 每个非终端节点包含n个关键字信息（P0,P1,…Pn, k1,…kn）&nbsp;
+　　6. 关键字的个数n满足：ceil(m/2)-1 &lt;= n &lt;= m-1&nbsp;
+　　7. ki(i=1,…n)为关键字，且关键字升序排序。&nbsp;
+　　8. Pi(i=1,…n)为指向子树根节点的指针。P(i-1)指向的子树的所有节点关键字均小于ki，但都大于k(i-1)</p>
+</li>
+<li>B-Tree中的每个节点根据实际情况可以包含大量的关键字信息和分支，如下图所示为一个3阶的B-Tree：</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-3.png" data-desc-position="bottom"><img alt="" src="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-3.png"></a>
+- 每个节点占用一个盘块的磁盘空间，一个节点上有两个升序排序的关键字和三个指向子树根节点的指针，指针存储的是子节点所在磁盘块的地址。两个关键词划分成的三个范围域对应三个指针指向的子树的数据的范围域。以根节点为例，关键字为17和35，P1指针指向的子树的数据范围为小于17，P2指针指向的子树的数据范围为17~35，P3指针指向的子树的数据范围为大于35。</p>
+<ul>
+<li>
+<p>查找关键字29的过程：</p>
+<ol>
+<li>根据根节点找到磁盘块1，读入内存。【磁盘I/O操作第1次】</li>
+<li>比较关键字29在区间（17,35），找到磁盘块1的指针P2。</li>
+<li>根据P2指针找到磁盘块3，读入内存。【磁盘I/O操作第2次】</li>
+<li>比较关键字29在区间（26,30），找到磁盘块3的指针P2。</li>
+<li>根据P2指针找到磁盘块8，读入内存。【磁盘I/O操作第3次】</li>
+<li>在磁盘块8中的关键字列表中找到关键字29。</li>
+</ol>
+</li>
+<li>
+<p>由于节点内部的关键字是有序的，所以在节点内部的查找可以使用二分法进行。分析上面过程，发现需要3次磁盘I/O操作，和3次内存查找操作。由于内存中的关键字是一个有序表结构，可以利用二分法查找提高效率。而3次磁盘I/O操作是影响整个B-Tree查找效率的决定因素。B-Tree相对于AVLTree缩减了节点个数，使每次磁盘I/O取到内存的数据都发挥了作用，从而提高了查询效率。</p>
+</li>
+</ul>
+<h3 id="110b">1.10B+树<a class="headerlink" href="#110b" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>B+树是B树的一种变种和优化，使其更适合实现外存储索引结构，InnoDB存储引擎就是用B+Tree实现其索引结构。B+树的特点是能够保持数据稳定有序，其插入与修改拥有较稳定的对数时间复杂度。B+树元素自底向上插入，这与二叉树恰好相反。</p>
+</li>
+<li>
+<p>从上面的B-Tree结构图中可以看到每个节点中不仅包含数据的key值，还有data值。而每一个页的存储空间是有限的，如果data数据较大时将会导致每个节点（即一个页）能存储的key的数量很小，当存储的数据量很大时同样会导致B-Tree的深度较大，增大查询时的磁盘I/O次数，进而影响查询效率。在B+Tree中，所有数据记录节点都是按照键值大小顺序存放在同一层的叶子节点上，而非叶子节点上只存储key值信息，这样可以大大加大每个节点存储的key值数量，降低B+Tree的高度。
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-4.png" data-desc-position="bottom"><img alt="" src="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-4.png"></a></p>
+</li>
+<li>
+<p>B树与B+树对比</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">类型</th>
+<th style="text-align: left;">B树</th>
+<th style="text-align: left;">B+树</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">节点存储的信息不同</td>
+<td style="text-align: left;">B树的节点存储了索引信息和数据</td>
+<td style="text-align: left;">B+树的分支结点仅仅存储着关键字信息和子节点的指针（这里的指针指的是磁盘块的偏移量），也就是说内部结点仅仅包含着索引信息。</td>
+</tr>
+<tr>
+<td style="text-align: center;">数据存储的位置不同</td>
+<td style="text-align: left;">B树的数据存储在每一个结点中，并不仅仅存储在叶子结点上</td>
+<td style="text-align: left;">B+树中的数据都存储在叶子结点上，也就是其所有叶子结点的数据组合起来就是完整的数据</td>
+</tr>
+<tr>
+<td style="text-align: center;">查找路径不同</td>
+<td style="text-align: left;">每个节点都带有数据，找到了即停止查找，可能在内部节点中找到，也可能在叶子节点中找到。而区间查找则需要在上下层中不停的穿梭。</td>
+<td style="text-align: left;">B+树的所有叶子节点都通过指针相连，每次查找都通过内部节点找到对应的叶子节点，从而获取到数据。顺序查找和区间查找也是这样，从内部节点定位到叶子节点，再在叶子节点中顺序查找。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="111b">1.11B*树<a class="headerlink" href="#111b" title="Permanent link">¶</a></h3>
+<p>B*树是B+树的变体，在B+Tree的非根和非叶子结点再增加指向兄弟的指针</p>
+<h2 id="2">2.红黑树意义<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<p><strong>问题：有了二叉查找树、平衡树（AVL），为啥还需要红黑树？</strong></p>
+<p><strong>答案：</strong></p>
+<p>极端情况下，二叉树会退化成链表，时间复杂度从O(logn)退化为O(n)。所以有了平衡二叉树。平衡二叉树对平衡的要求过于严格——每个节点的左右子树的高度差最多为1。这样导致每次进行插入或删除时都会破坏平衡规则，需要进行左旋和右旋来调整。所以有了红黑树。</p>
+<p>红黑树具有如下特点：1、具有二叉查找树的特点。2、根节点是黑色的；3、每个叶子节点都是黑色的空节点（NIL），也就是说，叶子节点不存数据。4、任何相邻的节点都不能同时为红色，也就是说，红色节点是被黑色节点隔开的。5、每个节点，从该节点到达其可达的叶子节点是所有路径，都包含相同数目的黑色节点。</p>
+<p>正是由于红黑树的这种特点，使得它能够在最坏情况下，也能在 O(logn) 的时间复杂度查找到某个节点。与平衡树不同的是，红黑树在插入、删除等操作时不会像平衡树那样频繁着破坏红黑树的规则，所以不需要频繁的调整，这也是大多数情况下使用红黑树的原因。</p>
+<p>但是，仅在查找效率方面，平衡树比红黑树快。所以，红黑树是一种不大严格的平衡树，可以说是一个折中发方案。</p>
+<p>总之：平衡树是为了解决二叉搜索树退化为链表的情况，而红黑树是为了解决平衡树在插入、删除等操作需要频繁调整的情况。</p>
+<h2 id="3">3.哈希<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<ul>
+<li>哈希定义：哈希（又称 “散列”）是一种将任意长度的输入数据，通过特定算法（哈希函数）映射到固定长度输出值的技术。这个输出值称为 “哈希值”（或 “散列值”）。</li>
+<li>
+<p>哈希特点</p>
+<ol>
+<li>相同输入一定得到相同哈希值；</li>
+<li>不同输入可能得到相同哈希值（称为 “哈希冲突”，无法完全避免，但好的哈希函数会尽量减少）；</li>
+<li>计算快速，且从哈希值反推原始数据极难（单向性）。</li>
+</ol>
+</li>
+<li>
+<p>举例
+</p><div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">一个简单的哈希函数是</span><span class="w"> </span><span class="err">“</span><span class="n">取数字除以</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">的余数</span><span class="err">”：</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">输入</span><span class="w"> </span><span class="mi">123</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">哈希值</span><span class="w"> </span><span class="mi">3</span><span class="err">（</span><span class="mi">123</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="err">）；</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">输入</span><span class="w"> </span><span class="mi">456</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">哈希值</span><span class="w"> </span><span class="mi">6</span><span class="err">（</span><span class="mi">456</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="err">）；</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">输入</span><span class="w"> </span><span class="mi">783</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">哈希值</span><span class="w"> </span><span class="mi">3</span><span class="err">（</span><span class="n">与</span><span class="w"> </span><span class="mi">123</span><span class="w"> </span><span class="n">冲突</span><span class="err">）。</span>
+</code></pre></div></td></tr></tbody></table></div><p></p>
+</li>
+</ul>
+<h2 id="4">4.哈希表<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<h3 id="41">4.1存储/查询过程<a class="headerlink" href="#41" title="Permanent link">¶</a></h3>
+<ul>
+<li>定义:是一种基于哈希函数实现的高效数据结构，核心是 “用哈希值快速定位数据存储位置”，用于实现 “键值对（KV）” 的存储和查询。</li>
+<li>原理：<ol>
+<li>有一个数组（称为 “哈希表”），每个位置称为 “桶（Bucket）”；</li>
+<li>插入键值对（Key, Value）时：</li>
+<li>用哈希函数计算 Key 的哈希值；</li>
+<li>用哈希值对数组长度取模，得到数组下标（即桶的位置）；</li>
+<li>将 Value 存入该下标对应的桶中；</li>
+<li>查询时，用同样的方法计算 Key 的哈希值→下标→直接从桶中取 Value（时间复杂度接近 O (1)）。</li>
+</ol>
+</li>
+<li>工作流程：哈希表的工作流程本质是：用哈希函数将 “键（Key）” 转换为数组索引，再将 “值（Value）” 存入该索引对应的数组位置（桶）。</li>
+<li>举例
+<div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span>
+<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">哈希函数</span><span class="err">：</span><span class="n">比如用</span><span class="w"> </span><span class="err">“</span><span class="n">key</span><span class="w"> </span><span class="n">的</span><span class="w"> </span><span class="n">ASCII</span><span class="w"> </span><span class="n">码之和</span><span class="err">”（</span><span class="n">简化版</span><span class="err">）；</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">数组长度</span><span class="err">：</span><span class="n">设为</span><span class="w"> </span><span class="mi">8</span><span class="err">（</span><span class="n">索引</span><span class="w"> </span><span class="mi">0</span><span class="o">~</span><span class="mi">7</span><span class="err">）；</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">取模操作</span><span class="err">：</span><span class="n">哈希值</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">8</span><span class="err">，</span><span class="n">得到数组索引</span><span class="err">。</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">现在插入键值对</span><span class="w"> </span><span class="p">(</span><span class="s">"abc"</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="err">：</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">步骤</span><span class="w"> </span><span class="mi">1</span><span class="err">：</span><span class="n">计算</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">的哈希值</span><span class="err">。</span><span class="s">"a"</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"b"</span><span class="p">(</span><span class="mi">98</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"c"</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">294</span><span class="err">；</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">步骤</span><span class="w"> </span><span class="mi">2</span><span class="err">：</span><span class="n">对数组长度取模</span><span class="err">。</span><span class="mi">294</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="err">（</span><span class="n">因为</span><span class="w"> </span><span class="mi">8</span><span class="err">×</span><span class="mi">36</span><span class="o">=</span><span class="mi">288</span><span class="err">，</span><span class="mi">294-288</span><span class="o">=</span><span class="mi">6</span><span class="err">）；</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">步骤</span><span class="w"> </span><span class="mi">3</span><span class="err">：</span><span class="n">将</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">存入数组索引</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="n">的位置</span><span class="err">。</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">查询</span><span class="w"> </span><span class="s">"abc"</span><span class="w"> </span><span class="n">时</span><span class="err">，</span><span class="n">同样计算哈希值</span><span class="w"> </span><span class="mi">294</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">取模</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">直接访问索引</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="n">得到</span><span class="w"> </span><span class="mi">100</span><span class="err">。</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+<h3 id="42">4.2底层数据<a class="headerlink" href="#42" title="Permanent link">¶</a></h3>
+<p>哈希表的核心功能就是存储和快速查询键值对（KV），而它的底层实现几乎都是以数组为基础的，原因是：
+- 数组的最大优势是 “随机访问”—— 通过索引可以直接定位到目标位置（时间复杂度 O (1)），这与哈希表追求 “快速查询” 的目标完美匹配。
+- 哈希表的工作流程本质是：用哈希函数将 “键（Key）” 转换为数组索引，再将 “值（Value）” 存入该索引对应的数组位置（桶）。</p>
+<h3 id="43">4.3冲突解决<a class="headerlink" href="#43" title="Permanent link">¶</a></h3>
+<h4 id="431">4.3.1链表法<a class="headerlink" href="#431" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>假设哈希表的底层结构是「数组 + 链表」</p>
+<ol>
+<li>计算目标键的哈希值：用与插入时相同的哈希函数，计算目标 Key 的哈希值（例如 Java 中 key.hashCode()）。</li>
+<li>定位到对应的桶（数组索引）：用哈希值对数组长度取模，得到目标 Key 所在的桶（数组索引），此时这个桶中存储着一个链表（所有哈希冲突的键值对都在这里）。</li>
+<li>遍历链表，比较原始键的相等性：链表中的每个节点都存储着完整的键值对（Key + Value）。遍历链表时，对每个节点的 Key 执行两步判断：<ol>
+<li>第一步：比较哈希值：先快速比较目标 Key 的哈希值与节点中 Key 的哈希值。如果不相等，直接跳过（哈希值不同的 Key 一定不是目标）。</li>
+<li>第二步：比较原始键本身：若哈希值相等，再用 equals() 方法（Java）或 == 运算符（C++，需重载）比较原始 Key 的实际内容，确认是否完全一致。</li>
+</ol>
+</li>
+<li>找到匹配项后返回对应的值：当找到某个节点的 Key 与目标 Key 完全相等时，返回该节点的 Value；若遍历完链表仍无匹配，说明哈希表中不存在该 Key。</li>
+</ol>
+</li>
+<li>
+<p>核心思想：</p>
+<ul>
+<li>哈希值用于快速缩小范围：先定位到可能的桶（减少遍历范围），哈希值不同的 Key 直接排除。</li>
+<li>原始键的相等性比较用于最终确认：因为不同的 Key 可能有相同的哈希值（哈希冲突），必须通过原始 Key 的实际内容比对才能确定是否为目标。</li>
+<li>这种 “哈希值粗筛 + 原始键精筛” 的方式，既利用了哈希的高效定位能力，又解决了哈希冲突可能导致的误判问题。</li>
+<li>数组（桶）负责通过哈希值快速定位到大致范围（链表的起点）；</li>
+<li>链表负责存储所有哈希冲突的键值对，每个节点完整保存 key、value 和 next 指针；</li>
+<li>这种设计既保证了哈希表的高效查询（平均 O (1)），又解决了哈希冲突问题。</li>
+</ul>
+</li>
+<li>
+<p>分析：</p>
+<ul>
+<li>桶（数组元素）的作用：数组的每个元素（桶）本质是一个 “指针 / 引用”，指向链表的第一个节点。如果该桶没有哈希冲突（没有键值对映射到这里），则指针为 null。</li>
+<li>链表节点的内容：每个链表节点必须同时存储：<ol>
+<li>key：原始键（用于发生冲突时，通过 equals 比较确认目标）；</li>
+<li>value：键对应的值（哈希表要存储的实际数据）；</li>
+<li>next：指向链表中下一个节点的指针（形成链表结构，存储所有冲突的键值对）。</li>
+</ol>
+</li>
+<li>为什么必须同时存 key 和 value：<ol>
+<li>value 是必须的（哈希表的核心是存储键值对）；</li>
+<li>key 也是必须的：当发生哈希冲突时，多个键值对会存在同一个链表中，必须通过 key 才能区分它们，找到目标键值对。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>举例：
+</p><div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>哈希表数组（table）:
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>+----+    +----+    +----+
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>| 0  | -&gt; |null|    |    |  // 桶0：无冲突，指针为null
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>+----+    +----+    +----+
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>| 1  | -&gt; |节点A| -&gt; |节点B|  // 桶1：有冲突，链表存储多个键值对
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>+----+    +----+    +----+
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>| 2  | -&gt; |null|    |    |  // 桶2：无冲突
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>+----+    +----+    +----+
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>// 链表节点结构（简化）：
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>节点A: {
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>  key: "apple",    // 键
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>  value: 10,       // 值
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>  next: 节点B      // 指向下一个节点的指针
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>}
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>节点B: {
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>  key: "apply",    // 另一个键（与"apple"哈希冲突）
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>  value: 20,       // 对应的值
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>  next: null       // 链表末尾
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a>}
+</code></pre></div></td></tr></tbody></table></div><p></p>
+</li>
+</ul>
+<h4 id="432">4.3.2开放寻址法<a class="headerlink" href="#432" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>核心思想：当哈希冲突发生时，不额外创建链表，而是在哈希表的数组中重新寻找一个空闲的桶（位置）来存储冲突的键值对。</p>
+</li>
+<li>
+<p>具体实现方式：</p>
+<ol>
+<li>线性探测（也叫线性探测再散列法）：如果冲突时，依次检查下一个桶（索引 + 1），直到找到空闲位置。例如键 A 哈希到索引 3，若被占用，则尝试 4、5、6... 直到找到空位。</li>
+<li>二次探测：冲突时，按 “索引 ±1²、±2²、±3²...” 的顺序寻找空闲位置（避免线性探测的 “聚集效应”）。</li>
+<li>双重哈希：冲突时，用第二个哈希函数计算步长，按 “索引 + 步长” 的方式寻找空位（步长与键相关，更分散）。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>[!NOTE] 适用场景：哈希表装载因子（已存储元素 / 数组容量）较低时（通常 &lt; 0.7），查询效率较高。常见于：C++ 的 std::unordered_map 某些实现（视编译器而定）；一些内存敏感的场景（无需额外存储链表指针，节省内存）。</p>
+</blockquote>
+<ul>
+<li>
+<p>优缺点：</p>
+<ol>
+<li>优点：无需指针 / 引用，内存连续性好，缓存利用率高；</li>
+<li>缺点：删除元素复杂（不能直接清空，需标记为 “已删除”），装载因子过高时性能急剧下降。</li>
+</ol>
+</li>
+<li>
+<p>举例
+</p><div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">假设有一个容量为</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">的哈希表</span><span class="err">（</span><span class="n">数组索引</span><span class="w"> </span><span class="mi">0</span><span class="o">~</span><span class="mi">9</span><span class="err">），</span><span class="n">哈希函数为</span><span class="w"> </span><span class="n">h1</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="err">（</span><span class="n">用于计算初始位置</span><span class="err">），</span><span class="n">需要插入的键依次为</span><span class="err">：</span><span class="mi">23</span><span class="err">、</span><span class="mi">13</span><span class="err">、</span><span class="mi">33</span><span class="err">、</span><span class="mi">43</span><span class="err">（</span><span class="n">这些键的初始哈希值都是</span><span class="w"> </span><span class="mi">3</span><span class="err">，</span><span class="n">会发生连续冲突</span><span class="err">）。</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">线性探测</span><span class="err">（</span><span class="n">Linear</span><span class="w"> </span><span class="n">Probing</span><span class="err">）</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">原理</span><span class="err">：</span><span class="n">冲突时</span><span class="err">，</span><span class="n">依次检查下一个索引</span><span class="err">（</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="err">、</span><span class="n">index</span><span class="o">+</span><span class="mf">2.</span><span class="p">..</span><span class="err">），</span><span class="n">直到找到空闲位置</span><span class="err">（</span><span class="n">或哈希表满</span><span class="err">）。</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">插入过程</span><span class="err">：</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">插入</span><span class="w"> </span><span class="mi">23</span><span class="err">：</span><span class="n">h1</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span><span class="o">=</span><span class="mi">23</span><span class="o">%</span><span class="mi">10</span><span class="o">=</span><span class="mi">3</span><span class="err">，</span><span class="n">索引</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">空闲</span><span class="err">，</span><span class="n">直接存入</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">哈希表</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span><span class="err">。</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="n">插入</span><span class="w"> </span><span class="mi">13</span><span class="err">：</span><span class="n">h1</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span><span class="o">=</span><span class="mi">13</span><span class="o">%</span><span class="mi">10</span><span class="o">=</span><span class="mi">3</span><span class="err">，</span><span class="n">索引</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">已被占用</span><span class="err">（</span><span class="n">冲突</span><span class="err">），</span><span class="n">探测下一个位置</span><span class="w"> </span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="o">=</span><span class="mi">4</span><span class="err">，</span><span class="n">空闲</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">存入哈希表</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="err">。</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="n">插入</span><span class="w"> </span><span class="mi">33</span><span class="err">：</span><span class="n">h1</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span><span class="o">=</span><span class="mi">33</span><span class="o">%</span><span class="mi">10</span><span class="o">=</span><span class="mi">3</span><span class="err">，</span><span class="n">索引</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">被占用</span><span class="err">，</span><span class="n">探测</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="n">被</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="n">占用</span><span class="err">），</span><span class="n">再探测</span><span class="w"> </span><span class="mi">5</span><span class="err">（</span><span class="n">空闲</span><span class="err">）→</span><span class="w"> </span><span class="n">存入哈希表</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="err">。</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="n">插入</span><span class="w"> </span><span class="mi">43</span><span class="err">：</span><span class="n">h1</span><span class="p">(</span><span class="mi">43</span><span class="p">)</span><span class="o">=</span><span class="mi">43</span><span class="o">%</span><span class="mi">10</span><span class="o">=</span><span class="mi">3</span><span class="err">，</span><span class="n">探测</span><span class="w"> </span><span class="mi">3</span><span class="err">（</span><span class="n">占用</span><span class="err">）→</span><span class="mi">4</span><span class="err">（</span><span class="n">占用</span><span class="err">）→</span><span class="mi">5</span><span class="err">（</span><span class="n">占用</span><span class="err">）→</span><span class="mi">6</span><span class="err">（</span><span class="n">空闲</span><span class="err">）→</span><span class="w"> </span><span class="n">存入哈希表</span><span class="w"> </span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">43</span><span class="err">。</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="n">结果</span><span class="err">：</span><span class="n">哈希表索引</span><span class="w"> </span><span class="mi">3</span><span class="o">~</span><span class="mi">6</span><span class="w"> </span><span class="n">分别存储</span><span class="err">：</span><span class="mi">23</span><span class="err">、</span><span class="mi">13</span><span class="err">、</span><span class="mi">33</span><span class="err">、</span><span class="mi">43</span><span class="err">。</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="n">二次探测</span><span class="err">（</span><span class="n">Quadratic</span><span class="w"> </span><span class="n">Probing</span><span class="err">）</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="n">原理</span><span class="err">：</span><span class="n">冲突时</span><span class="err">，</span><span class="n">按</span><span class="w"> </span><span class="err">“</span><span class="n">index</span><span class="w"> </span><span class="err">±</span><span class="w"> </span><span class="mi">1</span><span class="n">²</span><span class="err">、±</span><span class="w"> </span><span class="mi">2</span><span class="n">²</span><span class="err">、±</span><span class="w"> </span><span class="mi">3</span><span class="n">²</span><span class="p">...</span><span class="err">”</span><span class="w"> </span><span class="n">的顺序探测</span><span class="err">，</span><span class="n">避免线性探测的</span><span class="w"> </span><span class="err">“</span><span class="n">聚集效应</span><span class="err">”（</span><span class="n">连续占用一片区域</span><span class="err">）。</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="n">插入过程</span><span class="err">（</span><span class="n">仍用上述键和哈希表</span><span class="err">）：</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="n">插入</span><span class="w"> </span><span class="mi">23</span><span class="err">：</span><span class="n">同线性探测</span><span class="err">，</span><span class="n">存入索引</span><span class="w"> </span><span class="mi">3</span><span class="err">。</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="n">插入</span><span class="w"> </span><span class="mi">13</span><span class="err">：</span><span class="n">初始索引</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">冲突</span><span class="err">，</span><span class="n">探测</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="n">²</span><span class="o">=</span><span class="mi">4</span><span class="err">（</span><span class="n">空闲</span><span class="err">）→</span><span class="w"> </span><span class="n">存入索引</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="err">。</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="n">插入</span><span class="w"> </span><span class="mi">33</span><span class="err">：</span><span class="n">初始索引</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">冲突</span><span class="err">，</span><span class="n">探测</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="n">占用</span><span class="err">），</span><span class="n">再探测</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="n">²</span><span class="o">=</span><span class="mi">2</span><span class="err">（</span><span class="n">空闲</span><span class="err">）→</span><span class="w"> </span><span class="n">存入索引</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="err">。</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="n">插入</span><span class="w"> </span><span class="mi">43</span><span class="err">：</span><span class="n">初始索引</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">冲突</span><span class="err">，</span><span class="n">探测</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="n">占用</span><span class="err">）→</span><span class="mi">2</span><span class="err">（</span><span class="n">占用</span><span class="err">），</span><span class="n">再探测</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="n">²</span><span class="o">=</span><span class="mi">7</span><span class="err">（</span><span class="n">空闲</span><span class="err">）→</span><span class="w"> </span><span class="n">存入索引</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">43</span><span class="err">。</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="n">结果</span><span class="err">：</span><span class="n">哈希表索引</span><span class="w"> </span><span class="mi">2</span><span class="err">、</span><span class="mi">3</span><span class="err">、</span><span class="mi">4</span><span class="err">、</span><span class="mi">7</span><span class="w"> </span><span class="n">分别存储</span><span class="err">：</span><span class="mi">33</span><span class="err">、</span><span class="mi">23</span><span class="err">、</span><span class="mi">13</span><span class="err">、</span><span class="mi">43</span><span class="err">（</span><span class="n">分布更分散</span><span class="err">，</span><span class="n">避免连续占用</span><span class="err">）。</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="n">双重哈希</span><span class="err">（</span><span class="n">Double</span><span class="w"> </span><span class="n">Hashing</span><span class="err">）</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="n">原理</span><span class="err">：</span><span class="n">冲突时</span><span class="err">，</span><span class="n">用第二个哈希函数</span><span class="w"> </span><span class="n">h2</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="n">计算</span><span class="w"> </span><span class="err">“</span><span class="n">步长</span><span class="err">”，</span><span class="n">按</span><span class="w"> </span><span class="err">“</span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">h2</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="err">、</span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">h2</span><span class="p">(</span><span class="n">key</span><span class="p">)...</span><span class="err">”</span><span class="w"> </span><span class="n">探测</span><span class="err">（</span><span class="n">步长与键相关</span><span class="err">，</span><span class="n">更分散</span><span class="err">）。</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="n">设定</span><span class="err">：</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="n">第一个哈希函数</span><span class="w"> </span><span class="n">h1</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="err">（</span><span class="n">初始位置</span><span class="err">）；</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="n">第二个哈希函数</span><span class="w"> </span><span class="n">h2</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="err">（</span><span class="n">确保步长不为</span><span class="w"> </span><span class="mi">0</span><span class="err">，</span><span class="n">且与表长互质</span><span class="err">，</span><span class="n">减少重复探测</span><span class="err">）。</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="n">插入过程</span><span class="err">：</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="n">插入</span><span class="w"> </span><span class="mi">23</span><span class="err">：</span><span class="n">h1</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span><span class="o">=</span><span class="mi">3</span><span class="err">，</span><span class="n">空闲</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">存入索引</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span><span class="err">。</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="n">插入</span><span class="w"> </span><span class="mi">13</span><span class="err">：</span><span class="n">h1</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span><span class="o">=</span><span class="mi">3</span><span class="err">（</span><span class="n">冲突</span><span class="err">），</span><span class="n">h2</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span><span class="o">=</span><span class="mi">7</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mi">13</span><span class="o">%</span><span class="mi">7</span><span class="p">)</span><span class="o">=</span><span class="mi">7-6</span><span class="o">=</span><span class="mi">1</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">步长</span><span class="w"> </span><span class="mi">1</span><span class="err">。</span><span class="n">探测</span><span class="w"> </span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="o">=</span><span class="mi">4</span><span class="err">（</span><span class="n">空闲</span><span class="err">）→</span><span class="w"> </span><span class="n">存入索引</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="err">。</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="n">插入</span><span class="w"> </span><span class="mi">33</span><span class="err">：</span><span class="n">h1</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span><span class="o">=</span><span class="mi">3</span><span class="err">（</span><span class="n">冲突</span><span class="err">），</span><span class="n">h2</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span><span class="o">=</span><span class="mi">7</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mi">33</span><span class="o">%</span><span class="mi">7</span><span class="p">)</span><span class="o">=</span><span class="mi">7-5</span><span class="o">=</span><span class="mi">2</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">步长</span><span class="w"> </span><span class="mi">2</span><span class="err">。</span><span class="n">探测</span><span class="w"> </span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="o">=</span><span class="mi">5</span><span class="err">（</span><span class="n">空闲</span><span class="err">）→</span><span class="w"> </span><span class="n">存入索引</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="err">。</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="n">插入</span><span class="w"> </span><span class="mi">43</span><span class="err">：</span><span class="n">h1</span><span class="p">(</span><span class="mi">43</span><span class="p">)</span><span class="o">=</span><span class="mi">3</span><span class="err">（</span><span class="n">冲突</span><span class="err">），</span><span class="n">h2</span><span class="p">(</span><span class="mi">43</span><span class="p">)</span><span class="o">=</span><span class="mi">7</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mi">43</span><span class="o">%</span><span class="mi">7</span><span class="p">)</span><span class="o">=</span><span class="mi">7-1</span><span class="o">=</span><span class="mi">6</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">步长</span><span class="w"> </span><span class="mi">6</span><span class="err">。</span><span class="n">探测</span><span class="w"> </span><span class="mi">3</span><span class="o">+</span><span class="mi">6</span><span class="o">=</span><span class="mi">9</span><span class="err">（</span><span class="n">空闲</span><span class="err">）→</span><span class="w"> </span><span class="n">存入索引</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">43</span><span class="err">。</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="n">结果</span><span class="err">：</span><span class="n">哈希表索引</span><span class="w"> </span><span class="mi">3</span><span class="err">、</span><span class="mi">4</span><span class="err">、</span><span class="mi">5</span><span class="err">、</span><span class="mi">9</span><span class="w"> </span><span class="n">分别存储</span><span class="err">：</span><span class="mi">23</span><span class="err">、</span><span class="mi">13</span><span class="err">、</span><span class="mi">33</span><span class="err">、</span><span class="mi">43</span><span class="err">（</span><span class="n">分布最分散</span><span class="err">，</span><span class="n">冲突概率更低</span><span class="err">）。</span>
+</code></pre></div></td></tr></tbody></table></div><p></p>
+</li>
+</ul>
+<h4 id="433">4.3.3链表 + 红黑树<a class="headerlink" href="#433" title="Permanent link">¶</a></h4>
+<ul>
+<li>核心思想：这是对链表法的优化：当链表长度超过阈值（如 Java 中默认 8），自动将链表转为红黑树。</li>
+<li>
+<p>红黑树的 “左小右大” 特性是实现高效查询的关键：查找时，只需根据键的比较结果，从根节点开始向左或向右遍历（类似二分查找），时间复杂度为 O (log n)，远快于链表的 O (n)。</p>
+</li>
+<li>
+<p>冲突较少时用链表（插入简单，内存开销小）；</p>
+</li>
+<li>冲突较多（链表过长）时转红黑树（查询、删除的时间复杂度从 O (n) 优化为 O (log n)）。</li>
+</ul>
+<p>典型案例：</p>
+<h4 id="434">4.3.4其他方案<a class="headerlink" href="#434" title="Permanent link">¶</a></h4>
+<ul>
+<li>再哈希法：冲突时，用新的哈希函数重新计算哈希值，直到找到空闲桶（但多次哈希可能影响性能）。</li>
+<li>建立公共溢出区：将哈希表分为 “基本表” 和 “溢出表”，冲突的元素统一存到溢出表（类似链表法的集中版，查询时需先查基本表，再查溢出表）。</li>
+</ul>
+<h4 id="435">4.3.5总结对比<a class="headerlink" href="#435" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">方案</th>
+<th style="text-align: left;">核心特点</th>
+<th style="text-align: left;">典型应用</th>
+<th style="text-align: left;">优势</th>
+<th style="text-align: left;">劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">链表法</td>
+<td style="text-align: left;">冲突元素存入链表，挂在对应桶后</td>
+<td style="text-align: left;">多数语言的哈希表默认实现</td>
+<td style="text-align: left;">实现简单，删除方便</td>
+<td style="text-align: left;">链表过长时查询慢</td>
+</tr>
+<tr>
+<td style="text-align: center;">开放寻址法</td>
+<td style="text-align: left;">冲突时在数组内重新找空位</td>
+<td style="text-align: left;">部分 C++ 实现、内存敏感场景</td>
+<td style="text-align: left;">内存连续，缓存友好</td>
+<td style="text-align: left;">删除复杂，装载因子受限</td>
+</tr>
+<tr>
+<td style="text-align: center;">链表 + 红黑树（优化）</td>
+<td style="text-align: left;">短链表用链表，长链表转红黑树</td>
+<td style="text-align: left;">Java HashMap、ConcurrentHashMap</td>
+<td style="text-align: left;">兼顾插入和查询效率</td>
+<td style="text-align: left;">实现复杂</td>
+</tr>
+<tr>
+<td style="text-align: center;">- 开放寻址法的三种实现通过不同的 “探测步长” 解决冲突，其中双重哈希分布最分散，线性探测最简单但易聚集；</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">- 链表 + 红黑树中，冲突的键值对在红黑树中按键的比较顺序有序存储，以保证高效的查询性能。</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="44">4.4装填因子<a class="headerlink" href="#44" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>装填因子（Load Factor）是哈希表的一个核心参数，定义为：装填因子 = 哈希表中已存储的键值对数量 / 哈希表的总容量</p>
+</li>
+<li>
+<p>当装填因子为 0.6 时，意味着哈希表中已使用的空间占总容量的 60%（例如，容量为 100 的哈希表中已存入 60 个键值对）。</p>
+</li>
+<li>
+<p>装填因子的意义：</p>
+<ol>
+<li>与冲突概率正相关：装填因子越大，哈希表越 “满”，键值对之间发生冲突的概率越高；反之，装填因子越小，冲突概率越低，但空间利用率也越低。</li>
+<li>性能平衡点：实际应用中，哈希表的装填因子通常会设置一个阈值（如 0.7、0.6），当实际装填因子超过阈值时，会触发哈希表的 “扩容”（扩大容量并重新哈希所有键值对），以平衡冲突概率和空间利用率。</li>
+</ol>
+</li>
+<li>
+<p>举例：Java HashMap 默认的装填因子阈值为 0.7，当实际装填因子超过 0.7 时，会自动扩容为原来的 2 倍，避免冲突过多导致性能下降。而 0.6 的装填因子意味着更保守的设置，冲突概率更低，但空间利用率稍差。</p>
+</li>
+</ul>
+<h3 id="45">4.5哈希表的实现<a class="headerlink" href="#45" title="Permanent link">¶</a></h3>
+<ul>
+<li>HashMap<ul>
+<li>最常用的哈希表实现，存储键值对（Key-Value），允许 Key 和 Value 为 null。</li>
+<li>底层用数组 + 链表 / 红黑树实现（当链表长度超过阈值时转为红黑树优化查询）。</li>
+<li>线程不安全，适合单线程场景。</li>
+</ul>
+</li>
+<li>HashTable<ul>
+<li>早期的哈希表实现，功能与 HashMap 类似，但线程安全（方法加了 synchronized 锁）。</li>
+<li>不允许 Key 或 Value 为 null，性能比 HashMap 差，现在较少使用（推荐用 ConcurrentHashMap 替代）。</li>
+</ul>
+</li>
+<li>ConcurrentHashMap<ul>
+<li>线程安全的哈希表实现，用于多线程环境。</li>
+<li>采用分段锁（JDK 1.7）或 CAS + synchronized（JDK 1.8）实现高效并发，性能优于 HashTable。</li>
+</ul>
+</li>
+<li>
+<p>HashSet</p>
+<ul>
+<li>基于 HashMap 实现的 “集合”（仅存储键，不存储值）。</li>
+<li>本质是用 HashMap 的 Key 存储元素，Value 存一个空对象（PRESENT），利用哈希表实现元素的快速去重和查询。</li>
+</ul>
+</li>
+<li>
+<p>std::unordered_map</p>
+<ul>
+<li>存储键值对（Key-Value）的哈希表，Key 唯一，通过 Key 快速查询 Value。</li>
+<li>底层用数组 + 链表（或开链法）处理哈希冲突，元素无序（与 std::map 基于红黑树的有序性不同）。</li>
+</ul>
+</li>
+<li>std::unordered_set<ul>
+<li>基于哈希表的 “集合”，仅存储不重复的元素（类似 Java 的 HashSet）。</li>
+<li>底层通常复用 std::unordered_map 的实现（Key 为元素，Value 无实际意义），元素无序。</li>
+<li>集合中存储的是原始键本身，哈希操作仅用于计算存储位置，不会修改原始键。</li>
+</ul>
+</li>
+<li>
+<p>std::unordered_multimap / std::unordered_multiset</p>
+<ul>
+<li>允许 Key 重复的哈希表（multimap 存键值对，multiset 存元素）。</li>
+<li>其他特性与 unordered_map / unordered_set 一致，适合需要存储重复键的场景。</li>
+</ul>
+</li>
+<li>
+<p>举例
+</p><div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">hashCode</span><span class="p">(</span><span class="s">"abc"</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">96354</span><span class="err">，</span><span class="n">hashCode</span><span class="p">(</span><span class="s">"def"</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100884</span><span class="err">；</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">数组长度为</span><span class="w"> </span><span class="mi">10</span><span class="err">，</span><span class="n">取模后</span><span class="err">：</span><span class="mi">96354</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="err">，</span><span class="mi">100884</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="n">索引都是</span><span class="w"> </span><span class="mi">4</span><span class="err">）；</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">底层数组索引</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">的位置会形成链表</span><span class="err">：</span><span class="s">"abc"</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="s">"def"</span><span class="err">（</span><span class="n">存储的是原始字符串</span><span class="err">）；</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">当调用contains</span><span class="p">(</span><span class="s">"def"</span><span class="p">)</span><span class="n">时</span><span class="err">：</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">计算</span><span class="s">"def"</span><span class="n">的哈希值</span><span class="err">→</span><span class="n">取模</span><span class="err">→</span><span class="n">定位到索引</span><span class="w"> </span><span class="mi">4</span><span class="err">；</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="n">遍历链表</span><span class="err">，</span><span class="n">用equals比较每个元素</span><span class="err">，</span><span class="n">找到</span><span class="s">"def"</span><span class="n">并返回true</span><span class="err">。</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="n">查询依赖哈希</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">原始键比对</span><span class="err">：</span><span class="n">先通过哈希快速定位到索引</span><span class="err">，</span><span class="n">再通过原始键的</span><span class="w"> </span><span class="n">equals</span><span class="o">/==</span><span class="w"> </span><span class="n">比对找到具体元素</span><span class="err">，</span><span class="n">兼顾效率和准确性</span><span class="err">。</span>
+</code></pre></div></td></tr></tbody></table></div><p></p>
+</li>
+</ul>
+<h3 id="46">4.6例题<a class="headerlink" href="#46" title="Permanent link">¶</a></h3>
+<h4 id="461">4.6.1题目<a class="headerlink" href="#461" title="Permanent link">¶</a></h4>
+<p>将序列 8 ，10，9，12，15，20散列存储到散列表中，散列表的存储空间是一个下标从 0 开始的一维数组，散列函数为 H (K) = K^2 mod 6，处理冲突采用线性探测再散列法，装填因子为 0.6，则在计算等概率情况下，查找成功的平均查找长度为？</p>
+<h4 id="462">4.6.2解答<a class="headerlink" href="#462" title="Permanent link">¶</a></h4>
+<ul>
+<li>确定散列表容量：<ul>
+<li>散列表容量 = 元素数量 / 装填因子 = 6 / 0.6 = 10，即散列表是下标为 0~9 的数组。(当冲突位置在 9 时，下一个位置会循环到 0)</li>
+</ul>
+</li>
+<li>计算各元素的初始哈希位置
+<div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">H</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="n">²</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="mi">6</span><span class="err">×</span><span class="mi">10</span><span class="o">=</span><span class="mi">60</span><span class="err">，</span><span class="mi">64-60</span><span class="o">=</span><span class="mi">4</span><span class="err">）</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">H</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="n">²</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="mi">6</span><span class="err">×</span><span class="mi">16</span><span class="o">=</span><span class="mi">96</span><span class="err">，</span><span class="mi">100-96</span><span class="o">=</span><span class="mi">4</span><span class="err">）</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">H</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="n">²</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">81</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="err">（</span><span class="mi">6</span><span class="err">×</span><span class="mi">13</span><span class="o">=</span><span class="mi">78</span><span class="err">，</span><span class="mi">81-78</span><span class="o">=</span><span class="mi">3</span><span class="err">）</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">H</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="n">²</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">144</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="err">（</span><span class="mi">6</span><span class="err">×</span><span class="mi">24</span><span class="o">=</span><span class="mi">144</span><span class="err">，</span><span class="mi">144-144</span><span class="o">=</span><span class="mi">0</span><span class="err">）</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">H</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="n">²</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">225</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="err">（</span><span class="mi">6</span><span class="err">×</span><span class="mi">37</span><span class="o">=</span><span class="mi">222</span><span class="err">，</span><span class="mi">225-222</span><span class="o">=</span><span class="mi">3</span><span class="err">）</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="n">H</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="n">²</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">400</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="mi">6</span><span class="err">×</span><span class="mi">66</span><span class="o">=</span><span class="mi">396</span><span class="err">，</span><span class="mi">400-396</span><span class="o">=</span><span class="mi">4</span><span class="err">）</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+<li>用线性探测法处理冲突，确定最终位置及查找长度
+<div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">插入</span><span class="w"> </span><span class="mi">8</span><span class="err">：</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="n">初始位置</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">空闲</span><span class="err">，</span><span class="n">直接存入</span><span class="err">。</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="n">查找长度</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="err">（</span><span class="n">只检查位置</span><span class="w"> </span><span class="mi">4</span><span class="err">）。</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">插入</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="n">初始位置</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">已被</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">占用</span><span class="err">（</span><span class="n">冲突</span><span class="err">），</span><span class="n">探测位置</span><span class="w"> </span><span class="mi">5</span><span class="err">（</span><span class="n">空闲</span><span class="err">），</span><span class="n">存入</span><span class="err">。</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="n">查找长度</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="err">（</span><span class="n">检查位置</span><span class="w"> </span><span class="mi">4</span><span class="err">→</span><span class="mi">5</span><span class="err">）。</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">插入</span><span class="w"> </span><span class="mi">9</span><span class="err">：</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="n">初始位置</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">空闲</span><span class="err">，</span><span class="n">直接存入</span><span class="err">。</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="n">查找长度</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="err">（</span><span class="n">只检查位置</span><span class="w"> </span><span class="mi">3</span><span class="err">）。</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="n">插入</span><span class="w"> </span><span class="mi">12</span><span class="err">：</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">    </span><span class="n">初始位置</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">空闲</span><span class="err">，</span><span class="n">直接存入</span><span class="err">。</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="n">查找长度</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="err">（</span><span class="n">只检查位置</span><span class="w"> </span><span class="mi">0</span><span class="err">）。</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="n">插入</span><span class="w"> </span><span class="mi">15</span><span class="err">：</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="n">初始位置</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">已被</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="n">占用</span><span class="err">（</span><span class="n">冲突</span><span class="err">），</span><span class="n">探测位置</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="n">被</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">占用</span><span class="err">）→</span><span class="n">位置</span><span class="w"> </span><span class="mi">5</span><span class="err">（</span><span class="n">被</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">占用</span><span class="err">）→</span><span class="n">位置</span><span class="w"> </span><span class="mi">6</span><span class="err">（</span><span class="n">空闲</span><span class="err">），</span><span class="n">存入</span><span class="err">。</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="n">查找长度</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="n">检查位置</span><span class="w"> </span><span class="mi">3</span><span class="err">→</span><span class="mi">4</span><span class="err">→</span><span class="mi">5</span><span class="err">→</span><span class="mi">6</span><span class="err">）。</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="n">插入</span><span class="w"> </span><span class="mi">20</span><span class="err">：</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">    </span><span class="n">初始位置</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">已被</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">占用</span><span class="err">（</span><span class="n">冲突</span><span class="err">），</span><span class="n">探测位置</span><span class="w"> </span><span class="mi">5</span><span class="err">（</span><span class="n">被</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">占用</span><span class="err">）→</span><span class="n">位置</span><span class="w"> </span><span class="mi">6</span><span class="err">（</span><span class="n">被</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="n">占用</span><span class="err">）→</span><span class="n">位置</span><span class="w"> </span><span class="mi">7</span><span class="err">（</span><span class="n">空闲</span><span class="err">），</span><span class="n">存入</span><span class="err">。</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">    </span><span class="n">查找长度</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="err">（</span><span class="n">检查位置</span><span class="w"> </span><span class="mi">4</span><span class="err">→</span><span class="mi">5</span><span class="err">→</span><span class="mi">6</span><span class="err">→</span><span class="mi">7</span><span class="err">）。</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+<li>
+<p>计算平均查找长度</p>
+<ul>
+<li>总查找长度 = 1（8） + 2（10） + 1（9） + 1（12） + 4（15） + 4（20） = 13</li>
+</ul>
+</li>
+<li>
+<p>平均查找长度 = 总查找长度 / 元素数量 = 13 / 6 ≈ 2.17</p>
+</li>
+</ul>
+<h2 id="5">5.堆<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<h3 id="51">5.1基础定义<a class="headerlink" href="#51" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>堆(Heap)核心特性是父节点与子节点之间存在严格的大小关系。根据这种关系，堆可分为最小堆和最大堆。</p>
+</li>
+<li>
+<p>最小堆（Min Heap）:任意节点的值小于等于其左右子节点的值，且根节点是整个堆中最小的元素。</p>
+</li>
+<li>
+<p>最大堆（Max Heap）:任意节点的值大于等于其左右子节点的值，且根节点是整个堆中最大的元素。</p>
+</li>
+<li>
+<p>堆逻辑上是一种完全二叉树结构，但通常物理上用数组实现,因为完全二叉树的节点索引有明确规律，可通过数组下标快速定位父节点和子节点：若节点索引为 i（从 1 开始）：则左子节点索引：2*i；右子节点索引：2*i + 1；父节点索引：i/2（向下取整）。这种结构避免了树节点的指针开销，且操作高效（时间复杂度多为 O(log n)）。</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-5.png" data-desc-position="bottom"><img alt="" src="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-5.png"></a></p>
+<h3 id="52">5.2堆化<a class="headerlink" href="#52" title="Permanent link">¶</a></h3>
+<ul>
+<li>堆化（Heapify）：维持堆特性的核心操作</li>
+<li>堆化是当堆的特性被破坏时（如插入新元素或删除根节点后），通过调整节点位置恢复堆特性的过程。分为上浮（Sift Up） 和下沉（Sift Down） 两种</li>
+<li>应用：优先队列、堆排序、Top-K 问题等，依赖堆的高效插入和删除极值特性。</li>
+</ul>
+<h4 id="521">5.2.1上浮（用于插入元素后）<a class="headerlink" href="#521" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-6.png" data-desc-position="bottom"><img alt="" src="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-6.png"></a>
+- 最大堆的插入操作可以简单看成是“结点上浮”。当我们在向最大堆中插入一个结点必须满足完全二叉树的标准，那么被插入结点的位置的是固定的。而且要满足父结点关键字值不小于子结点关键字值，那么就需要去移动父结点和子结点的相互位置关系。</p>
+<ul>
+<li>将元素插入最后一位，再进行向上冒泡，即如果父节点的值小于被插入的元素，父节点下移，被插入的元素上移。时间复杂度取决于树的高度h。而完全二叉树的树的高度为[logn+1]的上取整，所示时间复杂度为O(logn)。</li>
+</ul>
+<h4 id="522">5.2.2下沉（用于删除根节点后）<a class="headerlink" href="#522" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-7.png" data-desc-position="bottom"><img alt="" src="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-7.png"></a>
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-8.png" data-desc-position="bottom"><img alt="" src="../../assets/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-8.png"></a>
+- 当删除根结点20之后明显不是一个完全二叉树，更确切地说被分成了两棵树。需要移动子树的某一个结点来充当该树的根节点，那么在(15,2,14,10,1)这些结点中移动哪一个呢？显然是移动结点1，如果移动了其他结点（比如14，10）就不再是一个完全二叉树了。显然现在看来该二叉树虽然是一个完全二叉树，但是它并不符合最大堆的相关定义，目的是要在删除完成之后，该完全二叉树依然是最大堆。1）、此时在结点（15，2）中选择较大的一个和1做比较，即15 &gt; 1的，所以15上浮到之前的20的结点处。 2）、同第1步类似，找出（14，10）之间较大的和1做比较，即14&gt;1的，所以14上浮到原来15所处的结点。 3）、因为原来14的结点是叶子结点，所以将1放在原来14所处的结点处。</p>
+<ul>
+<li>删除操作的逻辑为，删除堆的根节点，将最后一个节点补到根节点位置，得到一颗不符合规则的堆。再对根节点进行向下冒泡，即如果父节点小于某一孩子或所有孩子，将元素值最大 的孩子与父节点交换。孩子上移，父节点下移，下移后与孩子重复该操作，直到比孩子都大或没有孩子。删除操作向下冒泡，操作时间还是取决于树的高度，时间复杂度为O(logn)</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
+        
+          
+          <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 数据库">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                数据库
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-footer__link md-footer__link--next" aria-label="下一页: 计算机基础">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                计算机基础
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2021 Yanran
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yanran425" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

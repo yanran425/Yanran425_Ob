@@ -1,0 +1,5119 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yanran425.github.io/Yanran425_Ob/ITDev/Qt/">
+      
+      
+        <link rel="prev" href="../MFC/">
+      
+      
+        <link rel="next" href="../Thead/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Qt - Yanran_Ob</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qt" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Yanran_Ob" class="md-header__button md-logo" aria-label="Yanran_Ob" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yanran_Ob
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Qt
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="切换到浅色模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple" aria-label="切换到深色模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_2" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple" aria-label="切换到跟随系统" type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换到跟随系统" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yanran425/Yanran425_Ob" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  欢迎来到 Yanran_Ob
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../C%2B%2B%E4%B8%8ELinux/" class="md-tabs__link">
+          
+  
+  
+  ITDev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AIDev/Claude/" class="md-tabs__link">
+          
+  
+  
+  AIDev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Tools/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  标签索引
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yanran_Ob" class="md-nav__button md-logo" aria-label="Yanran_Ob" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Yanran_Ob
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yanran425/Yanran425_Ob" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到 Yanran_Ob
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITDev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ITDev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E4%B8%8ELinux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++与Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++基础入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++学习路线
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++提高编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++核心编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Java%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux系统编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qt
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.基础介绍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.框架说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.框架说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1窗口类
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aexec1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a.exec()是让应用程序对象（有且仅有1个）进入消息循环机制中，让代码阻塞到当前行。
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="a.exec()是让应用程序对象（有且仅有1个）进入消息循环机制中，让代码阻塞到当前行。">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2工程文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.对象树
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.窗口坐标体系
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.信号和槽
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.信号和槽">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2自定义信号和槽
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3Lambda表达式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6qmainwindow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.QMainWindow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.QMainWindow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1简介
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2常见栏目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.资源文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.对话框
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.对话框">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81qmessagebox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1QMessageBox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2自定义对话框
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3标准对话框
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.控件及使用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.控件及使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1布局
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2按钮
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3复合控件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4组合控件（容器）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5输入控件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6显示控件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#97" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7自定义控件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.事件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1鼠标事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2定时器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103qt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3Qt事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4事件分发器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5事件过滤器
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.绘图
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.绘图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1绘图事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2手动调用绘图事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3绘图设备
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.文件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1文件读写
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2文件信息
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.核心类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.核心类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1基础数据类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2预处理与宏
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3面向对象特性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4模板与泛型编程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5容器类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6字符串处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.7文件与 IO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#138" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.8智能指针
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#139" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.9日期与时间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.10并发与多线程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.11网络编程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.12异常处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.13内存管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.14元编程与反射
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1315gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.15GUI 与用户界面
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1316" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.16国际化与本地化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.其他类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.其他类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141qprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1QProcess
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2动画
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3音效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144qtextedit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.4QTextEdit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145qconcurrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5QConcurrent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.5QConcurrent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1451qtconcurrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5.1QtConcurrent 模块的核心功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1452qfuture-qfuturewatcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5.2QFuture 与 QFutureWatcher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1453" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5.3使用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1454" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5.4与手动管理线程的对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.字符串转换
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16qt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.Qt事件的更深理解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.GUI应用程序的事件处理流程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18qt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.Qt事件处理的五个层次
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19qobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.QObject三大职责
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.事件和信号对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注意事项
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Thead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    操作系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机编译
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIDev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIDev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/Claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/LLM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/Ollama/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ollama
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    科研学术
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E7%BD%91%E5%9D%80%E9%9B%86%E5%90%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网址集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标签索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.基础介绍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.框架说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.框架说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1窗口类
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aexec1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a.exec()是让应用程序对象（有且仅有1个）进入消息循环机制中，让代码阻塞到当前行。
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="a.exec()是让应用程序对象（有且仅有1个）进入消息循环机制中，让代码阻塞到当前行。">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2工程文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.对象树
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.窗口坐标体系
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.信号和槽
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.信号和槽">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2自定义信号和槽
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3Lambda表达式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6qmainwindow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.QMainWindow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.QMainWindow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1简介
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2常见栏目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.资源文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.对话框
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.对话框">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81qmessagebox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1QMessageBox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2自定义对话框
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3标准对话框
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.控件及使用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.控件及使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1布局
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2按钮
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3复合控件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4组合控件（容器）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5输入控件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6显示控件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#97" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7自定义控件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.事件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1鼠标事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2定时器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103qt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3Qt事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4事件分发器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5事件过滤器
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.绘图
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.绘图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1绘图事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2手动调用绘图事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3绘图设备
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.文件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1文件读写
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2文件信息
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.核心类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.核心类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1基础数据类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2预处理与宏
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3面向对象特性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4模板与泛型编程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5容器类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6字符串处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.7文件与 IO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#138" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.8智能指针
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#139" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.9日期与时间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.10并发与多线程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.11网络编程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.12异常处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.13内存管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.14元编程与反射
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1315gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.15GUI 与用户界面
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1316" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.16国际化与本地化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.其他类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.其他类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141qprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1QProcess
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2动画
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3音效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144qtextedit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.4QTextEdit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145qconcurrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5QConcurrent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.5QConcurrent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1451qtconcurrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5.1QtConcurrent 模块的核心功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1452qfuture-qfuturewatcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5.2QFuture 与 QFutureWatcher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1453" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5.3使用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1454" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.5.4与手动管理线程的对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.字符串转换
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16qt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.Qt事件的更深理解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.GUI应用程序的事件处理流程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18qt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.Qt事件处理的五个层次
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19qobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.QObject三大职责
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.事件和信号对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注意事项
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="qt">Qt<a class="headerlink" href="#qt" title="Permanent link">¶</a></h1>
+<h2 id="1">1.基础介绍<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<ul>
+<li>Qt是一个跨平台的C++图形用户界面应用程序框架。它为应用程序开发者提供建立艺术级图形界面所需的所有功能。它是完全面向对象的，很容易扩展，并且允许真正的组件编程。</li>
+<li>1991 奇趣科技</li>
+<li>
+<p>MFC不是跨平台的</p>
+</li>
+<li>
+<p>优势</p>
+<ol>
+<li>跨平台，几乎支持所有的平台</li>
+<li>接口简单，容易上手，学习QT框架对学习其他框架有参考意义。</li>
+<li>一定程度上简化了内存回收机制</li>
+<li>开发效率高，能够快速的构建应用程序。</li>
+<li>有很好的社区氛围，市场份额在缓慢上升。</li>
+<li>可以进行嵌入式开发。</li>
+</ol>
+</li>
+<li>
+<p>成功案例</p>
+<ol>
+<li>Linux桌面环境KDE</li>
+<li>WPS Office 办公软件</li>
+<li>Skype 网络电话</li>
+<li>Google Earth 谷歌地图</li>
+<li>VLC多媒体播放器</li>
+<li>VirtualBox虚拟机软件</li>
+</ol>
+</li>
+</ul>
+<h2 id="2">2.框架说明<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<h3 id="21">2.1窗口类<a class="headerlink" href="#21" title="Permanent link">¶</a></h3>
+<ul>
+<li>窗口共有3种基类</li>
+<li>QWidget</li>
+<li>QMainWindow</li>
+<li>QDialog</li>
+</ul>
+<blockquote>
+<p>[!NOTE] 其实QWidget是父类。QMainWindow和QDialog均继承于QWidget。</p>
+</blockquote>
+<ul>
+<li>
+<p>自定义的窗口类继承于上述三大类，其中<code>Q_OBJECT</code>是一个宏，申明后表示该窗口类可以使用<strong>信号和槽的机制</strong>。</p>
+</li>
+<li>
+<p>main函数<code>main(int argc char *argv[])</code>是程序项目的入口，第二个参数是一个指针数组。main函数里实例化一个应用程序对象和窗口对象，将应用程序对象挂入消息循环机制，窗口对象进行显示。</p>
+</li>
+<li>
+<p>QApplication：包含一个应用程序类的头文件，在Qt中，应用程序对象有且仅有一个。</p>
+</li>
+<li>
+<h2 id="aexec1"><code>a.exec()</code>是让应用程序对象（有且仅有1个）进入消息循环机制中，让代码阻塞到当前行。<a class="headerlink" href="#aexec1" title="Permanent link">¶</a></h2>
+</li>
+</ul>
+<h3 id="22">2.2工程文件<a class="headerlink" href="#22" title="Permanent link">¶</a></h3>
+<ul>
+<li>.pro文件</li>
+<li>Qt包含的模块
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>QT       += core gui
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">模块</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Qt Core</td>
+<td style="text-align: left;">下面其他模块使用的核心基础类（Qt Core是非图形模块）。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt D-Bus</td>
+<td style="text-align: left;">用于通过 D-Bus 协议进行进程间通信的类。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt GUI</td>
+<td style="text-align: left;">图形用户界面 （GUI） 组件的基类。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt Network</td>
+<td style="text-align: left;">使网络编程更轻松、更易移植的类。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt QML</td>
+<td style="text-align: left;">QML 和 JavaScript 语言的类。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt Quick</td>
+<td style="text-align: left;">一个声明性框架，用于构建具有自定义用户界面的高度动态的应用程序。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt Quick Controls</td>
+<td style="text-align: left;">提供轻量级 QML 类，用于为桌面、嵌入式和移动设备创建高性能用户界面。这些类型采用简单的样式体系结构，并且非常高效。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt Quick Dialogs</td>
+<td style="text-align: left;">用于从 Qt 快速应用程序创建系统对话框并与之交互的类。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt Quick Layouts</td>
+<td style="text-align: left;">布局是用于在用户界面中排列基于 Qt Quick 2 的项目的项。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt Quick Test  QML</td>
+<td style="text-align: left;">应用程序的单元测试框架，其中测试用例编写为 JavaScript 函数。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt Test</td>
+<td style="text-align: left;">用于单元测试 Qt 应用程序和库的类。</td>
+</tr>
+<tr>
+<td style="text-align: center;">Qt Widgets</td>
+<td style="text-align: left;">使用C++ widget扩展Qt GUI的类。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>模板变量：告诉qmake为这个应用程序生成哪种makefile。下面是可供使用的选择：<strong>TEMPLATE</strong> = app</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">类型</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">app</td>
+<td style="text-align: left;">建立一个应用程序的makefile。这是默认值，所以如果模板没有被指定，这个将被使用。</td>
+</tr>
+<tr>
+<td style="text-align: center;">lib</td>
+<td style="text-align: left;">建立一个库的makefile。</td>
+</tr>
+<tr>
+<td style="text-align: center;">vcapp</td>
+<td style="text-align: left;">建立一个应用程序的VisualStudio项目文件。</td>
+</tr>
+<tr>
+<td style="text-align: center;">vclib</td>
+<td style="text-align: left;">建立一个库的VisualStudio项目文件。</td>
+</tr>
+<tr>
+<td style="text-align: center;">subdirs</td>
+<td style="text-align: left;">这是一个特殊的模板，它可以创建一个能够进入特定目录并且为一个项目文件生成makefile并且为它调用make的makefile。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>指定生成的应用程序名：<strong>TARGET</strong> = QtDemo</p>
+</li>
+<li>
+<p>工程中包含的头文件/源文件/ui文件/资源文件：
+</p><div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>SOURCES += \
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    main.cpp \
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    mywidget.cpp
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>HEADERS += \
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    mywidget.h
+</code></pre></div></td></tr></tbody></table></div><p></p>
+</li>
+<li>
+<p>配置信息：CONFIG用来告诉qmake关于应用程序的配置信息。</p>
+</li>
+</ul>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>CONFIG += c++17
+</code></pre></div></td></tr></tbody></table></div>
+<h2 id="3">3.对象树<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<ul>
+<li>控件的基类也是窗口类，需要严格指定各个窗口间的关系。</li>
+<li>QObject是以对象树的形式组织起来的。</li>
+<li>当创建一个QObject对象时，QObject的构造函数接收一个QObject指针作为参数，这个参数就是 parent，也就是父对象指针，指向其父对象，创建的这个QObject对象会自动添加到其父对象的children()列表。当父对象析构的时候，这个列表中的所有对象也会被析构。（注意，这里的父对象并不是继承意义上的父类！）</li>
+<li>当创建的对象在堆区时候，如果指定的父亲是QObject派生下来的类或者QObject子类派生下来的类，可以不用管理释放的操作，将对象会放入到对象树中。一定程度上简化了内存回收机制。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Qt.png" data-desc-position="bottom"><img alt="" src="../../assets/Qt.png"></a></p>
+<ul>
+<li>
+<p>QWidget是能够在屏幕上显示的一切组件的父类。QWidget继承自QObject，因此也继承了这种对象树关系。一个孩子自动地成为父组件的一个子组件。因此，它会显示在父组件的坐标系统中，被父组件的边界剪裁。例如，当用户关闭一个对话框的时候，应用程序将其删除，那么，我们希望属于这个对话框的按钮、图标等应该一起被删除。事实就是如此，因为这些都是对话框的子组件。我们也可以自己删除子对象，它们会自动从其父对象列表中删除。比如，当我们删除了一个工具栏时，其所在的主窗口会自动将该工具栏从其子对象列表中删除，并且自动调整屏幕显示。</p>
+</li>
+<li>
+<p>当一个QObject对象在堆上创建的时候，Qt 会同时为其创建一个对象树。不过，对象树中对象的顺序是没有定义的。这意味着，销毁这些对象的顺序也是未定义的。任何对象树中的 QObject对象 delete 的时候，如果这个对象有 parent，则自动将其从 parent 的children() 列表中删除；如果有孩子，则自动 delete 每一个孩子。Qt 保证没有QObject会被 delete 两次，这是由析构顺序决定的。</p>
+</li>
+<li>如果QObject在栈上创建，Qt 保持同样的行为。正常情况下，这也不会发生什么问题。</li>
+</ul>
+<blockquote>
+<p>[!NOTE] 声明的变量名会依次存入一个栈中，当超出作用域的时候最后一个创建的对象会先被作为析构对象，析构时找其parent，在其parent的children()列表中移除该对象，接着对该对象的children()列表中的对象析构，最后析构该对象自身。至此该对象析构完成，接着弹出栈中下一个要被析构的对象，重复执行，这个栈只是记录变量名称的，相当于索引。</p>
+<p>[!NOTE] 非控件或窗口的类的对象也可以设置父对象，其也可以被Qt托管析构。</p>
+</blockquote>
+<h2 id="4">4.窗口坐标体系<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<ul>
+<li>以左上角为原点（0,0），X向右增加，Y向下增加。</li>
+<li>对于嵌套窗口，其坐标是相对于父窗口来说的。</li>
+</ul>
+<h2 id="5">5.信号和槽<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<h3 id="51">5.1原理<a class="headerlink" href="#51" title="Permanent link">¶</a></h3>
+<ul>
+<li>信号槽是 Qt 框架引以为豪的机制之一。所谓信号槽，实际就是观察者模式。<strong>当某个事件发生之后</strong>，比如，按钮检测到自己被点击了一下，<strong>它就会发出一个信号（signal）</strong>。这种发出是没有目的的，类似广播。<strong>如果有对象对这个信号感兴趣，它就会使用连接（connect）函数</strong>，意思是，<strong>将想要处理的信号和自己的一个函数（称为槽（slot））绑定来处理这个信号</strong>。也就是说，<strong>当信号发出时，被连接的槽函数会自动被回调</strong>。这就类似观察者模式：当发生了感兴趣的事件，某一个操作就会被自动触发。</li>
+<li>
+<p>信号槽的优点：松散耦合。信号发送端和接收端本来是没有关联的，通过connect连接将两端耦合在了一起。</p>
+</li>
+<li>
+<p>connect()函数最常用的一般形式：connect(sender, signal, receiver, slot);</p>
+<ol>
+<li>sender：发出信号的对象</li>
+<li>signal：发送对象发出的信号</li>
+<li>receiver：接收信号的对象</li>
+<li>slot：接收对象在接收到信号之后所需要调用的函数（槽函数）</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>[!NOTE] 控件或者是窗口对象可以有一些被触发的事件，触发这些事件就会发出相应的信号，大多数情况下事件和消息合并处理统一为消息；接收方监听到指定消息后执行相应的槽函数。</p>
+</blockquote>
+<h3 id="52">5.2自定义信号和槽<a class="headerlink" href="#52" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>自定义信号：</p>
+<ol>
+<li>写到signals下</li>
+<li>返回值只能是void</li>
+<li>只需要声明，不需要实现</li>
+<li>可以有参数，可以重载</li>
+<li>发送者必须是QObject的子类</li>
+</ol>
+</li>
+<li>
+<p>自定义槽函数</p>
+<ol>
+<li>可以写到public下当作正常的函数（槽函数是普通的成员函数，作为成员函数，会受到 public、private、protected 的影响）</li>
+<li>返回值只能是void</li>
+<li>需要声明，也需要实现</li>
+<li>可以有参数，可以重载</li>
+<li>接收者如果是成员函数，那么其对应的类必须是QObject的子类</li>
+<li>任何成员函数、static 函数、全局函数和 Lambda 表达式都可以作为槽函数</li>
+</ol>
+</li>
+<li>
+<p>手动触发自定义信号</p>
+<ol>
+<li>触发自定义信号要用 <code>emit</code>，eg. emit tea-&gt;hungry();</li>
+</ol>
+</li>
+<li>
+<p>连接信号和槽</p>
+<ol>
+<li>使用connect()函数连接信号和槽。</li>
+<li>信号槽要求信号和槽的参数一致，所谓一致，是参数类型一致</li>
+<li>如果信号和槽的参数不一致，允许的情况是，槽函数的参数可以比信号的少，即便如此，槽函数存在的那些参数的顺序也必须和信号的前面几个一致起来。这是因为，你可以在槽函数中选择忽略信号传来的数据（也就是槽函数的参数比信号的少）。</li>
+<li>一个信号可以和多个槽相连，如果是这种情况，这些槽会一个接一个的被调用，但是它们的<strong>调用顺序是不确定的</strong>。</li>
+<li>多个信号可以连接到一个槽<strong>只要任意一个信号发出，这个槽就会被调用</strong>。</li>
+<li>一个信号可以连接到另外的一个信号，当第一个信号发出时，第二个信号被发出。除此之外，这种信号-信号的形式和信号-槽的形式没有什么区别。</li>
+</ol>
+</li>
+<li>信号和槽重载<ol>
+<li>信号和槽重载时，需要用函数指针指向确定的信号和槽。同时在connect函数中填写新的指针参数。</li>
+</ol>
+</li>
+<li>断开信号和槽<ol>
+<li>使用disconnect()函数断开信号和槽，参数和connect的一样。</li>
+<li>槽可以被取消链接，这种情况并不经常出现，因为<strong>当一个对象delete之后，Qt自动取消所有连接到这个对象上面的槽</strong>。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>[!NOTE] 目标是希望发送者发出信号，监听者接收信号并执行相应的槽函数。期间也可以实现信号连接信号，槽函数内部再发起新的信号。本质是由于信号与槽都是函数，都能写入connect函数中。</p>
+</blockquote>
+<h3 id="53lambda">5.3Lambda表达式<a class="headerlink" href="#53lambda" title="Permanent link">¶</a></h3>
+<ul>
+<li>使用Lambda表达式设置槽函数可以实现槽函数获取其他来源的数据做参数。</li>
+</ul>
+<div class="language-C highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">//Lambda表达式(实现slot的参数比signal的参数多）</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">QPushButton</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">btn6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">QPushButton</span><span class="p">(</span><span class="s">"Lambda"</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">btn6</span><span class="o">-&gt;</span><span class="n">move</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">connect</span><span class="p">(</span><span class="n">btn6</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">QPushButton</span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">btn6</span><span class="p">](</span><span class="n">QString</span><span class="w"> </span><span class="n">foodName</span><span class="o">=</span><span class="s">"wy"</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="p">{</span><span class="n">btn6</span><span class="o">-&gt;</span><span class="n">setText</span><span class="p">(</span><span class="n">foodName</span><span class="p">);}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">);</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="54">5.4总结<a class="headerlink" href="#54" title="Permanent link">¶</a></h3>
+<ul>
+<li>如果槽函数无需明确接收方对象，则可以省略接收方对象这个参数。所以在Lambda表达式中大多数情况下都可以省略第三个参数。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Qt-1.png" data-desc-position="bottom"><img alt="" src="../../assets/Qt-1.png"></a></p>
+<h2 id="6qmainwindow">6.QMainWindow<a class="headerlink" href="#6qmainwindow" title="Permanent link">¶</a></h2>
+<h3 id="61">6.1简介<a class="headerlink" href="#61" title="Permanent link">¶</a></h3>
+<ul>
+<li>QMainWindow是一个为用户提供主窗口程序的类，包含一个菜单栏（menu bar）、多个工具栏(tool bars)、多个锚接部件/浮动窗口(dock widgets)、一个状态栏(status bar)及一个中心部件(central widget)，是许多应用程序的基础，如文本编辑器，图片编辑器等。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Qt-2.png" data-desc-position="bottom"><img alt="" src="../../assets/Qt-2.png"></a></p>
+<h3 id="62">6.2常见栏目<a class="headerlink" href="#62" title="Permanent link">¶</a></h3>
+<ul>
+<li>菜单栏最多只能有1个，创建时不能new QMenuBar，要使用其约束的单例创建方法 MenuBar()。状态栏，中心部件同样最多只能有1个。</li>
+<li>各控件均需要绑定到主窗口上。</li>
+<li>菜单栏可以加子菜单栏，Action，分割线等</li>
+<li>工具栏可以加Action，按钮等Widget子类控件。</li>
+<li>状态栏可以加Label等Widget子类。</li>
+<li>铆接部件本身就是Widget子类。</li>
+</ul>
+<h2 id="7">7.资源文件<a class="headerlink" href="#7" title="Permanent link">¶</a></h2>
+<ul>
+<li>Qt添加资源文件需要先创建资源板块，会生成xxx.qrc的资源文件板块，然后在该资源文件板块中添加资源文件并设置其前缀。</li>
+<li>使用Qt资源<ol>
+<li>“:+前缀名+文件名”</li>
+<li>绝对路径</li>
+<li>在UI界面中图形化选择</li>
+</ol>
+</li>
+<li>在代码中使用Action时用ui-&gt;xxxAction即可索引到。</li>
+</ul>
+<h2 id="8">8.对话框<a class="headerlink" href="#8" title="Permanent link">¶</a></h2>
+<h3 id="81qmessagebox">8.1QMessageBox<a class="headerlink" href="#81qmessagebox" title="Permanent link">¶</a></h3>
+<ul>
+<li>Qt已经封装好的对话框QMessageBox<ol>
+<li>QMessageBox::critical（错误对话框）</li>
+<li>QMessageBox::information（消息对话框）</li>
+<li>QMessageBox::question（提问对话框）</li>
+<li>QMessageBox::warning（警告对话框）</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>[!Note] QMessageBox类有静态成员函数，直接使用静态成员函数就可以创建对话框，创建的对话框都是模态对话框，并且自动show，无需再调用exec或者show</p>
+</blockquote>
+<h3 id="82">8.2自定义对话框<a class="headerlink" href="#82" title="Permanent link">¶</a></h3>
+<ul>
+<li>自定义对话框：QDialog<ol>
+<li>模态对话框（dlg.exec();），有阻塞功能<ol>
+<li>可以创建在栈区</li>
+<li>调用exec()函数实现阻塞</li>
+</ol>
+</li>
+<li>非模态对话框<ol>
+<li>需要建立在堆区保持住</li>
+<li>设置属性为关闭即释放，否则可能存在内存泄漏</li>
+<li>调用show()展示窗口</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="83">8.3标准对话框<a class="headerlink" href="#83" title="Permanent link">¶</a></h3>
+<ul>
+<li>Qt已经内置好的<ol>
+<li>QColorDialog：选择颜色</li>
+<li>QFileDialog：选择文件</li>
+<li>QFontDialog：选择字体</li>
+<li>QInputDialog：允许用户输入一个值，并将其值返回</li>
+<li>QMessageBox：消息对话框</li>
+<li>QProgressDialog：显示操作过程</li>
+</ol>
+</li>
+</ul>
+<h2 id="9">9.控件及使用<a class="headerlink" href="#9" title="Permanent link">¶</a></h2>
+<h3 id="91">9.1布局<a class="headerlink" href="#91" title="Permanent link">¶</a></h3>
+<ol>
+<li>利用容器组合控件（可省略，但是为了便于控制还是组合起来再布局更好）</li>
+<li>容器内垂直水平网格布局</li>
+<li>巧用弹簧</li>
+</ol>
+<h3 id="92">9.2按钮<a class="headerlink" href="#92" title="Permanent link">¶</a></h3>
+<ol>
+<li>普通按钮</li>
+<li>工具按钮（带icon）</li>
+<li>单项选择按钮</li>
+<li>多项选择按钮</li>
+</ol>
+<h3 id="93">9.3复合控件<a class="headerlink" href="#93" title="Permanent link">¶</a></h3>
+<ol>
+<li>列表</li>
+<li>树结构</li>
+<li>表格</li>
+</ol>
+<h3 id="94">9.4组合控件（容器）<a class="headerlink" href="#94" title="Permanent link">¶</a></h3>
+<ol>
+<li>组盒子</li>
+<li>滚动区域</li>
+<li>折叠组</li>
+<li>标签组</li>
+<li>翻页（栈）组</li>
+<li>边框</li>
+<li>浮动窗口</li>
+</ol>
+<h3 id="95">9.5输入控件<a class="headerlink" href="#95" title="Permanent link">¶</a></h3>
+<ol>
+<li>下拉框</li>
+<li>字体下拉框</li>
+<li>单行输入框</li>
+<li>文本输入框（支持加粗倾斜字体颜色等设置）</li>
+<li>纯文本输入框（不支持加粗倾斜字体颜色等设置）</li>
+<li>加减器</li>
+<li>小数加减器</li>
+<li>时间选择框</li>
+<li>日期选择框</li>
+<li>水平/垂直滚动条</li>
+<li>进度条</li>
+</ol>
+<h3 id="96">9.6显示控件<a class="headerlink" href="#96" title="Permanent link">¶</a></h3>
+<ol>
+<li>Label（也可以显示图片、动图）</li>
+<li>浏览器文本</li>
+<li>图像展示</li>
+<li>日历展示</li>
+<li>时刻展示</li>
+<li>进度展示</li>
+</ol>
+<h3 id="97">9.7自定义控件<a class="headerlink" href="#97" title="Permanent link">¶</a></h3>
+<ul>
+<li>自定义控件时要选“从类设计图形”，则会生成相应的UI和C++类，类中可以提供一些对外的功能函数。</li>
+<li>主窗口想要使用自定义控件（类），则新建目标控件的UI对象（通常为Widget）,接着将该对象提升为目标控件的类。</li>
+</ul>
+<h2 id="10">10.事件<a class="headerlink" href="#10" title="Permanent link">¶</a></h2>
+<h3 id="101">10.1鼠标事件<a class="headerlink" href="#101" title="Permanent link">¶</a></h3>
+<ul>
+<li>事件：QEvent，有很多枚举值</li>
+<li>鼠标事件是事件中常用的一类</li>
+<li>当要对控件添加一些默认的（构造和析构）或者被动触发的事件函数时，需要自己重定义一个类（基类与控件的基类相同），然后将控件提升为新建的类，接着在自己新建的类中可以重写很多方法或添加新方法。</li>
+<li>鼠标的信息都记录在了QMouseEvent类中。</li>
+<li>鼠标进入指定范围：enterEvent()；鼠标离开指定范围：leaveEvent()；</li>
+<li>mousePressEvent()，mouseReleaseEvent()，mouseMoveEvent()</li>
+<li>其中mouseMoveEvent函数是当鼠标被追踪时才会检测，例如可能是按键摁下才开始追踪。即默认追踪状态是false，要想时刻追踪移动，需要设置为true。this-&gt;setMouseTracking(true);</li>
+</ul>
+<h3 id="102">10.2定时器<a class="headerlink" href="#102" title="Permanent link">¶</a></h3>
+<ul>
+<li>定时器的目标是：每隔多久发送一次某个信号</li>
+<li>事件的方式<ol>
+<li>定时器本质是利用的事件，重写timerEvent(QTimerEvent *event)函数，参数event自动已经读取到了消息机制中的所有事件和信号，其中每个计时器都有一个timeId唯一标识，event可以区分不同的计时器。</li>
+<li>在构造函数中构造并启动定时器startTimer(1000)，时间单位是毫秒。返回值是int，可以作为该计时器的timeId。</li>
+</ol>
+</li>
+<li>类的方式<ol>
+<li>QTimer是一个定时器的类，调用其对象实例timer的start(500)方法即可启动定时器，实现的效果是该对象实例每0.5s发送一个信号。</li>
+<li>紧接着用connect对信号进行处理即可。</li>
+<li>当有多个定时器的时候再创建新的QTimer对象即可。</li>
+</ol>
+</li>
+</ul>
+<h3 id="103qt">10.3Qt事件<a class="headerlink" href="#103qt" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>事件主要分为两种：</p>
+</li>
+<li>
+<p>在与用户交互时发生。比如按下鼠标（<em>mousePressEvent</em>），敲击键盘（<em>keyPressEvent</em>）等。</p>
+</li>
+<li>
+<p>系统自动发生，比如计时器事件（<em>timerEvent</em>）等。</p>
+</li>
+<li>
+<p>在发生事件时（比如说上面说的按下鼠标），就会产生一个_QEvent_对象（这里是_[QMouseEvent]，为_QEvent_的子类），这个_QEvent_对象会传给当前组件的_event_函数。如果当前组件没有安装<strong>事件过滤器</strong>，则会被_event_函数发放到相应的_xxxEvent_函数中（这里是_mousePressEvent_函数）。</p>
+</li>
+<li>
+<p>当系统产生QEvent对象时，就会传入相应类的event函数并调用。函数的返回值是bool类型，返回值不同有不同的意义。</p>
+</li>
+<li>
+<p>如果传入的事件已被识别并且处理，则需要返回 true，否则返回 false。如果返回值是 true，那么 Qt 会认为这个事件已经处理完毕，不会再将这个事件发送给其它对象，而是会继续处理事件队列中的下一事件。</p>
+</li>
+<li>
+<p>这个函数<code>event()</code>不处理事件本身；根据交付的事件类型，它为该特定类型的事件调用具体的事件处理程序，并根据事件是被接受还是被忽略发送响应。</p>
+</li>
+<li>
+<p>Qt系统在处理事件时，有一种机制叫<strong>事件传播机制</strong>。也就是说，在子组件（比如说一个_QButton_）中发生的事件，调用了子组件的_event_函数之后，还会调用父组件（比如说_QWidget_）的_event_函数。_event_函数的返回值就用于控制这样的一个过程。</p>
+</li>
+</ul>
+<blockquote>
+<p>[!NOTE] 应用程序接收到事件后并不是直接调用相应的执行函数，而是先将事件对象扔给event函数进行事件分发。这个event函数接收的参数是QEvent类型的对象，返回值是bool类型。如果返回true，则说明该分发器已经把这个事件处理了（<strong>这里其实就可以人为的重写分发器函数实现拦截事件和直接处理事件</strong>），如果是false，则说明没处理，得把参数这个对象转发给具体操作的事件处理程序并调用。</p>
+</blockquote>
+<h3 id="104">10.4事件分发器<a class="headerlink" href="#104" title="Permanent link">¶</a></h3>
+<ul>
+<li>一般来说，我们定义的类继承常用的Widget或者Label类，重写event函数时写自己要监听的事件的逻辑，不关注的事件交给父类（常用的Widget或者Label类）的默认event事件处理，否则会导致自己定义的类只能监听自己想要的事件。</li>
+<li>e.type()可以判断是什么类型的事件</li>
+<li>Qt 程序需要在main()函数创建一个QApplication对象，然后调用它的exec()函数。这个函数就是开始 Qt 的事件循环。在执行exec()函数之后，程序将进入事件循环来监听应用程序的事件。当事件发生时，Qt 将创建一个事件对象。</li>
+<li>Qt 中所有事件类都继承于QEvent。在事件对象创建完毕后，Qt 将这个事件对象传递给QObject的event()函数。event()函数并不直接处理事件，而是按照事件对象的类型分派给特定的事件处理函数（event handler）。</li>
+<li>
+<p>event()函数主要用于事件的分发。所以，如果你希望在事件分发之前做一些操作，就可以重写这个event()函数了。例如，我们希望在一个QWidget组件中监听 tab 键的按下，那么就可以继承QWidget，并重写它的event()函数，来达到这个目的。</p>
+</li>
+<li>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Qt-3.png" data-desc-position="bottom"><img alt="" src="../../assets/Qt-3.png"></a></p>
+</li>
+</ul>
+<h3 id="105">10.5事件过滤器<a class="headerlink" href="#105" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>在程序将事件分发到事件分类器前，利用过滤器做拦截。</p>
+</li>
+<li>
+<p>某些应用场景下，需要拦截某个组件发生的事件，让这个事件不再向其他组件进行传播，这时候可以为这个组件或其父组件安装一个事件过滤器（<em>evenFilter</em>）。</p>
+</li>
+<li>
+<p>evenFilter函数有两个参数，一个为具体发生事件的组件，一个为发生的事件（产生的_QEvent_对象）。当事件是我们感兴趣的类型，可以就地进行处理，并令其不再转发给其他组件。函数的返回值也是bool类型，作用跟_even_函数类似，返回true为不再转发，false则让其继续被处理。</p>
+</li>
+<li>
+<p>实际使用中，我们需要对QObject组件调用_installEvenFilter_函数，即为组件安装过滤器，才能使用事件过滤器这个机制。这样，该组件及其子组件的事件就会被监听。这个机制的好处在于不用像重写QEvent和xxxEvent函数一样需要继承Qt的内置类。</p>
+</li>
+<li>
+<p>同事件分发器一样，不过滤的事件抛给父类处理</p>
+</li>
+</ul>
+<div class="language-C highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">//安装事件过滤器</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">ui</span><span class="o">-&gt;</span><span class="n">label_6</span><span class="o">-&gt;</span><span class="n">installEventFilter</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1">//重写过滤器事件</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">myMainWindow::eventFilter</span><span class="p">(</span><span class="n">QObject</span><span class="w"> </span><span class="o">*</span><span class="n">watched</span><span class="p">,</span><span class="w"> </span><span class="n">QEvent</span><span class="w"> </span><span class="o">*</span><span class="n">event</span><span class="p">){...}</span>
+</code></pre></div></td></tr></tbody></table></div>
+<ul>
+<li><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Qt-4.png" data-desc-position="bottom"><img alt="" src="../../assets/Qt-4.png"></a></li>
+</ul>
+<h2 id="11">11.绘图<a class="headerlink" href="#11" title="Permanent link">¶</a></h2>
+<h3 id="111">11.1绘图事件<a class="headerlink" href="#111" title="Permanent link">¶</a></h3>
+<ul>
+<li>绘图事件其实是默认执行的，eventFilter没有过滤掉，event函数分发事件到paintEvent()并调用，只不过这个函数默认是空，所以相当于不绘图，要想绘图直接重写该函数即可。</li>
+<li>过程<ol>
+<li>先初始化一个画家类QPainter painter(this);this指的是当前类的图形区域，即绘图设备。</li>
+<li>设置画笔：QPen pen(QPen pen(QColor(255,0,0),3,Qt::DashLine);    painter.setPen(pen);</li>
+<li>设置抗锯齿能力：painter.setRenderHint(QPainter::Antialiasing);</li>
+<li>移动画家的位置：painter.translate(100,100);</li>
+<li>保存和恢复画家的位置：painter.restore(); painter.restore();</li>
+<li>设置画刷：QBrush brush(Qt::green, Qt::Dense4Pattern);    painter.setBrush(brush);</li>
+<li>绘制图形：painter.drawLine，painter.drawEllipse，painter.drawRect</li>
+<li>绘制字：painter.drawText</li>
+<li>绘制资源图片：painter.drawPixmap(-90, 1,QPixmap(":/pic/Image/LuffyQ.png"));</li>
+</ol>
+</li>
+<li><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Qt-5.png" data-desc-position="bottom"><img alt="" src="../../assets/Qt-5.png"></a></li>
+<li>Qt 的绘图系统实际上是，使用QPainter在QPainterDevice上进行绘制，它们之间使用QPaintEngine进行通讯（也就是翻译QPainter的指令）。</li>
+</ul>
+<h3 id="112">11.2手动调用绘图事件<a class="headerlink" href="#112" title="Permanent link">¶</a></h3>
+<ul>
+<li>重新调用绘图事件，并不能直接显示的调用paintEvent函数，因为它需要参数，必须是事件触发的，而不是显示逻辑调用。</li>
+<li>重新调用绘图事件，应该使用update()或者repaint()，该函数会重新调用paintEvent函数。</li>
+</ul>
+<h3 id="113">11.3绘图设备<a class="headerlink" href="#113" title="Permanent link">¶</a></h3>
+<ul>
+<li>绘图设备是指继承QPaintDevice的子类。常用的是四个这样的类，分别是QPixmap、QBitmap、QImage和 QPicture。其中，<ol>
+<li>QPixmap专门为图像在屏幕上的显示做了优化</li>
+<li>QBitmap是QPixmap的一个子类，它的色深限定为1，可以使用 QPixmap的isQBitmap()函数来确定这个QPixmap是不是一个QBitmap。</li>
+<li>QImage专门为图像的像素级访问做了优化。可以修改像素点img.setPixel(i,j,value)</li>
+<li>QPicture可以记录和重现QPainter的各条命令。用于记绘图指令。</li>
+</ol>
+</li>
+<li>绘图设备相当于一张纸，决定了画在哪个纸上，QWidget的父类是QObject and QPaintDevice。</li>
+<li>可以新建一个QPixmap的绘图设备，在其上绘制后保存至本地。</li>
+<li>可以在QWidget绘图设备上绘制QPixmap绘图设备，类似于纸叠纸</li>
+</ul>
+<h2 id="12">12.文件<a class="headerlink" href="#12" title="Permanent link">¶</a></h2>
+<h3 id="121">12.1文件读写<a class="headerlink" href="#121" title="Permanent link">¶</a></h3>
+<ul>
+<li>文件读取对话框：QString path = QFileDialog::getOpenFileName(this,"打开文件","./");</li>
+<li>读过程<ol>
+<li>创建文件对象：QFile file(path);</li>
+<li>设置打开方式：file.open(QIODevice::ReadOnly);</li>
+<li>读取内容：QByteArray array = file.readAll();，这里读到的是QByteArray；QByteArray array2; while(!file.atEnd()){array += file.readLine();}读的也是QByteArray</li>
+<li>输出内容：注意编码格式转换</li>
+<li>关闭文件对象：file.close();</li>
+</ol>
+</li>
+<li>写过程<ol>
+<li>创建文件对象：QFile file(path);</li>
+<li>设置打开方式：file.open(QIODevice::Append);</li>
+<li>写入内容：file.write("aaaaaaaaa");</li>
+<li>关闭文件对象：file.close();</li>
+</ol>
+</li>
+</ul>
+<h3 id="122">12.2文件信息<a class="headerlink" href="#122" title="Permanent link">¶</a></h3>
+<ul>
+<li>文件信息类：QFileInfo</li>
+<li>过程<ol>
+<li>创建文件信息对象：QFileInfo info(path);</li>
+<li>获取其信息：info.size()&lt;&lt;info.suffix()&lt;&lt;info.fileName()&lt;&lt;info.filePath()&lt;&lt;info.birthTime()&lt;&lt;info.lastModified();，size输出的是字节的大小,data返回的是QDateTime。</li>
+<li>输出内容：qDebug()&lt;&lt;info.birthTime().toString("yyyy/MMdd hh<img alt="🇲🇲" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1f2-1f1f2.svg" title=":mm:">ss")&lt;&lt;info.lastModified();，注意格式转换</li>
+</ol>
+</li>
+</ul>
+<h2 id="13">13.核心类<a class="headerlink" href="#13" title="Permanent link">¶</a></h2>
+<h3 id="131">13.1基础数据类型<a class="headerlink" href="#131" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 类型</strong></th>
+<th><strong>Qt 对应类型</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bool</code></td>
+<td><code>bool</code></td>
+<td>完全兼容，Qt 中无替代类型。</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>char</code></td>
+<td>8 位字符，完全兼容。</td>
+</tr>
+<tr>
+<td><code>wchar_t</code></td>
+<td>通常使用&nbsp;<code>QChar</code></td>
+<td><code>QChar</code>&nbsp;是 16 位 Unicode 字符，替代&nbsp;<code>wchar_t</code>&nbsp;处理国际化文本。</td>
+</tr>
+<tr>
+<td><code>int</code>/<code>long</code></td>
+<td><code>int</code>/<code>qint32</code>/<code>qlonglong</code></td>
+<td><code>qint32</code>&nbsp;等类型保证跨平台长度一致（如&nbsp;<code>qint64</code>&nbsp;始终为 64 位）。</td>
+</tr>
+<tr>
+<td><code>float</code>/<code>double</code></td>
+<td><code>float</code>/<code>double</code></td>
+<td>完全兼容，Qt 中无替代类型。</td>
+</tr>
+<tr>
+<td><code>void*</code></td>
+<td><code>QVariant</code></td>
+<td><code>QVariant</code>&nbsp;是类型安全的通用容器，可存储多种数据类型（类似&nbsp;<code>std::any</code>）。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="132">13.2预处理与宏<a class="headerlink" href="#132" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 特性</strong></th>
+<th><strong>Qt 对应特性</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#define</code></td>
+<td>Qt 特定宏</td>
+<td>Qt 使用宏实现信号槽、元对象系统（如&nbsp;<code>Q_OBJECT</code>、<code>SIGNAL()</code>、<code>SLOT()</code>）。</td>
+</tr>
+<tr>
+<td><code>assert()</code></td>
+<td><code>Q_ASSERT()</code></td>
+<td>Qt 的断言宏，支持调试模式下的条件检查。</td>
+</tr>
+<tr>
+<td><code>__FILE__</code>/<code>__LINE__</code></td>
+<td><code>Q_FUNC_INFO</code></td>
+<td><code>Q_FUNC_INFO</code>&nbsp;提供函数名、文件名和行号信息。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="133">13.3面向对象特性<a class="headerlink" href="#133" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 特性</strong></th>
+<th><strong>Qt 对应特性</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>继承与多态</td>
+<td>Qt 类继承体系</td>
+<td>Qt 类通常继承自&nbsp;<code>QObject</code>，支持信号槽和元对象系统。</td>
+</tr>
+<tr>
+<td>虚函数</td>
+<td>正常使用</td>
+<td>Qt 类可使用 C++ 虚函数机制，同时信号槽基于元对象系统实现动态绑定。</td>
+</tr>
+<tr>
+<td>抽象类</td>
+<td>正常使用</td>
+<td>Qt 支持纯虚函数定义抽象接口。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="134">13.4模板与泛型编程<a class="headerlink" href="#134" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 特性</strong></th>
+<th><strong>Qt 对应特性</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模板类 / 函数</td>
+<td>Qt 模板类</td>
+<td>Qt 提供了大量模板类（如&nbsp;<code>QVector&lt;T&gt;</code>、<code>QMap&lt;K,V&gt;</code>），用法与 STL 类似。</td>
+</tr>
+<tr>
+<td><code>std::function</code></td>
+<td><code>std::function</code>&nbsp;或&nbsp;<code>QtConcurrent</code></td>
+<td>Qt 提供&nbsp;<code>QtConcurrent</code>&nbsp;处理异步任务，也可直接使用 C++11 的&nbsp;<code>std::function</code>。</td>
+</tr>
+<tr>
+<td><code>lambda</code>&nbsp;表达式</td>
+<td>完全支持</td>
+<td>Qt 5+ 支持 C++11 lambda，可用于信号槽连接（如&nbsp;<code>connect(sender, &amp;Sender::signal, [=](){...})</code>）。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="135">13.5容器类<a class="headerlink" href="#135" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>STL 类型</strong></th>
+<th><strong>Qt 对应类</strong></th>
+<th><strong>特点</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>std::vector&lt;T&gt;</code></td>
+<td><code>QVector&lt;T&gt;</code></td>
+<td>动态数组，连续内存存储，性能优于&nbsp;<code>QList</code>（但插入删除效率低）。</td>
+</tr>
+<tr>
+<td><code>std::deque&lt;T&gt;</code></td>
+<td><code>QList&lt;T&gt;</code>&nbsp;或&nbsp;<code>QQueue&lt;T&gt;</code></td>
+<td><code>QQueue</code>&nbsp;是&nbsp;<code>QList</code>&nbsp;的子类，提供队列接口（<code>enqueue</code>/<code>dequeue</code>）。</td>
+</tr>
+<tr>
+<td><code>std::list&lt;T&gt;</code></td>
+<td><code>QList&lt;T&gt;</code></td>
+<td>双向链表（Qt 5 及以前），Qt 6 起改为连续存储（类似&nbsp;<code>QVector</code>）。</td>
+</tr>
+<tr>
+<td><code>std::stack&lt;T&gt;</code></td>
+<td><code>QStack&lt;T&gt;</code></td>
+<td>栈结构，LIFO（后进先出），基于&nbsp;<code>QVector</code>&nbsp;实现。</td>
+</tr>
+<tr>
+<td><code>std::queue&lt;T&gt;</code></td>
+<td><code>QQueue&lt;T&gt;</code></td>
+<td>队列结构，FIFO（先进先出），基于&nbsp;<code>QList</code>&nbsp;实现。</td>
+</tr>
+<tr>
+<td><code>std::set&lt;T&gt;</code></td>
+<td><code>QSet&lt;T&gt;</code></td>
+<td>无序集合，基于哈希表实现，查找效率高（平均 O (1)）。</td>
+</tr>
+<tr>
+<td><code>std::map&lt;K, V&gt;</code></td>
+<td><code>QMap&lt;K, V&gt;</code></td>
+<td>有序映射（按键排序），基于红黑树实现，插入 / 查找效率 O (log n)。</td>
+</tr>
+<tr>
+<td><code>std::unordered_map</code></td>
+<td><code>QHash&lt;K, V&gt;</code></td>
+<td>无序映射，基于哈希表实现，查找效率更高（平均 O (1)）。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>std::deque是一种动态数组与链表结合的混合数据结构,<code>deque</code>维护一个<strong>中控器（通常是指针数组）</strong>，它存储了所有块的地址。中控器本身是动态扩展的，当块数量超过中控器容量时，会重新分配更大的中控器。</li>
+<li>std::stack和std::queue默认底层容器是<code>std::deque</code>（双端队列）</li>
+<li>Qt中没有QDeque</li>
+<li>QStack是基于QVector实现</li>
+<li>QQueue是基于QList实现</li>
+</ul>
+<h3 id="136">13.6字符串处理<a class="headerlink" href="#136" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>STL 类型</strong></th>
+<th><strong>Qt 对应类</strong></th>
+<th><strong>特点</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>std::string</code></td>
+<td><code>QString</code></td>
+<td>Unicode 字符串，支持国际化、正则表达式、编码转换（如 UTF-8/16）。</td>
+</tr>
+<tr>
+<td><code>std::wstring</code></td>
+<td><code>QString</code></td>
+<td><code>QString</code>&nbsp;使用 16 位 Unicode 存储，兼容宽字符需求。</td>
+</tr>
+<tr>
+<td><code>std::stringstream</code></td>
+<td><code>QStringBuilder</code></td>
+<td>高效字符串拼接（使用&nbsp;<code>%</code>&nbsp;操作符），或&nbsp;<code>QString::arg()</code>&nbsp;格式化。</td>
+</tr>
+<tr>
+<td><code>std::regex</code></td>
+<td><code>QRegularExpression</code></td>
+<td>Qt 的正则表达式类，功能更强大，性能更优（基于 PCRE）。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="137-io">13.7文件与 IO<a class="headerlink" href="#137-io" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>STL 类型</strong></th>
+<th><strong>Qt 对应类</strong></th>
+<th><strong>特点</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>std::fstream</code></td>
+<td><code>QFile</code>&nbsp;+&nbsp;<code>QTextStream</code></td>
+<td>文件读写，支持跨平台路径处理、权限控制、文本 / 二进制模式。</td>
+</tr>
+<tr>
+<td><code>std::cout</code>/<code>std::cin</code></td>
+<td><code>QTextStream</code></td>
+<td>控制台输入输出，支持 Unicode 和更灵活的格式化。</td>
+</tr>
+<tr>
+<td><code>std::ifstream</code></td>
+<td><code>QFile</code>&nbsp;+&nbsp;<code>QTextStream</code></td>
+<td>读取文件（文本模式）。</td>
+</tr>
+<tr>
+<td><code>std::ofstream</code></td>
+<td><code>QFile</code>&nbsp;+&nbsp;<code>QTextStream</code></td>
+<td>写入文件（文本模式）。</td>
+</tr>
+<tr>
+<td>文件路径处理</td>
+<td><code>QDir</code>/<code>QFileInfo</code></td>
+<td>Qt 提供跨平台的文件路径处理，自动处理不同操作系统的路径分隔符。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="138">13.8智能指针<a class="headerlink" href="#138" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>STL 类型</strong></th>
+<th><strong>Qt 对应类</strong></th>
+<th><strong>特点</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>std::unique_ptr&lt;T&gt;</code></td>
+<td><code>QScopedPointer&lt;T&gt;</code></td>
+<td>独占所有权的智能指针，对象销毁时自动释放内存。</td>
+</tr>
+<tr>
+<td><code>std::shared_ptr&lt;T&gt;</code></td>
+<td><code>QSharedPointer&lt;T&gt;</code></td>
+<td>共享所有权的智能指针，通过引用计数管理内存。</td>
+</tr>
+<tr>
+<td><code>std::weak_ptr&lt;T&gt;</code></td>
+<td><code>QWeakPointer&lt;T&gt;</code></td>
+<td>弱引用，不控制对象生命周期，用于解决循环引用问题。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="139">13.9日期与时间<a class="headerlink" href="#139" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>STL 类型</strong></th>
+<th><strong>Qt 对应类</strong></th>
+<th><strong>特点</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>std::chrono</code></td>
+<td><code>QDateTime</code>/<code>QTime</code></td>
+<td>日期时间处理，支持时区转换、格式化输出、计时器功能。</td>
+</tr>
+<tr>
+<td><code>std::time_t</code></td>
+<td><code>QDateTime::toTime_t()</code></td>
+<td>与 Unix 时间戳互转。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1310">13.10并发与多线程<a class="headerlink" href="#1310" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 特性</strong></th>
+<th><strong>Qt 对应特性</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>std::thread</code></td>
+<td><code>QThread</code></td>
+<td><code>QThread</code>&nbsp;提供更高级的线程管理（如信号槽、事件循环）。</td>
+</tr>
+<tr>
+<td><code>std::mutex</code></td>
+<td><code>QMutex</code></td>
+<td><code>QMutex</code>&nbsp;支持递归锁和超时机制，功能更丰富。</td>
+</tr>
+<tr>
+<td><code>std::condition_variable</code></td>
+<td><code>QWaitCondition</code></td>
+<td>与&nbsp;<code>QMutex</code>&nbsp;配合使用，实现线程间同步。</td>
+</tr>
+<tr>
+<td><code>std::atomic</code></td>
+<td><code>QAtomicInteger</code></td>
+<td>Qt 的原子操作类，提供平台无关的原子操作。</td>
+</tr>
+<tr>
+<td><code>std::future</code></td>
+<td><code>QFuture</code></td>
+<td><code>QFuture</code>&nbsp;与&nbsp;<code>QtConcurrent</code>&nbsp;配合，处理异步计算结果。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1311">13.11网络编程<a class="headerlink" href="#1311" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>STL 类型</strong></th>
+<th><strong>Qt 对应类</strong></th>
+<th><strong>特点</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>std::socket</code></td>
+<td><code>QTcpSocket</code>/<code>QUdpSocket</code></td>
+<td>跨平台 TCP/UDP 通信，基于事件驱动，支持异步操作。</td>
+</tr>
+<tr>
+<td><code>std::url</code>&nbsp;(C++20)</td>
+<td><code>QUrl</code></td>
+<td>URL 解析与操作，支持编码转换、URL 参数处理。</td>
+</tr>
+<tr>
+<td>原始 socket API</td>
+<td><code>QTcpSocket</code>/<code>QTcpServer</code>/<code>QUdpSocket</code></td>
+<td>Qt 提供高层封装，支持异步通信和事件驱动编程。</td>
+</tr>
+<tr>
+<td>HTTP 客户端</td>
+<td><code>QNetworkAccessManager</code></td>
+<td>支持 HTTP/HTTPS 请求，处理 Cookie、SSL 等。</td>
+</tr>
+<tr>
+<td>WebSocket</td>
+<td><code>QWebSocket</code></td>
+<td>Qt 5.3+ 提供的 WebSocket 协议实现。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1312">13.12异常处理<a class="headerlink" href="#1312" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 特性</strong></th>
+<th><strong>Qt 对应特性</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>try/catch</code></td>
+<td>完全支持</td>
+<td>Qt 代码可正常使用 C++ 异常处理机制，但 Qt 自身很少抛出异常（更倾向返回错误码）。</td>
+</tr>
+<tr>
+<td><code>std::exception</code></td>
+<td>完全支持</td>
+<td>Qt 代码可抛出和捕获标准异常，或自定义异常类。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1313">13.13内存管理<a class="headerlink" href="#1313" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 特性</strong></th>
+<th><strong>Qt 对应特性</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>new</code>/<code>delete</code></td>
+<td>正常使用</td>
+<td>Qt 对象可手动管理内存，也可通过父对象自动管理（如&nbsp;<code>QObject</code>&nbsp;的父子关系）。</td>
+</tr>
+<tr>
+<td>智能指针 (<code>std::unique_ptr</code>,&nbsp;<code>std::shared_ptr</code>)</td>
+<td><code>QScopedPointer</code>,&nbsp;<code>QSharedPointer</code></td>
+<td>Qt 提供类似智能指针，与 Qt 对象的生命周期管理更兼容。</td>
+</tr>
+<tr>
+<td>对象树</td>
+<td>Qt 特有机制</td>
+<td>Qt 对象通过父子关系形成对象树，父对象销毁时自动销毁所有子对象。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1314">13.14元编程与反射<a class="headerlink" href="#1314" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 特性</strong></th>
+<th><strong>Qt 对应特性</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编译时元编程 (模板元)</td>
+<td>较少使用</td>
+<td>Qt 主要通过元对象系统（而非模板元）实现运行时反射。</td>
+</tr>
+<tr>
+<td>反射机制</td>
+<td>Qt 元对象系统</td>
+<td>通过&nbsp;<code>Q_OBJECT</code>&nbsp;宏和&nbsp;<code>QMetaObject</code>&nbsp;类，支持运行时类型信息、属性访问和信号槽。</td>
+</tr>
+<tr>
+<td>RTTI (<code>typeid</code>,&nbsp;<code>dynamic_cast</code>)</td>
+<td>正常使用</td>
+<td>Qt 类可使用 C++ RTTI，但元对象系统提供更强大的类型信息。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1315gui">13.15GUI 与用户界面<a class="headerlink" href="#1315gui" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 特性</strong></th>
+<th><strong>Qt 对应特性</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无（C++ 标准无 GUI）</td>
+<td>Qt Widgets 或 Qt Quick</td>
+<td>Qt Widgets 提供传统桌面控件，Qt Quick 基于 QML 实现现代 UI 设计。</td>
+</tr>
+<tr>
+<td>事件循环</td>
+<td><code>QCoreApplication::exec()</code></td>
+<td>Qt 应用程序的核心，处理窗口事件、定时器等。</td>
+</tr>
+<tr>
+<td>信号与回调</td>
+<td>Qt 信号槽机制</td>
+<td>比 C++ 回调函数更灵活，支持类型安全的跨线程通信。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1316">13.16国际化与本地化<a class="headerlink" href="#1316" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>C++ 特性</strong></th>
+<th><strong>Qt 对应特性</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无标准方案</td>
+<td><code>QString</code>&nbsp;+&nbsp;<code>Qt Linguist</code></td>
+<td><code>QString</code>&nbsp;存储 Unicode 文本，<code>Qt Linguist</code>&nbsp;工具生成翻译文件（.ts/.qm）。</td>
+</tr>
+<tr>
+<td>字符串编码转换</td>
+<td><code>QTextCodec</code></td>
+<td>处理不同字符编码间的转换（如 UTF-8、GBK、Latin1 等）。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="14">14.其他类<a class="headerlink" href="#14" title="Permanent link">¶</a></h2>
+<h3 id="141qprocess">14.1QProcess<a class="headerlink" href="#141qprocess" title="Permanent link">¶</a></h3>
+<p><code>QProcess</code>&nbsp;是 Qt 中管理外部进程的核心类，封装了进程启动、通信、终止等功能，常用方法如下：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>进程启动</strong></td>
+<td><code>start(const QString &amp;program)</code></td>
+<td>启动指定程序（program 为可执行文件路径）</td>
+</tr>
+<tr>
+<td></td>
+<td><code>startDetached(...)</code></td>
+<td>启动独立进程（与主进程脱离关联）</td>
+</tr>
+<tr>
+<td><strong>数据发送</strong></td>
+<td><code>write(const QByteArray &amp;data)</code></td>
+<td>向子进程的标准输入写入数据</td>
+</tr>
+<tr>
+<td><strong>数据接收</strong></td>
+<td><code>readAllStandardOutput()</code></td>
+<td>读取子进程的标准输出数据</td>
+</tr>
+<tr>
+<td></td>
+<td><code>readAllStandardError()</code></td>
+<td>读取子进程的错误输出数据</td>
+</tr>
+<tr>
+<td><strong>进程控制</strong></td>
+<td><code>terminate()</code></td>
+<td>发送终止信号（温和终止，允许清理资源）</td>
+</tr>
+<tr>
+<td></td>
+<td><code>kill()</code></td>
+<td>强制终止进程（立即结束，可能丢失数据）</td>
+</tr>
+<tr>
+<td></td>
+<td><code>waitForFinished(int msecs)</code></td>
+<td>等待进程结束（超时时间 msecs，-1 为无限等）</td>
+</tr>
+<tr>
+<td><strong>状态查询</strong></td>
+<td><code>isOpen()</code></td>
+<td>判断进程是否启动并处于运行状态</td>
+</tr>
+<tr>
+<td></td>
+<td><code>state()</code></td>
+<td>返回进程状态（NotRunning/Starting/Running）</td>
+</tr>
+<tr>
+<td><strong>信号</strong></td>
+<td><code>readyReadStandardOutput()</code></td>
+<td>子进程有标准输出时触发</td>
+</tr>
+<tr>
+<td></td>
+<td><code>readyReadStandardError()</code></td>
+<td>子进程有错误输出时触发</td>
+</tr>
+<tr>
+<td></td>
+<td><code>finished(int exitCode)</code></td>
+<td>子进程结束时触发</td>
+</tr>
+</tbody>
+</table>
+<h3 id="142">14.2动画<a class="headerlink" href="#142" title="Permanent link">¶</a></h3>
+<ul>
+<li>QPropertyAnimation
+<div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">QPropertyAnimation</span><span class="w"> </span><span class="o">*</span><span class="n">animation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QPropertyAnimation</span><span class="p">(</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="s">"geometry"</span><span class="p">);</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">animation</span><span class="o">-&gt;</span><span class="n">setDuration</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">animation</span><span class="o">-&gt;</span><span class="n">setStartValue</span><span class="p">(</span><span class="n">QRect</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">(),</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">(),</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">width</span><span class="p">(),</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">height</span><span class="p">()));</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">animation</span><span class="o">-&gt;</span><span class="n">setEndValue</span><span class="p">(</span><span class="n">QRect</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">(),</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">()</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">width</span><span class="p">(),</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">height</span><span class="p">()));</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">animation</span><span class="o">-&gt;</span><span class="n">setEasingCurve</span><span class="p">(</span><span class="n">QEasingCurve</span><span class="o">::</span><span class="n">OutCurve</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">animation</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+<h3 id="143">14.3音效<a class="headerlink" href="#143" title="Permanent link">¶</a></h3>
+<ul>
+<li>QSound</li>
+<li>需要包含新的模块multimedia
+<div class="language-C highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">QSoundEffect</span><span class="w"> </span><span class="o">*</span><span class="n">startSound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">QSoundEffect</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">startSound</span><span class="o">-&gt;</span><span class="n">setSource</span><span class="p">(</span><span class="n">QUrl</span><span class="o">::</span><span class="n">fromLocalFile</span><span class="p">(</span><span class="s">":/res/TapButtonSound.wav"</span><span class="p">));</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">startSound</span><span class="o">-&gt;</span><span class="n">play</span><span class="p">();</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+<li>可以设置循环播放的次数，设为-1表示一直循环。</li>
+</ul>
+<h3 id="144qtextedit">14.4QTextEdit<a class="headerlink" href="#144qtextedit" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>QTextEdit</strong></th>
+<th><strong>QPlainTextEdit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>设计定位</strong></td>
+<td>富文本编辑器（支持 HTML 格式）</td>
+<td>纯文本编辑器（高效处理大文本）</td>
+</tr>
+<tr>
+<td><strong>性能</strong></td>
+<td>较慢（处理复杂格式）</td>
+<td>较快（专注纯文本，优化大文件性能）</td>
+</tr>
+<tr>
+<td><strong>默认行为</strong></td>
+<td>支持换行（Wrap）</td>
+<td>默认不换行（需手动设置&nbsp;<code>setLineWrapMode</code>）</td>
+</tr>
+<tr>
+<td><strong>文本格式</strong></td>
+<td>支持 HTML 标签（如&nbsp;<code>&lt;b&gt;</code>,&nbsp;<code>&lt;a&gt;</code>）、表格、图片等</td>
+<td>仅支持纯文本（无格式）</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>文档编辑器、聊天窗口（需显示富文本）</td>
+<td>代码编辑器、日志查看器（大文本、无格式需求）</td>
+</tr>
+<tr>
+<td><strong>常用 API</strong></td>
+<td><code>setHtml()</code>,&nbsp;<code>insertHtml()</code></td>
+<td><code>setPlainText()</code>,&nbsp;<code>appendPlainText()</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="145qconcurrent">14.5QConcurrent<a class="headerlink" href="#145qconcurrent" title="Permanent link">¶</a></h3>
+<p>在 Qt 项目中，<code>#include &lt;QtConcurrent/QtConcurrent&gt;</code>&nbsp;引入的是&nbsp;<strong>QtConcurrent 模块</strong>，它提供了一组高级 API，用于简化<strong>并行编程</strong>（多线程任务），让开发者无需手动管理线程池和低级线程同步细节。</p>
+<h4 id="1451qtconcurrent">14.5.1QtConcurrent 模块的核心功能<a class="headerlink" href="#1451qtconcurrent" title="Permanent link">¶</a></h4>
+<p>QtConcurrent 模块提供了三种主要的并行编程模式：
+1. <code>QtConcurrent::run()</code></p>
+<ul>
+<li>功能：在后台线程执行函数或成员函数，返回&nbsp;<code>QFuture</code>&nbsp;对象用于跟踪结果。</li>
+<li>示例：
+    <div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QtConcurrent/QtConcurrent&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="c1">// 普通函数</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">calculateSum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">}</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="c1">// 在后台线程执行</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="n">QFuture</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtConcurrent</span><span class="o">::</span><span class="n">run</span><span class="p">(</span><span class="n">calculateSum</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="c1">// 获取结果（阻塞当前线程，直到完成）</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">future</span><span class="p">.</span><span class="n">result</span><span class="p">();</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+<li>
+<p>并行算法</p>
+</li>
+<li>
+<p>功能：对容器（如&nbsp;<code>QList</code>、<code>QVector</code>）中的元素并行执行操作，包括：</p>
+<ul>
+<li><code>QtConcurrent::map()</code>：对每个元素应用函数。</li>
+<li><code>QtConcurrent::filter()</code>：筛选符合条件的元素。</li>
+<li><code>QtConcurrent::reduce()</code>：合并元素结果。</li>
+</ul>
+</li>
+<li>
+<p>示例：
+    </p><div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">QList</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="c1">// 并行计算每个元素的平方</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">QFuture</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtConcurrent</span><span class="o">::</span><span class="n">map</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="p">});</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="n">future</span><span class="p">.</span><span class="n">waitForFinished</span><span class="p">();</span><span class="w"> </span><span class="c1">// 等待所有任务完成</span>
+</code></pre></div></td></tr></tbody></table></div><p></p>
+</li>
+<li>
+<p><code>QtConcurrent::mappedReduced()</code></p>
+</li>
+<li>
+<p>功能：结合映射（map）和归约（reduce）操作，先并行处理元素，再合并结果。</p>
+</li>
+<li>
+<p>示例：</p>
+<div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">QList</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="c1">// 并行计算总和</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">QFuture</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtConcurrent</span><span class="o">::</span><span class="n">mappedReduced</span><span class="p">(</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="n">numbers</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">// 映射函数：计算平方</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="p">[](</span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">// 归约函数：累加结果</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="n">QtConcurrent</span><span class="o">::</span><span class="n">UnorderedReduce</span><span class="w"> </span><span class="c1">// 归约顺序无关</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="p">);</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">future</span><span class="p">.</span><span class="n">result</span><span class="p">();</span><span class="w"> </span><span class="c1">// 获取最终总和</span>
+</code></pre></div></td></tr></tbody></table></div>
+</li>
+</ul>
+<h4 id="1452qfuture-qfuturewatcher">14.5.2QFuture 与 QFutureWatcher<a class="headerlink" href="#1452qfuture-qfuturewatcher" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong><code>QFuture</code></strong>：表示异步操作的结果，提供查询状态（如&nbsp;<code>isFinished()</code>）、获取结果（如&nbsp;<code>result()</code>）等功能。</li>
+<li><strong><code>QFutureWatcher</code></strong>：用于监视&nbsp;<code>QFuture</code>&nbsp;的进度，支持信号槽机制，适合与 UI 交互。
+    <div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">QFuture</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QtConcurrent</span><span class="o">::</span><span class="n">run</span><span class="p">(...);</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">QFutureWatcher</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">watcher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QFutureWatcher</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1">// 连接信号，任务完成时触发</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">connect</span><span class="p">(</span><span class="n">watcher</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">QFutureWatcher</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">finished</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MyClass</span><span class="o">::</span><span class="n">handleFinished</span><span class="p">);</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="n">watcher</span><span class="o">-&gt;</span><span class="n">setFuture</span><span class="p">(</span><span class="n">future</span><span class="p">);</span><span class="w"> </span><span class="c1">// 设置要监视的 future</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+<h4 id="1453">14.5.3使用场景<a class="headerlink" href="#1453" title="Permanent link">¶</a></h4>
+<p>QtConcurrent 适用于以下场景：</p>
+<ul>
+<li><strong>耗时操作</strong>：如文件读写、网络请求、复杂计算，避免阻塞主线程（UI 线程）。</li>
+<li><strong>数据并行</strong>：对大量数据进行并行处理（如图像 / 视频处理、科学计算）。</li>
+<li><strong>任务并行</strong>：同时执行多个独立任务（如多文件压缩、多 API 调用）。</li>
+</ul>
+<h4 id="1454">14.5.4与手动管理线程的对比<a class="headerlink" href="#1454" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>QtConcurrent</strong></th>
+<th><strong>手动管理线程（QThread）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>复杂度</strong></td>
+<td>低（高级 API，无需管理线程池）</td>
+<td>高（需手动创建 / 销毁线程，处理同步）</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>简单并行任务（如函数调用、容器处理）</td>
+<td>复杂长时间任务（如持续网络监听）</td>
+</tr>
+<tr>
+<td><strong>与 UI 交互</strong></td>
+<td>友好（通过&nbsp;<code>QFutureWatcher</code>&nbsp;和信号槽）</td>
+<td>需谨慎（避免直接在子线程操作 UI）</td>
+</tr>
+<tr>
+<td><strong>资源控制</strong></td>
+<td>自动管理线程池，优化资源使用</td>
+<td>需手动调整线程数量，可能导致资源浪费</td>
+</tr>
+</tbody>
+</table>
+<h2 id="15">15.字符串转换<a class="headerlink" href="#15" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>所属语言 / 库</th>
+<th>编码方式</th>
+<th>内存管理方式</th>
+<th>特点与用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C 风格字符串</td>
+<td>C/C++</td>
+<td>依赖系统（如 ASCII、GBK）</td>
+<td>手动管理（<code>char*</code>）</td>
+<td>以<code>\0</code>结尾的字符数组，用于与 C 库交互，低级别操作（如网络编程）。</td>
+</tr>
+<tr>
+<td><code>std::string</code></td>
+<td>C++ STL</td>
+<td>依赖系统（通常与 C 风格一致）</td>
+<td>自动管理</td>
+<td>C++ 标准字符串，支持动态扩展，提供丰富 API（如<code>substr</code>、<code>find</code>），适合常规使用。</td>
+</tr>
+<tr>
+<td><code>std::wstring</code></td>
+<td>C++ STL</td>
+<td>UTF-16（Windows）或 UTF-32（Linux）</td>
+<td>自动管理</td>
+<td>宽字符字符串，用于 Unicode 编码，解决多语言显示问题（如中文、日文）。</td>
+</tr>
+<tr>
+<td><code>CString</code></td>
+<td>MFC/ATL</td>
+<td>多字节或 Unicode（取决于项目配置）</td>
+<td>自动管理</td>
+<td>MFC 框架的字符串类，主要用于 Windows 桌面应用开发，兼容 MFC 组件。</td>
+</tr>
+<tr>
+<td><code>QString</code></td>
+<td>Qt</td>
+<td>Unicode（UTF-16 内部存储）</td>
+<td>自动管理</td>
+<td>Qt 框架的字符串类，跨平台支持，提供丰富的文本处理功能（如正则表达式、国际化）。</td>
+</tr>
+<tr>
+<td><code>QByteArray</code></td>
+<td>Qt</td>
+<td>原始字节流（无编码限制）</td>
+<td>自动管理</td>
+<td>用于存储原始二进制数据或文本，适合网络通信、文件操作等场景。</td>
+</tr>
+</tbody>
+</table>
+<div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span>
+<span class="normal"><a href="#__codelineno-11-25">25</a></span>
+<span class="normal"><a href="#__codelineno-11-26">26</a></span>
+<span class="normal"><a href="#__codelineno-11-27">27</a></span>
+<span class="normal"><a href="#__codelineno-11-28">28</a></span>
+<span class="normal"><a href="#__codelineno-11-29">29</a></span>
+<span class="normal"><a href="#__codelineno-11-30">30</a></span>
+<span class="normal"><a href="#__codelineno-11-31">31</a></span>
+<span class="normal"><a href="#__codelineno-11-32">32</a></span>
+<span class="normal"><a href="#__codelineno-11-33">33</a></span>
+<span class="normal"><a href="#__codelineno-11-34">34</a></span>
+<span class="normal"><a href="#__codelineno-11-35">35</a></span>
+<span class="normal"><a href="#__codelineno-11-36">36</a></span>
+<span class="normal"><a href="#__codelineno-11-37">37</a></span>
+<span class="normal"><a href="#__codelineno-11-38">38</a></span>
+<span class="normal"><a href="#__codelineno-11-39">39</a></span>
+<span class="normal"><a href="#__codelineno-11-40">40</a></span>
+<span class="normal"><a href="#__codelineno-11-41">41</a></span>
+<span class="normal"><a href="#__codelineno-11-42">42</a></span>
+<span class="normal"><a href="#__codelineno-11-43">43</a></span>
+<span class="normal"><a href="#__codelineno-11-44">44</a></span>
+<span class="normal"><a href="#__codelineno-11-45">45</a></span>
+<span class="normal"><a href="#__codelineno-11-46">46</a></span>
+<span class="normal"><a href="#__codelineno-11-47">47</a></span>
+<span class="normal"><a href="#__codelineno-11-48">48</a></span>
+<span class="normal"><a href="#__codelineno-11-49">49</a></span>
+<span class="normal"><a href="#__codelineno-11-50">50</a></span>
+<span class="normal"><a href="#__codelineno-11-51">51</a></span>
+<span class="normal"><a href="#__codelineno-11-52">52</a></span>
+<span class="normal"><a href="#__codelineno-11-53">53</a></span>
+<span class="normal"><a href="#__codelineno-11-54">54</a></span>
+<span class="normal"><a href="#__codelineno-11-55">55</a></span>
+<span class="normal"><a href="#__codelineno-11-56">56</a></span>
+<span class="normal"><a href="#__codelineno-11-57">57</a></span>
+<span class="normal"><a href="#__codelineno-11-58">58</a></span>
+<span class="normal"><a href="#__codelineno-11-59">59</a></span>
+<span class="normal"><a href="#__codelineno-11-60">60</a></span>
+<span class="normal"><a href="#__codelineno-11-61">61</a></span>
+<span class="normal"><a href="#__codelineno-11-62">62</a></span>
+<span class="normal"><a href="#__codelineno-11-63">63</a></span>
+<span class="normal"><a href="#__codelineno-11-64">64</a></span>
+<span class="normal"><a href="#__codelineno-11-65">65</a></span>
+<span class="normal"><a href="#__codelineno-11-66">66</a></span>
+<span class="normal"><a href="#__codelineno-11-67">67</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1">// std::string → char*</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hello"</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">c_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span><span class="w">        </span><span class="c1">// 返回const char*，指向内部数据</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">non_const_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">          </span><span class="c1">// C++11及以后支持，需确保字符串非空</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="c1">// char* → std::string</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">c_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"World"</span><span class="p">;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">c_str</span><span class="p">);</span><span class="w">                 </span><span class="c1">// 直接构造</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="c1">// 需要使用codecvt或Windows API（不同平台实现不同）</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="c1">// 示例：Windows平台</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="c1">// std::string → std::wstring</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="w"> </span><span class="nf">StringToWString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MultiByteToWideChar</span><span class="p">(</span><span class="n">CP_UTF8</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="w"> </span><span class="n">wstr</span><span class="p">(</span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">    </span><span class="n">MultiByteToWideChar</span><span class="p">(</span><span class="n">CP_UTF8</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">wstr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">wstr</span><span class="p">;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="p">}</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="c1">// std::wstring → std::string</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">WStringToString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="o">&amp;</span><span class="w"> </span><span class="n">wstr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WideCharToMultiByte</span><span class="p">(</span><span class="n">CP_UTF8</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">wstr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="p">(</span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="w">    </span><span class="n">WideCharToMultiByte</span><span class="p">(</span><span class="n">CP_UTF8</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">wstr</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="p">}</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30"></a>
+<a id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="c1">// QString ↔ std::string</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32"></a><span class="n">QString</span><span class="w"> </span><span class="n">qstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QString</span><span class="o">::</span><span class="n">fromStdString</span><span class="p">(</span><span class="n">std_str</span><span class="p">);</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">std_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qstr</span><span class="p">.</span><span class="n">toStdString</span><span class="p">();</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34"></a>
+<a id="__codelineno-11-35" name="__codelineno-11-35"></a><span class="c1">// QString ↔ std::wstring</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36"></a><span class="n">QString</span><span class="w"> </span><span class="n">qstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QString</span><span class="o">::</span><span class="n">fromStdWString</span><span class="p">(</span><span class="n">wstr</span><span class="p">);</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37"></a><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="w"> </span><span class="n">wstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qstr</span><span class="p">.</span><span class="n">toStdWString</span><span class="p">();</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38"></a>
+<a id="__codelineno-11-39" name="__codelineno-11-39"></a><span class="c1">// QString ↔ char*</span>
+<a id="__codelineno-11-40" name="__codelineno-11-40"></a><span class="n">QString</span><span class="w"> </span><span class="n">qstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QString</span><span class="o">::</span><span class="n">fromUtf8</span><span class="p">(</span><span class="n">c_str</span><span class="p">);</span><span class="w">  </span><span class="c1">// 从UTF-8编码的char*转换</span>
+<a id="__codelineno-11-41" name="__codelineno-11-41"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">c_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qstr</span><span class="p">.</span><span class="n">toUtf8</span><span class="p">().</span><span class="n">data</span><span class="p">();</span><span class="w"> </span><span class="c1">// 转换为UTF-8编码的char*</span>
+<a id="__codelineno-11-42" name="__codelineno-11-42"></a>
+<a id="__codelineno-11-43" name="__codelineno-11-43"></a><span class="c1">// QString ↔ QByteArray</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44"></a><span class="n">QString</span><span class="w"> </span><span class="n">qstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"文本"</span><span class="p">;</span>
+<a id="__codelineno-11-45" name="__codelineno-11-45"></a><span class="n">QByteArray</span><span class="w"> </span><span class="n">byteArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qstr</span><span class="p">.</span><span class="n">toUtf8</span><span class="p">();</span><span class="w">      </span><span class="c1">// 转换为UTF-8字节流</span>
+<a id="__codelineno-11-46" name="__codelineno-11-46"></a><span class="n">QString</span><span class="w"> </span><span class="n">qstr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QString</span><span class="o">::</span><span class="n">fromUtf8</span><span class="p">(</span><span class="n">byteArray</span><span class="p">);</span><span class="w"> </span><span class="c1">// 从字节流恢复</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47"></a><span class="n">QByteArray</span><span class="w"> </span><span class="n">byteArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qstr</span><span class="p">.</span><span class="n">toLocal8Bit</span><span class="p">();</span><span class="w"> </span><span class="c1">//转换为本地编码（如 Windows 的 GBK）。</span>
+<a id="__codelineno-11-48" name="__codelineno-11-48"></a><span class="n">QString</span><span class="w"> </span><span class="n">qstr3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QString</span><span class="o">::</span><span class="n">fromLocal8Bit</span><span class="p">(</span><span class="n">byteArray</span><span class="p">);</span><span class="w"> </span><span class="c1">//从本地编码转换</span>
+<a id="__codelineno-11-49" name="__codelineno-11-49"></a>
+<a id="__codelineno-11-50" name="__codelineno-11-50"></a><span class="c1">// QByteArray ↔ char*</span>
+<a id="__codelineno-11-51" name="__codelineno-11-51"></a><span class="n">QByteArray</span><span class="w"> </span><span class="n">byteArray</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">);</span>
+<a id="__codelineno-11-52" name="__codelineno-11-52"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">c_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">byteArray</span><span class="p">.</span><span class="n">data</span><span class="p">();</span><span class="w">      </span><span class="c1">// 直接获取内部指针</span>
+<a id="__codelineno-11-53" name="__codelineno-11-53"></a><span class="n">QByteArray</span><span class="w"> </span><span class="n">byteArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QByteArray</span><span class="o">::</span><span class="n">fromRawData</span><span class="p">(</span><span class="n">c_str</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">);</span><span class="w"> </span><span class="c1">// 从char*创建,size表示数据的字节数，而非字符串长度。`strlen(c_str)`&nbsp;会在第一个&nbsp;`\0`&nbsp;处截断</span>
+<a id="__codelineno-11-54" name="__codelineno-11-54"></a>
+<a id="__codelineno-11-55" name="__codelineno-11-55"></a><span class="c1">// QByteArray ↔ std::string</span>
+<a id="__codelineno-11-56" name="__codelineno-11-56"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">byteArray</span><span class="p">.</span><span class="n">toStdString</span><span class="p">();</span>
+<a id="__codelineno-11-57" name="__codelineno-11-57"></a><span class="n">QByteArray</span><span class="w"> </span><span class="n">byteArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QByteArray</span><span class="o">::</span><span class="n">fromStdString</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-11-58" name="__codelineno-11-58"></a>
+<a id="__codelineno-11-59" name="__codelineno-11-59"></a><span class="c1">// CString ↔ std::string</span>
+<a id="__codelineno-11-60" name="__codelineno-11-60"></a><span class="n">CString</span><span class="w"> </span><span class="n">cstr</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">);</span>
+<a id="__codelineno-11-61" name="__codelineno-11-61"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">std_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CT2A</span><span class="p">(</span><span class="n">cstr</span><span class="p">);</span><span class="w">          </span><span class="c1">// 需要包含 &lt;atlconv.h&gt;</span>
+<a id="__codelineno-11-62" name="__codelineno-11-62"></a><span class="n">CString</span><span class="w"> </span><span class="nf">cstr</span><span class="p">(</span><span class="n">std_str</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<a id="__codelineno-11-63" name="__codelineno-11-63"></a>
+<a id="__codelineno-11-64" name="__codelineno-11-64"></a><span class="c1">// CString ↔ std::wstring</span>
+<a id="__codelineno-11-65" name="__codelineno-11-65"></a><span class="n">CStringW</span><span class="w"> </span><span class="n">cstr</span><span class="p">(</span><span class="sa">L</span><span class="s">"World"</span><span class="p">);</span>
+<a id="__codelineno-11-66" name="__codelineno-11-66"></a><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="w"> </span><span class="n">wstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cstr</span><span class="p">.</span><span class="n">GetBuffer</span><span class="p">();</span>
+<a id="__codelineno-11-67" name="__codelineno-11-67"></a><span class="n">CStringW</span><span class="w"> </span><span class="nf">cstr</span><span class="p">(</span><span class="n">wstr</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+</code></pre></div></td></tr></tbody></table></div>
+<ul>
+<li><code>std::string::c_str()</code>&nbsp;返回的指针仅在字符串对象有效时可用，不要保存该指针。</li>
+<li><code>QByteArray::data()</code>&nbsp;同理，避免在&nbsp;<code>QByteArray</code>&nbsp;销毁后使用其指针。</li>
+<li><code>QByteArray</code>&nbsp;可以存储任意字节（包括&nbsp;<code>\0</code>），但&nbsp;<code>QByteArray::data()</code>&nbsp;返回的 C 风格字符串会在第一个&nbsp;<code>\0</code>&nbsp;处截断。</li>
+<li>若需完整数据（含&nbsp;<code>\0</code>），用&nbsp;<code>QByteArray::constData()</code>&nbsp;或&nbsp;<code>QByteArray::size()</code>。</li>
+</ul>
+<p><a href="https://blog.csdn.net/humanking7/article/details/80913474">[QT]QByteArray与char、int、float(及其数组)之间的互相转化_qbytearray转char数组-CSDN博客</a></p>
+<p><a href="https://blog.csdn.net/delphigbg/article/details/128074322">Qt基础开发之QString与QByteArray详细用法与区别及QString QByteArray互转-CSDN博客</a></p>
+<p><a href="https://blog.csdn.net/superrunner_wujin/article/details/103950512">QT char*,char[],QString,string互相转换-CSDN博客</a></p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>是否包含&nbsp;<code>\0</code></th>
+<th><code>size</code>&nbsp;的值</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C 风格字符串</td>
+<td>否</td>
+<td><code>strlen(c_str)</code></td>
+<td><code>const char* s = "Hello";</code>  <br><code>QByteArray::fromRawData(s, strlen(s));</code></td>
+</tr>
+<tr>
+<td>二进制数据</td>
+<td>是（若&nbsp;<code>\0</code>&nbsp;是有效数据）</td>
+<td><code>sizeof(data)</code>&nbsp;或手动指定字节数</td>
+<td><code>char data[] = { 'A', '\0', 'B' }</code>;<br><code>QByteArray::fromRawData(data, 3);</code></td>
+</tr>
+<tr>
+<td>带&nbsp;<code>\0</code>&nbsp;的字符串</td>
+<td>是</td>
+<td>手动指定完整长度</td>
+<td><code>const char* s = "Hello\0World";</code>  <br><code>QByteArray::fromRawData(s, 11);</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="16qt">16.Qt事件的更深理解<a class="headerlink" href="#16qt" title="Permanent link">¶</a></h2>
+<ul>
+<li>Qt平台将系统产生的消息转变成Qt事件</li>
+<li>Qt事件是一个QEvent（或子类）的对象。一个事件就是一个对象</li>
+<li>有时一个事件包含多个事件类型，比如鼠标事件又可.以分为鼠标按下、双击、和移动多种操作</li>
+<li>事件类型由QEvent类的枚举型QEvent::Type来表示，可由帮助文档进行查询</li>
+<li>Qt事件用于描述程序内部或外部发生的对应动作（描述的是操作系统发生来的消息，一个系统消息对应着一个消息事件）</li>
+<li>任意QObject对象都具备时间处理的能力</li>
+</ul>
+<h2 id="17gui">17.GUI应用程序的事件处理流程<a class="headerlink" href="#17gui" title="Permanent link">¶</a></h2>
+<ol>
+<li>Qt事件产生后会立即被分发到QWidget对象（QObject的子类，如按键QPushButton对象等）</li>
+<li>QWidget对象其内部会有一个event(QEVent*)函数被调用，进行事件处理</li>
+<li>event()根据事件类型调用不同的事件处理函数（默认的子函数）</li>
+<li>在事件处理函数中发送Qt中预定义的信号</li>
+<li>
+<p>调用信号关联的槽函数</p>
+</li>
+<li>
+<p>举个例子说明</p>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Qt-6.png" data-desc-position="bottom"><img alt="" src="../../assets/Qt-6.png"></a>
+1. 用户用鼠标点击按钮（或通过其他输入设备模拟点击）。
+2. 操作系统将 “点击事件” 封装为系统级消息（如 Windows 的&nbsp;<code>WM_LBUTTONUP</code>），转发给正在运行的 Qt 应用程序（<code>QApplication</code>）。
+3. <code>QApplication</code>&nbsp;将系统级事件（如&nbsp;<code>WM_LBUTTONUP</code>）转换为 Qt 框架的统一事件对象（<code>QEvent</code>&nbsp;或其子类，如&nbsp;<code>QMouseEvent</code>）。
+4. <code>QApplication</code>&nbsp;的事件循环通过&nbsp;<code>notify()</code>&nbsp;方法，将事件分发给窗口，这也是Qt事件分发的入口。
+5. 窗口通过事件传播机制（即调用自身的<code>event</code>函数），确定这个事件要传递给目标控件（<code>QPushButton</code>）
+6. 把事件传递给QPushButton。
+7. <code>QPushButton</code>调用&nbsp;<code>QPushButton::event(QEvent* e)</code>。<code>event()</code>&nbsp;函数统一处理各类事件（鼠标、键盘、绘制等）。<code>event()</code>&nbsp;会根据事件类型（如&nbsp;<code>QEvent::MouseButtonRelease</code>），调用对应的具体事件处理函数（如&nbsp;<code>mouseReleaseEvent()</code>）。
+8. 在&nbsp;<code>mouseReleaseEvent()</code>&nbsp;中，Qt 内部逻辑会调用&nbsp;<code>click()</code>&nbsp;函数，标记按钮为 “被点击” 状态。
+9. <code>click()</code>&nbsp;不仅处理视觉反馈（如按钮按下动画），还会触发信号发射（<code>clicked()</code>）的逻辑。
+10. <code>QPushButton</code>&nbsp;继承自&nbsp;<code>QObject</code>，通过&nbsp;<code>clicked()</code>&nbsp;信号通知所有关联的槽函数。
+11. 与&nbsp;<code>clicked()</code>&nbsp;信号关联的槽函数（如&nbsp;<code>onButtonClicked()</code>）被调用，执行用户的业务逻辑。</p>
+<h2 id="18qt">18.Qt事件处理的五个层次<a class="headerlink" href="#18qt" title="Permanent link">¶</a></h2>
+<ol>
+<li>重写paintEvent()、mousePressEvent()等事件处理函数。这是最普通、最简单的形式，同时功能也最简单。</li>
+<li>重写event()函数。event()函数是所有对象的事件入口，QObject和QWidget中的实现，默认是把事件传递给特定的事件处理函数。</li>
+<li>在特定对象上面安装事件过滤器。该过滤器仅过滤该对象接收到的事件。</li>
+<li>在QCoreApplication::instance()上面安装事件过滤器。该过滤器将过滤所有对象的所有事件，因此和notify()函数一样强大，但是它更灵活，因为可以安装多个过滤器。全局的事件过滤器可以看到 disabled 组件上面发出的鼠标事件。全局过滤器有一个问题：只能用在主线程。</li>
+<li>重写QCoreApplication::notify()函数。这是最强大的，和全局事件过滤器一样提供完全控制，并且不受线程的限制。但是全局范围内只能有一个被使用（因为QCoreApplication是单例的）。</li>
+</ol>
+<h2 id="19qobject">19.QObject三大职责<a class="headerlink" href="#19qobject" title="Permanent link">¶</a></h2>
+<ol>
+<li>内存管理</li>
+<li>内省(intropection)</li>
+<li>事件处理机制</li>
+</ol>
+<h2 id="20">20.事件和信号对比<a class="headerlink" href="#20" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>[!NOTE] 先有事件（QEvent），再有信号（SIGNAL）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">事件（QEvent）</th>
+<th style="text-align: center;">信号（SIGNAL）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">与QObject的关系</td>
+<td style="text-align: center;">由具体对象进行处理</td>
+<td style="text-align: center;">由具体对象主动产生</td>
+</tr>
+<tr>
+<td style="text-align: center;">对程序影响</td>
+<td style="text-align: center;">改写事件处理函数可能导致程序行为发生改变</td>
+<td style="text-align: center;">信号是否存在对应的槽函数不会改变程序行为</td>
+</tr>
+<tr>
+<td style="text-align: center;">两者的联系</td>
+<td style="text-align: center;">一般而言，信号在具体的事件处理函数中产生</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Qt中的事件和信号不同</li>
+<li>事件由QObject对象进行处理</li>
+<li>信号由QObject对象触发</li>
+<li>重写事件处理函数可能改变程序行为</li>
+<li>信号的触发不会对程序行为造成影响</li>
+<li>事件处理是在实际工程开发中应用非常普遍的</li>
+</ol>
+<h2 id="_1">注意事项<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>控件穿透</li>
+<li>label设置图标文字动画都可以直接setMovie，setPixmap</li>
+<li>pressEvent和click的先后</li>
+<li>切换widget时状态栏不切换</li>
+<li>button需要设置icon的大小，Label不需要设置pixmap的大小</li>
+<li>Qt动画顺序</li>
+<li>在实现多线程C/S通信时，有一个bug卡了我好久——当有一个C端关闭时，S端会崩溃。我通过类QList和迭代器来存储、访问C端链接的socket，而我在deleteSocket中delete迭代器后还想要访问到它，导致了内存的异常访问，使程序崩溃了。所以把delete *iter改成(*iter)-&gt;deleteLater(); 既可以实现原来释放内存的作用，又不会使程序崩溃</li>
+</ul>
+<div class="language-cpp highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">constexpr</span><span class="w"> </span>
+</code></pre></div></td></tr></tbody></table></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
+        
+          
+          <a href="../MFC/" class="md-footer__link md-footer__link--prev" aria-label="上一页: MFC">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                MFC
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Thead/" class="md-footer__link md-footer__link--next" aria-label="下一页: Thead">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Thead
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2021 Yanran
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yanran425" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

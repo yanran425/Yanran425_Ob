@@ -1,0 +1,3358 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yanran425.github.io/Yanran425_Ob/ITDev/Vue/">
+      
+      
+        <link rel="prev" href="../Thead/">
+      
+      
+        <link rel="next" href="../Web%E5%9F%BA%E7%A1%80/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Vue - Yanran_Ob</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vue" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Yanran_Ob" class="md-header__button md-logo" aria-label="Yanran_Ob" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yanran_Ob
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vue
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="切换到浅色模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple" aria-label="切换到深色模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_2" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple" aria-label="切换到跟随系统" type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换到跟随系统" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yanran425/Yanran425_Ob" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  欢迎来到 Yanran_Ob
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../C%2B%2B%E4%B8%8ELinux/" class="md-tabs__link">
+          
+  
+  
+  ITDev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AIDev/Claude/" class="md-tabs__link">
+          
+  
+  
+  AIDev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Tools/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  标签索引
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yanran_Ob" class="md-nav__button md-logo" aria-label="Yanran_Ob" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Yanran_Ob
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yanran425/Yanran425_Ob" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到 Yanran_Ob
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITDev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ITDev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E4%B8%8ELinux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++与Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++基础入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++学习路线
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++提高编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++核心编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Java%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux系统编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Qt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Thead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12vue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2Vue版本
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13vue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3Vue执行过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.基础语法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.基础语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1命令行创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2模板语法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3渲染
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5计算属性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.各种绑定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.各种绑定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1class绑定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2style绑定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3侦听器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4表单输入绑定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.模板引用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.组件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.组件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1组件组成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2组件嵌套关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53props" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3组件传递数据（props）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4组件事件（组件传递数据）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5透传属性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6插槽（slot）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7组件生命周期
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8动态组件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9异步组件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#510" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10依赖注入
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 组合式API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 组合式API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1选项式和组合式对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2响应式API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3计算属性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4事件处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5侦听器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6生命周期
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7模板引用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#68props" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8组件传参（props）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.9组件事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.自定义指令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.自定义指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1局部自定义指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2全局自定义指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3自定义指令钩子函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    操作系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机编译
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIDev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIDev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/Claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/LLM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/Ollama/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ollama
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    科研学术
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E7%BD%91%E5%9D%80%E9%9B%86%E5%90%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网址集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标签索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12vue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2Vue版本
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13vue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3Vue执行过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.基础语法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.基础语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1命令行创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2模板语法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3渲染
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5计算属性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.各种绑定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.各种绑定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1class绑定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2style绑定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3侦听器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4表单输入绑定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.模板引用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.组件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.组件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1组件组成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2组件嵌套关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53props" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3组件传递数据（props）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4组件事件（组件传递数据）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5透传属性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6插槽（slot）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7组件生命周期
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8动态组件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9异步组件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#510" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10依赖注入
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 组合式API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 组合式API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1选项式和组合式对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2响应式API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3计算属性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4事件处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5侦听器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6生命周期
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7模板引用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#68props" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8组件传参（props）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.9组件事件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.自定义指令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.自定义指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1局部自定义指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2全局自定义指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3自定义指令钩子函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="vue">Vue<a class="headerlink" href="#vue" title="Permanent link">¶</a></h1>
+<h2 id="1">1.简介<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<h3 id="11">1.1定义<a class="headerlink" href="#11" title="Permanent link">¶</a></h3>
+<ul>
+<li>用于构建用户界面的渐进式JavaScript框架</li>
+<li>提供了一套声明式的、组件化的编程模型</li>
+<li>渐进式框架<ul>
+<li>无需构建步骤，渐进式增强静态的HTML</li>
+<li>在任何页面中作为Web Components嵌入</li>
+<li>单页应用（SPA）</li>
+<li>全栈/服务端渲染（SSR）</li>
+<li>Jamstack/静态站点生成（SSG）</li>
+<li>开发桌面端、移动端、WebGL、甚至是命令行终端中的界面</li>
+</ul>
+</li>
+</ul>
+<h3 id="12vue">1.2Vue版本<a class="headerlink" href="#12vue" title="Permanent link">¶</a></h3>
+<ul>
+<li>Vue2，组件风格为<strong>选项式API</strong>（Options API）</li>
+<li>Vue3，组件风格为<strong>组合式API</strong>（Composition API）</li>
+<li><a href="https://cn.vuejs.org/">官网</a></li>
+</ul>
+<h3 id="13vue">1.3Vue执行过程<a class="headerlink" href="#13vue" title="Permanent link">¶</a></h3>
+<ul>
+<li>每个Vue应用都是根据creatApp函数创建的一个新的应用实例。</li>
+<li>在一个Vue项目中有且仅有一个一个Vue的实例对象</li>
+<li>传入creatApp的对象实际上是一个组件，每个应用都需要一个==根组件==，其他组件将作为其==子组件==。</li>
+<li>应用实例必须在调用了.mount()方法后才能渲染出来。这个方法接收一个容器参数，可以是一个实际的DOM元素或者是一个CSS选择器字符串。</li>
+<li>src目录下的assets文件夹存放公共资源，例如图片、公共CSS或者字体图标等。</li>
+</ul>
+<h2 id="2">2.基础语法<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<h3 id="21">2.1命令行创建<a class="headerlink" href="#21" title="Permanent link">¶</a></h3>
+<p>创建项目：<code>npm init vue@latest</code>
+执行项目：<code>cd 项目名</code>、<code>npm install</code>，<code>npm run dev</code></p>
+<h3 id="22">2.2模板语法<a class="headerlink" href="#22" title="Permanent link">¶</a></h3>
+<ol>
+<li>文本插值</li>
+<li>
+<p>最基本的数据绑定形式是文本插值，它使用的是“Mustache”语法（双大括号）</p>
+</li>
+<li>
+<p>属性绑定</p>
+</li>
+<li>双大括号不能在HTML Attributes中使用。想要相应式地绑定Attribute，需要通过v-bind绑定。</li>
+</ol>
+<h3 id="23">2.3渲染<a class="headerlink" href="#23" title="Permanent link">¶</a></h3>
+<ol>
+<li>条件渲染</li>
+</ol>
+<p><code>v-if</code>,<code>v-else</code>,<code>v-else-if</code>,<code>v-show</code></p>
+<ol>
+<li>列表渲染</li>
+</ol>
+<p><code>v-for</code>:不仅能遍历数组中每个元素（<code>(item,index) in results</code>），还可以遍历对象的所有属性（<code>(value,key,index) in results</code>）</p>
+<blockquote>
+<p>[!note] Vue按照“就地更新”的策略来更新通过<code>v-for</code>渲染的列表顺序。需要未每个元素对应的块提供一个唯一的key属性。</p>
+</blockquote>
+<h3 id="24">2.4事件<a class="headerlink" href="#24" title="Permanent link">¶</a></h3>
+<ol>
+<li>事件处理</li>
+</ol>
+<p>使用<code>v-on</code>（简写为<code>@</code>）来监听DOM事件，并在事件触发时执行对应的JS。这个JS可以是函数的形式，也可以直接就是一段JS代码。</p>
+<ul>
+<li>内联事件处理器</li>
+<li>
+<p>方法事件处理器</p>
+</li>
+<li>
+<p>事件参数</p>
+</li>
+</ul>
+<p>事件参数可以获取<code>event</code>对象和通过实践传递数据</p>
+<ol>
+<li>事件修饰符</li>
+</ol>
+<p>Vue为<code>v-on</code>提供了事件修饰符，例如：<code>.stop</code>,<code>.prevent</code>,<code>.once</code>,<code>.enter</code>。</p>
+<ol>
+<li>
+<p>数组变化侦测</p>
+</li>
+<li>
+<p>变更数组:Vue能够侦听响应式数组的变更方法，并在它们被调用时出发相关的更新</p>
+</li>
+</ol>
+<p><code>push()</code>,<code>pop()</code>,<code>shift()</code>,<code>unshift()</code>,<code>splice()</code>,<code>sort</code>,<code>reverse()</code></p>
+<ul>
+<li>替换整个数组:不更改原数组，总是返回个新数组</li>
+</ul>
+<p><code>filter()</code>,<code>concat()</code>,<code>slice()</code></p>
+<h3 id="25">2.5计算属性<a class="headerlink" href="#25" title="Permanent link">¶</a></h3>
+<ul>
+<li>模板中写太多逻辑会让模板变得臃肿，难以维护。推荐使用计算属性来描述依赖响应式状态的复杂逻辑。</li>
+<li>将模板中需要计算的逻辑放到<code>computed</code>的计算属性里边。</li>
+<li>在表达式中调用函数也可以得到和计算属性相同的结果。但是</li>
+</ul>
+<blockquote>
+<p>[!note] 计算属性：计算属性值会基于其响应式依赖被缓存。一个计算属性仅会在其响应式依赖更新时才重新计算。（这个属性值如果没有改变的情况下被多次调用时仅第一次执行运算）</p>
+<p>[!note] 方法：方法总是在重新渲染时发生函数执行运算。（这个属性值如果没有改变的情况下被多次调用时每次都要调用函数执行运算）</p>
+</blockquote>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">computed</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nx">resultContent</span><span class="p">(){</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;</span><span class="mf">0</span><span class="o">?</span><span class="s2">"Yes"</span><span class="o">:</span><span class="s2">"No"</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h2 id="3">3.各种绑定<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<h3 id="31class">3.1class绑定<a class="headerlink" href="#31class" title="Permanent link">¶</a></h3>
+<ul>
+<li>数据绑定的常见需求是操纵元素的CSS class 列表，<code>class</code>是属性，可以用<code>v-bind</code>绑定。</li>
+<li>Vue为<code>class</code>的<code>v-bind</code>提供了特殊的功能增强，除了字符串外，表达式的值也可以是对象或数组。</li>
+<li>如果数组和对象嵌套使用，那么只能是数组嵌套对象。不能对象嵌套数组</li>
+</ul>
+<div class="language-HTML highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">:class</span><span class="o">=</span><span class="s">"{'active':isActive}"</span><span class="p">&gt;</span>class 样式绑定<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="32style">3.2style绑定<a class="headerlink" href="#32style" title="Permanent link">¶</a></h3>
+<ul>
+<li>Vue为<code>style</code>的<code>v-bind</code>提供了特殊的功能增强，除了字符串外，表达式的值也可以是对象或数组。</li>
+<li>一般不用数组，因为<code>style</code>样式本身就是一些键值对，而<code>class</code>是一个值，所以style数组中也是存放对象。</li>
+</ul>
+<div class="language-HTML highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>&nbsp;<span class="p">&lt;</span><span class="nt">p</span> <span class="na">:style</span><span class="o">=</span><span class="s">"{color:activeColor, fontSize:fontsize + 'px',}"</span><span class="p">&gt;</span>style 对象绑定<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="33">3.3侦听器<a class="headerlink" href="#33" title="Permanent link">¶</a></h3>
+<ul>
+<li>侦听器是用来侦听数据的变化的</li>
+<li>使用<code>watch</code>选项在每次响应式属性发生变化时触发一个函数。不是所有的数据都可以侦听，data返回的数据是可以侦听的。</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nx">watch</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="c1">//此处函数名必须和要监听的数据变量一致</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nx">message</span><span class="p">(</span><span class="nx">newValue</span><span class="p">,</span><span class="w"> </span><span class="nx">oldValue</span><span class="p">){</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newValue</span><span class="p">,</span><span class="w"> </span><span class="nx">oldValue</span><span class="p">);</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="34">3.4表单输入绑定<a class="headerlink" href="#34" title="Permanent link">¶</a></h3>
+<ul>
+<li>经常需要将表单输入框中的内容同步给JS中的变量。但是手动连接值绑定和更改事件监听器很麻烦。<code>v-model</code>指令可以简化这个过程的步骤。</li>
+<li>为<code>v-model</code>提供了3个修饰符：<code>.lazy</code>,<code>.number</code>,<code>.trim</code>。</li>
+<li>默认情况下，<code>v-model</code>会在每次input事件后更新数据，添加<code>.lazy</code>后改为每次在change事件后更新数据。</li>
+</ul>
+<div class="language-HTML highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"message2"</span><span class="p">&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message2 }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"checkboxs"</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"message3"</span><span class="p">&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"checkboxs"</span><span class="p">&gt;</span>{{message3}}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">v-model</span><span class="err">.</span><span class="na">lazy</span><span class="o">=</span><span class="s">"message4"</span><span class="p">&gt;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message4 }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h2 id="4">4.模板引用<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Vue的声明性渲染模型抽象了大部分对DOM的直接操作，但在某些情况下仍然需要直接访问底层DOM元素。这时就需要使用<code>ref attribute</code>，挂在结束后引用都会被暴露在<code>this.$refs</code>上。</p>
+</li>
+<li>
+<p>内容改变：{{ 模板语法 }}</p>
+</li>
+<li>属性改变：v-bind:指令</li>
+<li>事件：v-on:click</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="o">&lt;</span><span class="nx">p</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="o">=</span><span class="s2">"a"</span><span class="w"> </span><span class="o">:</span><span class="kd">class</span><span class="o">=</span><span class="s2">"classObject"</span><span class="o">&gt;</span><span class="p">{{</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s2">"hahaha"</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h2 id="5">5.组件<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<h3 id="51">5.1组件组成<a class="headerlink" href="#51" title="Permanent link">¶</a></h3>
+<ul>
+<li>Vue是组件式开发。</li>
+<li>组件的最大优势就是可复用性</li>
+<li>当使用构建步骤时，一般会将Vue组件定义在一个单独的<code>.vue</code>文件中，这被叫做单文件组件（SFC）</li>
+<li>
+<p>组件引用：采用ES6提供的import语句，具体步骤有3步如下：</p>
+</li>
+<li>
+<p>引入组件</p>
+</li>
+<li>注入组件</li>
+<li>显示组件</li>
+</ul>
+<h3 id="52">5.2组件嵌套关系<a class="headerlink" href="#52" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue.png"></a></p>
+<ul>
+<li>
+<p>组件的注册方式</p>
+</li>
+<li>
+<p>局部注册</p>
+</li>
+<li>全局注册：注册一次全局使用，需要写到<code>main.js</code>中。全局注册但是并没有被使用的组件无法在生产打包时自动移除（tree-shaking）。</li>
+</ul>
+<h3 id="53props">5.3组件传递数据（props）<a class="headerlink" href="#53props" title="Permanent link">¶</a></h3>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// Parent.vue</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="o">&lt;</span><span class="nx">f06_comp</span><span class="w"> </span><span class="nx">title</span><span class="o">=</span><span class="s2">"Parent 数据"</span><span class="w"> </span><span class="nx">demo</span><span class="o">=</span><span class="s2">"测试"</span><span class="w"> </span><span class="o">:</span><span class="nx">msg</span><span class="o">=</span><span class="s2">"message"</span><span class="o">/&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c1">// Child.vue</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">props</span><span class="o">:</span><span class="p">[</span><span class="s2">"title"</span><span class="p">,</span><span class="s2">"demo"</span><span class="p">,</span><span class="w"> </span><span class="s2">"msg"</span><span class="p">]</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">}</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="c1">// Child2.vue</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="p">{</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">props</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">age</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">type</span><span class="o">:</span><span class="nb">Number</span><span class="p">,</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">default</span><span class="o">:</span><span class="mf">0</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="p">},</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">demo</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">type</span><span class="o">:</span><span class="p">[</span><span class="nb">String</span><span class="p">,</span><span class="w"> </span><span class="nb">Number</span><span class="p">,</span><span class="w"> </span><span class="nb">Array</span><span class="p">,</span><span class="w"> </span><span class="nb">Object</span><span class="p">]</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="p">},</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">msg</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">type</span><span class="o">:</span><span class="nb">String</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="p">}</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1">//数字和字符串可以直接default,数组和对象必须通过工厂函数返回默认值。</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">&nbsp; &nbsp; </span><span class="p">}</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div>
+<ul>
+<li>
+<p>通过<code>props</code>传递数据，不仅可以传递字符串类型的数据，还可以传递数字、对象、数组等类型的数据。</p>
+</li>
+<li>
+<p>props是只读的，无法修改父类的值，也就是说只能传参，不能有返回值。</p>
+</li>
+<li>
+<p>通过传函数，能实现子传父。</p>
+</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span>
+<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">//父</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="o">&lt;</span><span class="nx">f07_comp</span><span class="w"> </span><span class="nx">demo</span><span class="o">=</span><span class="mf">20</span><span class="w"> </span><span class="o">:</span><span class="nx">msg</span><span class="o">=</span><span class="nx">message</span><span class="w"> </span><span class="o">:</span><span class="nx">names</span><span class="o">=</span><span class="s2">"names"</span><span class="w"> </span><span class="o">:</span><span class="nx">onEvent</span><span class="o">=</span><span class="s2">"dataFn"</span><span class="o">/&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="nx">dataFn</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">message2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">}</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="c1">//子</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">{{</span><span class="w"> </span><span class="nx">onEvent</span><span class="p">(</span><span class="s2">"要传递的数据"</span><span class="p">)</span><span class="w"> </span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="54">5.4组件事件（组件传递数据）<a class="headerlink" href="#54" title="Permanent link">¶</a></h3>
+<ul>
+<li>在组件的模板表达式中，可以直接使用<code>$emit</code>方法触发自定义事件</li>
+<li>触发自定义事件的目的是组件之间的传递数据，实现了子类传父类的数据，也就是返回值。但是是通过事件触发的。</li>
+<li>动态子传父可以用v-model结合watch侦察器实现。</li>
+</ul>
+<blockquote>
+<p>[!note] props:父传子</p>
+<p>[!note] 自定义事件：子传父</p>
+</blockquote>
+<h3 id="55">5.5透传属性<a class="headerlink" href="#55" title="Permanent link">¶</a></h3>
+<ul>
+<li>传递给一个组件，通常直接传class,style,id</li>
+<li>当一个组件以单个元素为根作渲染时（即==唯一根元素==），透传的属性会自动被添加到根元素上。</li>
+<li>设置为false可以禁用透传属性&nbsp; &nbsp; inheritAttrs:false,</li>
+</ul>
+<h3 id="56slot">5.6插槽（slot）<a class="headerlink" href="#56slot" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>组件能够接收任意类型的JS值作为props。如果要为子组件传一些模板片段，让子组件渲染这些片段，就要用到插槽。</p>
+</li>
+<li>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue-1.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue-1.png"></a></p>
+</li>
+<li>
+<p>插槽内容可以访问到父组件的数据作用域，因为插槽内容本身是在父组件模板中定义的。</p>
+</li>
+<li>
+<p>如果插槽没有传递任何内容，可以设置默认值</p>
+</li>
+<li>
+<p>通过给模板添加具体的v-slot，实现具名插槽</p>
+</li>
+<li>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue-2.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue-2.png"></a></p>
+</li>
+<li>
+<p>在某些情况下，插槽内容想要同时使用父组件和子组件的数据，可以向一个插槽的出口传递属性参数。</p>
+</li>
+</ul>
+<h3 id="57">5.7组件生命周期<a class="headerlink" href="#57" title="Permanent link">¶</a></h3>
+<ul>
+<li>从Vue组件被创建开始到其被卸载，这整个过程叫做该Vue组件的生命周期。</li>
+<li>在此期间，Vue组件需要设置数据侦听，编译模板，挂载实例到DOM等。这些过程执行的那个相应的函数叫做生命周期钩子函数，这个函数无需调用，是自动执行的。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue-3.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue-3.png"></a>
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue-4.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue-4.png"></a>
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue-5.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue-5.png"></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">时期</th>
+<th style="text-align: center;">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">创建期</td>
+<td style="text-align: center;">beforeCreate, created</td>
+</tr>
+<tr>
+<td style="text-align: center;">挂载期</td>
+<td style="text-align: center;">beforeMount, mounted</td>
+</tr>
+<tr>
+<td style="text-align: center;">更新期</td>
+<td style="text-align: center;">beforeUpdate, updated</td>
+</tr>
+<tr>
+<td style="text-align: center;">销毁期</td>
+<td style="text-align: center;">beforeUnmount, Unmounted</td>
+</tr>
+</tbody>
+</table>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">beforeCreate</span><span class="p">(){</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"组件创建之前"</span><span class="p">);</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">&nbsp; &nbsp; </span><span class="p">},</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">created</span><span class="p">(){</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"组件创建之后"</span><span class="p">);</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">&nbsp; &nbsp; </span><span class="p">},</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">beforeMount</span><span class="p">(){</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"组件渲染之前"</span><span class="p">);</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">&nbsp; &nbsp; </span><span class="p">},</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">mounted</span><span class="p">(){</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"组件渲染之后"</span><span class="p">);</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">&nbsp; &nbsp; </span><span class="p">},</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">beforeUpdate</span><span class="p">(){</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"组件更新之前"</span><span class="p">);</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">&nbsp; &nbsp; </span><span class="p">},</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">updated</span><span class="p">(){</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"组件创建之后"</span><span class="p">);</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">&nbsp; &nbsp; </span><span class="p">},</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">beforeUnmount</span><span class="p">(){</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"组件销毁之前"</span><span class="p">);</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">&nbsp; &nbsp; </span><span class="p">},</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">unmounted</span><span class="p">(){</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"组件销毁之后"</span><span class="p">);</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">&nbsp; &nbsp; </span><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="58">5.8动态组件<a class="headerlink" href="#58" title="Permanent link">¶</a></h3>
+<ul>
+<li>多个组件动态切换显示.</li>
+<li>当使用<code>&lt;component is=""&gt;</code>在多个组件间切换时，被切换掉的组件会被卸载。可以通过<code>&lt;keep-alive&gt;</code>组件强制被切换掉的组件仍然保持存活状态。</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">//不保持组件存活</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="o">&lt;</span><span class="nx">component</span><span class="w"> </span><span class="o">:</span><span class="nx">is</span><span class="o">=</span><span class="s2">"tabComponent"</span><span class="o">&gt;&lt;</span><span class="err">/component&gt;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="err">@</span><span class="nx">click</span><span class="o">=</span><span class="s2">"changeHandle"</span><span class="o">&gt;</span><span class="nx">切换组件</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="nx">changeHandle</span><span class="p">(){</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">tabComponent</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">tabComponent</span><span class="o">==</span><span class="s2">"f10_comp"</span><span class="o">?</span><span class="s2">"f11_comp"</span><span class="o">:</span><span class="s2">"f10_comp"</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="p">}</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="c1">//保持组件存活</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="o">&lt;</span><span class="nx">keep</span><span class="o">-</span><span class="nx">alive</span><span class="o">&gt;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">component</span><span class="w"> </span><span class="o">:</span><span class="nx">is</span><span class="o">=</span><span class="s2">"tabComponent"</span><span class="o">&gt;&lt;</span><span class="err">/component&gt;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="o">&lt;</span><span class="err">/keep-alive&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="59">5.9异步组件<a class="headerlink" href="#59" title="Permanent link">¶</a></h3>
+<ul>
+<li>在大型项目中，很多模块独立运行，为了优化组件性能，需要使用异步组件，即用到哪个再加载哪个。</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineAsyncComponent</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'vue'</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">f10_comp</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./f10_comp.vue'</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="c1">// import f11_comp from './f11_comp.vue';</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1">// 异步加载组件</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">f11_comp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">defineAsyncComponent</span><span class="p">(()=&gt;</span><span class="k">import</span><span class="p">(</span><span class="s2">"./f11_comp.vue"</span><span class="p">))</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="510">5.10依赖注入<a class="headerlink" href="#510" title="Permanent link">¶</a></h3>
+<ul>
+<li><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue-6.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue-6.png"></a></li>
+<li><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue-7.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue-7.png"></a></li>
+<li>provide和inject只能由上到下的传递。</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1">//父</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nx">provide</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="s2">"f09的数据"</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="p">},</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="c1">//子</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="nx">inject</span><span class="o">:</span><span class="p">[</span><span class="s2">"message"</span><span class="p">],</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h2 id="6-api">6 组合式API<a class="headerlink" href="#6-api" title="Permanent link">¶</a></h2>
+<h3 id="61">6.1选项式和组合式对比<a class="headerlink" href="#61" title="Permanent link">¶</a></h3>
+<ul>
+<li>选项式API使用包含多个选项的对象来描述组件的逻辑，例如<code>data</code>，<code>methods</code>,<code>mounted</code>等。选项所定义的属性都会暴露在函数内部的this上，它会指向当前的组件实例。</li>
+<li><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue-8.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue-8.png"></a></li>
+<li>vue3 的组合式API每次使用时需要引用相应的配件函数功能等，优势是在打包时只把使用的功能打包。</li>
+</ul>
+<h3 id="62api">6.2响应式API<a class="headerlink" href="#62api" title="Permanent link">¶</a></h3>
+<ul>
+<li>组合式中没有data选项。变量的初始化依赖于ref和reactive。</li>
+<li>
+<blockquote>
+<p>[!note] ref用于创建基本类型响应数据（String Number Boolean）// 在JS读取时必须通过.value才能读取到值</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>[!note] reactive用于创建引用类型响应数据（Array Object）</p>
+</blockquote>
+</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">import</span><span class="p">{</span><span class="nx">ref</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'vue'</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">reactive</span><span class="p">({</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">name</span><span class="o">:</span><span class="s2">"iewn"</span><span class="p">,</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="p">})</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="kd">function</span><span class="w"> </span><span class="nx">increment</span><span class="p">(){</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="63">6.3计算属性<a class="headerlink" href="#63" title="Permanent link">¶</a></h3>
+<ul>
+<li>使用选项式API的时候，所有的计算属性都必须放在<code>computed</code>中，这样如果又很多计算属性就会很复杂且臃肿，组合式API会简洁很多。
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">(</span><span class="s2">"ABC"</span><span class="p">)</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="c1">//计算属性</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="c1">// 在JS读取时必须通过.value才能读取到值</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">myreverse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">computed</span><span class="p">(()=&gt;{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">&nbsp; &nbsp; </span><span class="k">return</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">""</span><span class="p">).</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="p">})</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+<h3 id="64">6.4事件处理<a class="headerlink" href="#64" title="Permanent link">¶</a></h3>
+<ul>
+<li>组合式API中事件处理与原生JS很相似
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="err">@</span><span class="nx">click</span><span class="o">=</span><span class="s2">"increment($event)"</span><span class="o">&gt;</span><span class="nx">Count</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">increment</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"count++"</span><span class="p">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+<h3 id="65">6.5侦听器<a class="headerlink" href="#65" title="Permanent link">¶</a></h3>
+<ul>
+<li>使用选项式API的时候，所有的侦听器都必须放在<code>watch</code>中，这样如果又很多侦听器就会很复杂且臃肿，组合式API会简洁很多。
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="c1">//侦听器</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="nx">watch</span><span class="p">(</span><span class="nx">count</span><span class="p">,(</span><span class="nx">NewValue</span><span class="p">,</span><span class="nx">OldValue</span><span class="p">)=&gt;{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">NewValue</span><span class="p">,</span><span class="nx">OldValue</span><span class="p">);</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="p">})</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+<h3 id="66">6.6生命周期<a class="headerlink" href="#66" title="Permanent link">¶</a></h3>
+<ul>
+<li>选项式写法只能存在一个mounted，写多个时会后者覆盖前者。</li>
+<li>组合式写法可以写多个mounted。其他生命函数钩子函数类似。(导入是==on==Mounted)
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">import</span><span class="p">{</span><span class="nx">onMounted</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'vue'</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="c1">//生命周期</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="nx">onMounted</span><span class="p">(()=&gt;{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Initial count is "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="p">})</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+<h3 id="67">6.7模板引用<a class="headerlink" href="#67" title="Permanent link">¶</a></h3>
+<ul>
+<li>本质上声明一个ref来存放该元素的引用，必须和模板里的ref同名</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span>
+<span class="normal"><a href="#__codelineno-17-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="c1">//这个不能放在函数里</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">countNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="nx">onMounted</span><span class="p">(()=&gt;{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Initial count is "</span><span class="o">+</span><span class="w"> </span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Initial count is "</span><span class="o">+</span><span class="w"> </span><span class="nx">countNumber</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">);</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="p">})</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="68props">6.8组件传参（props）<a class="headerlink" href="#68props" title="Permanent link">¶</a></h3>
+<ul>
+<li>组合式引用子模板只需导入后就可以使用，无需注入。</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span>
+<span class="normal"><a href="#__codelineno-18-6">6</a></span>
+<span class="normal"><a href="#__codelineno-18-7">7</a></span>
+<span class="normal"><a href="#__codelineno-18-8">8</a></span>
+<span class="normal"><a href="#__codelineno-18-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="c1">//props</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">props</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">defineProps</span><span class="p">({</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">title</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">type</span><span class="o">:</span><span class="nb">String</span><span class="p">,</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">default</span><span class="o">:</span><span class="s2">""</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">&nbsp; &nbsp; </span><span class="p">}</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="p">})</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="69">6.9组件事件<a class="headerlink" href="#69" title="Permanent link">¶</a></h3>
+<ul>
+<li>需要先定义一个emit把所有组件事件的句柄都初始化好，然后在函数里选择用哪个句柄发送组件间的哪个事件。类似于6.6节。</li>
+</ul>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span>
+<span class="normal"><a href="#__codelineno-19-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">emit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">defineEmits</span><span class="p">([</span><span class="s2">"eventf14"</span><span class="p">,])</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="c1">//组件事件</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="kd">function</span><span class="w"> </span><span class="nx">increment</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"count++"</span><span class="p">)</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">emit</span><span class="p">(</span><span class="s2">"eventf14"</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">message</span><span class="p">])</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h2 id="7">7.自定义指令<a class="headerlink" href="#7" title="Permanent link">¶</a></h2>
+<h3 id="71">7.1局部自定义指令<a class="headerlink" href="#71" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>除了Vue内置的指令（例如<code>v-model</code>，<code>v-show</code>）等，Vue还允许自己定义的指令（Custom Directives）</p>
+</li>
+<li>
+<p>选项式API
+</p><div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-20-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="o">&lt;</span><span class="nx">p</span><span class="w"> </span><span class="nx">v</span><span class="o">-</span><span class="nx">author</span><span class="o">&gt;</span><span class="nx">西游记</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="c1">//自定义指令</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">directives</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">author</span><span class="o">:</span><span class="p">{</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">mounted</span><span class="p">(</span><span class="nx">element</span><span class="p">){</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"-wy撰写"</span><span class="p">;</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="p">}</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="p">}</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">&nbsp; &nbsp; </span><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div><p></p>
+</li>
+<li>
+<p>组合式API
+</p><div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span>
+<span class="normal"><a href="#__codelineno-21-6">6</a></span>
+<span class="normal"><a href="#__codelineno-21-7">7</a></span>
+<span class="normal"><a href="#__codelineno-21-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="o">&lt;</span><span class="nx">p</span><span class="w"> </span><span class="nx">v</span><span class="o">-</span><span class="nx">author</span><span class="o">&gt;</span><span class="nx">西游记</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="c1">//自定义指令</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">vAuthor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">mounted</span><span class="o">:</span><span class="p">(</span><span class="nx">element</span><span class="p">)=&gt;{</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"-wy撰写"</span><span class="p">;</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">&nbsp; &nbsp; </span><span class="p">}</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div><p></p>
+</li>
+</ul>
+<h3 id="72">7.2全局自定义指令<a class="headerlink" href="#72" title="Permanent link">¶</a></h3>
+<ul>
+<li>自定义指令可以分为全局自定义指令和局部自定义指令。在全局注册则可以在任意组件中使用；局部注册只能在当前组件中使用。</li>
+<li>7.1中两种都是局部自定义指令，全局自定义指令写在<code>main.js</code>中。
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createApp</span><span class="p">(</span><span class="nx">App</span><span class="p">);</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="c1">//在挂载前写全局注册的组件</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="nx">app</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="s2">"f04_component"</span><span class="p">,</span><span class="w"> </span><span class="nx">f04_component</span><span class="p">);</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="c1">//在挂载前写全局自定义指令</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="nx">app</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s2">"red"</span><span class="p">,{</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">&nbsp; &nbsp; </span><span class="nx">mounted</span><span class="p">(</span><span class="nx">element</span><span class="p">){</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'red'</span><span class="p">;</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">&nbsp; &nbsp; </span><span class="p">}</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="p">})</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="nx">app</span><span class="p">.</span><span class="nx">mount</span><span class="p">(</span><span class="s1">'#app'</span><span class="p">);</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+<h3 id="73">7.3自定义指令钩子函数<a class="headerlink" href="#73" title="Permanent link">¶</a></h3>
+<ul>
+<li>自定义指令有很多钩子函数，可以理解为是自定义指令的生命周期函数，在不同情况下会自动调用。</li>
+<li>同组件的生命周期函数相比，少了一个beforecreate。</li>
+<li><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/Vue-9.png" data-desc-position="bottom"><img alt="" src="../../assets/Vue-9.png"></a>
+<div class="language-JS highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span>
+<span class="normal"><a href="#__codelineno-23-16">16</a></span>
+<span class="normal"><a href="#__codelineno-23-17">17</a></span>
+<span class="normal"><a href="#__codelineno-23-18">18</a></span>
+<span class="normal"><a href="#__codelineno-23-19">19</a></span>
+<span class="normal"><a href="#__codelineno-23-20">20</a></span>
+<span class="normal"><a href="#__codelineno-23-21">21</a></span>
+<span class="normal"><a href="#__codelineno-23-22">22</a></span>
+<span class="normal"><a href="#__codelineno-23-23">23</a></span>
+<span class="normal"><a href="#__codelineno-23-24">24</a></span>
+<span class="normal"><a href="#__codelineno-23-25">25</a></span>
+<span class="normal"><a href="#__codelineno-23-26">26</a></span>
+<span class="normal"><a href="#__codelineno-23-27">27</a></span>
+<span class="normal"><a href="#__codelineno-23-28">28</a></span>
+<span class="normal"><a href="#__codelineno-23-29">29</a></span>
+<span class="normal"><a href="#__codelineno-23-30">30</a></span>
+<span class="normal"><a href="#__codelineno-23-31">31</a></span>
+<span class="normal"><a href="#__codelineno-23-32">32</a></span>
+<span class="normal"><a href="#__codelineno-23-33">33</a></span>
+<span class="normal"><a href="#__codelineno-23-34">34</a></span>
+<span class="normal"><a href="#__codelineno-23-35">35</a></span>
+<span class="normal"><a href="#__codelineno-23-36">36</a></span>
+<span class="normal"><a href="#__codelineno-23-37">37</a></span>
+<span class="normal"><a href="#__codelineno-23-38">38</a></span>
+<span class="normal"><a href="#__codelineno-23-39">39</a></span>
+<span class="normal"><a href="#__codelineno-23-40">40</a></span>
+<span class="normal"><a href="#__codelineno-23-41">41</a></span>
+<span class="normal"><a href="#__codelineno-23-42">42</a></span>
+<span class="normal"><a href="#__codelineno-23-43">43</a></span>
+<span class="normal"><a href="#__codelineno-23-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">vBlue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="c1">//在绑定元素的attribute前</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">    </span><span class="c1">//或事件监听器应用前调用</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">    </span><span class="nx">created</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">binding</span><span class="p">,</span><span class="w"> </span><span class="nx">vnode</span><span class="p">,</span><span class="w"> </span><span class="nx">prevVnode</span><span class="p">){</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"created"</span><span class="p">);</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">    </span><span class="c1">//在元素被插入到DOM前调用</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">    </span><span class="nx">beforeMount</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">binding</span><span class="p">,</span><span class="w"> </span><span class="nx">vnode</span><span class="p">,</span><span class="w"> </span><span class="nx">prevVnode</span><span class="p">){</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"beforeMount"</span><span class="p">);</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">    </span><span class="c1">//在绑定元素的父组件</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">    </span><span class="c1">//以及它自己的所有子节点都挂载完成后调用</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="w">    </span><span class="nx">mounted</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">binding</span><span class="p">,</span><span class="w"> </span><span class="nx">vnode</span><span class="p">,</span><span class="w"> </span><span class="nx">prevVnode</span><span class="p">){</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">binding</span><span class="p">);</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vnode</span><span class="p">);</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">prevVnode</span><span class="p">);</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20"></a><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'blue'</span><span class="p">;</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"mounted"</span><span class="p">);</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23"></a>
+<a id="__codelineno-23-24" name="__codelineno-23-24"></a><span class="w">    </span><span class="c1">//绑定元素的父组件更新前调用</span>
+<a id="__codelineno-23-25" name="__codelineno-23-25"></a><span class="w">    </span><span class="nx">beforeUpdate</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">binding</span><span class="p">,</span><span class="w"> </span><span class="nx">vnode</span><span class="p">,</span><span class="w"> </span><span class="nx">prevVnode</span><span class="p">){</span>
+<a id="__codelineno-23-26" name="__codelineno-23-26"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"beforeUpdate"</span><span class="p">);</span>
+<a id="__codelineno-23-27" name="__codelineno-23-27"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-23-28" name="__codelineno-23-28"></a>
+<a id="__codelineno-23-29" name="__codelineno-23-29"></a><span class="w">    </span><span class="c1">//在绑定元素的父组件</span>
+<a id="__codelineno-23-30" name="__codelineno-23-30"></a><span class="w">    </span><span class="c1">//以及它自己的所有子节点都更新后调用</span>
+<a id="__codelineno-23-31" name="__codelineno-23-31"></a><span class="w">    </span><span class="nx">updated</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">binding</span><span class="p">,</span><span class="w"> </span><span class="nx">vnode</span><span class="p">,</span><span class="w"> </span><span class="nx">prevVnode</span><span class="p">){</span>
+<a id="__codelineno-23-32" name="__codelineno-23-32"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"updated"</span><span class="p">);</span>
+<a id="__codelineno-23-33" name="__codelineno-23-33"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-23-34" name="__codelineno-23-34"></a>
+<a id="__codelineno-23-35" name="__codelineno-23-35"></a><span class="w">    </span><span class="c1">//绑定元素的父组件卸载前调用</span>
+<a id="__codelineno-23-36" name="__codelineno-23-36"></a><span class="w">    </span><span class="nx">beforeUnmount</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">binding</span><span class="p">,</span><span class="w"> </span><span class="nx">vnode</span><span class="p">,</span><span class="w"> </span><span class="nx">prevVnode</span><span class="p">){</span>
+<a id="__codelineno-23-37" name="__codelineno-23-37"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"beforeUnmount"</span><span class="p">);</span>
+<a id="__codelineno-23-38" name="__codelineno-23-38"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-23-39" name="__codelineno-23-39"></a>
+<a id="__codelineno-23-40" name="__codelineno-23-40"></a><span class="w">    </span><span class="c1">//绑定元素的父组件卸载后调用</span>
+<a id="__codelineno-23-41" name="__codelineno-23-41"></a><span class="w">    </span><span class="nx">unmounted</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">binding</span><span class="p">,</span><span class="w"> </span><span class="nx">vnode</span><span class="p">,</span><span class="w"> </span><span class="nx">prevVnode</span><span class="p">){</span>
+<a id="__codelineno-23-42" name="__codelineno-23-42"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"unmounted"</span><span class="p">);</span>
+<a id="__codelineno-23-43" name="__codelineno-23-43"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-23-44" name="__codelineno-23-44"></a><span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
+        
+          
+          <a href="../Thead/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Thead">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Thead
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Web%E5%9F%BA%E7%A1%80/" class="md-footer__link md-footer__link--next" aria-label="下一页: Web基础">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Web基础
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2021 Yanran
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yanran425" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,0 +1,3386 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yanran425.github.io/Yanran425_Ob/ITDev/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+      
+      
+        <link rel="prev" href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91/">
+      
+      
+        <link rel="next" href="../../AIDev/Claude/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>计算机网络 - Yanran_Ob</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Yanran_Ob" class="md-header__button md-logo" aria-label="Yanran_Ob" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yanran_Ob
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              计算机网络
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="切换到浅色模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple" aria-label="切换到深色模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_2" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple" aria-label="切换到跟随系统" type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换到跟随系统" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yanran425/Yanran425_Ob" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  欢迎来到 Yanran_Ob
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../C%2B%2B%E4%B8%8ELinux/" class="md-tabs__link">
+          
+  
+  
+  ITDev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AIDev/Claude/" class="md-tabs__link">
+          
+  
+  
+  AIDev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Tools/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  标签索引
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yanran_Ob" class="md-nav__button md-logo" aria-label="Yanran_Ob" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Yanran_Ob
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yanran425/Yanran425_Ob" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到 Yanran_Ob
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITDev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ITDev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E4%B8%8ELinux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++与Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++基础入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++学习路线
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++提高编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++核心编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Java%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux系统编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Qt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Thead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    操作系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机编译
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.OSI七层模型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.OSI七层模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1模型介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.三次握手
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.四次挥手
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.DNS的工作原理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5rpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.RPC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.RPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53rpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3常用RPC技术或框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54grpcthriftdubbo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4主流的gRPC、Thrift、Dubbo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55rpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5RPC作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7调用过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8核心功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9功能实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.9功能实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#591" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.1服务寻址功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#592" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.2序列化和反序列化功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#593" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.3网络传输功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.mqtt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.mqtt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2MQTT特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3设计规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4主要特性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5主题订阅
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5主题订阅">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#651" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.1发布订阅模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#652" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.2请求响应模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6协议原理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6协议原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#661" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.1实现方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#662" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.2网络传输与应用消息
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#663mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.3MQTT客户端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#664mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.4MQTT服务器端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#665" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.5发布/订阅、主题、会话
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#666mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.6MQTT协议中的方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7数据包结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.7数据包结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#671" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.1固定头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#672" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.2可变头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#673" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.3消息体
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.网络连接
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.网络连接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1基本定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip48bitipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP地址是一个4*8bit的数字串（IPv4协议）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP地址是一个4*8bit的数字串（IPv4协议）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2网络分类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3网络设备
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4网络拓扑结构图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8arp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.ARP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.加密算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.加密算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1不可逆加密算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2对称加密算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3非对称加密算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注意事项
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIDev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIDev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/Claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/LLM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIDev/Ollama/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ollama
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    科研学术
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E7%BD%91%E5%9D%80%E9%9B%86%E5%90%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网址集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标签索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.OSI七层模型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.OSI七层模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1模型介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.三次握手
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.四次挥手
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.DNS的工作原理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5rpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.RPC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.RPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53rpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3常用RPC技术或框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54grpcthriftdubbo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4主流的gRPC、Thrift、Dubbo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55rpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5RPC作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7调用过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8核心功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9功能实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.9功能实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#591" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.1服务寻址功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#592" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.2序列化和反序列化功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#593" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.3网络传输功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.mqtt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.mqtt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2MQTT特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3设计规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4主要特性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5主题订阅
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5主题订阅">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#651" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.1发布订阅模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#652" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.2请求响应模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6协议原理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6协议原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#661" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.1实现方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#662" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.2网络传输与应用消息
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#663mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.3MQTT客户端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#664mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.4MQTT服务器端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#665" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.5发布/订阅、主题、会话
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#666mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.6MQTT协议中的方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7数据包结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.7数据包结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#671" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.1固定头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#672" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.2可变头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#673" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.3消息体
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.网络连接
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.网络连接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1基本定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip48bitipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP地址是一个4*8bit的数字串（IPv4协议）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP地址是一个4*8bit的数字串（IPv4协议）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2网络分类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3网络设备
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4网络拓扑结构图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8arp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.ARP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.加密算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.加密算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1不可逆加密算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2对称加密算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3非对称加密算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注意事项
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">计算机网络<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<h2 id="1osi">1.OSI七层模型<a class="headerlink" href="#1osi" title="Permanent link">¶</a></h2>
+<h3 id="11">1.1模型介绍<a class="headerlink" href="#11" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">名称</th>
+<th style="text-align: left;">概述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">物理层</td>
+<td style="text-align: left;">底层数据传输，如网线；网卡标准。</td>
+</tr>
+<tr>
+<td style="text-align: center;">数据链路层</td>
+<td style="text-align: left;">定义数据的基本格式，如何传输，如何标识；如网卡MAC地址。</td>
+</tr>
+<tr>
+<td style="text-align: center;">网络层</td>
+<td style="text-align: left;">定义IP编址，定义路由功能；如不同设备的数据转发。</td>
+</tr>
+<tr>
+<td style="text-align: center;">传输层</td>
+<td style="text-align: left;">端到端传输数据的基本功能；如TCP、UDP。</td>
+</tr>
+<tr>
+<td style="text-align: center;">会话层</td>
+<td style="text-align: left;">控制应用程序之间会话能力；如不同软件数据分发给不同软件。</td>
+</tr>
+<tr>
+<td style="text-align: center;">表示层</td>
+<td style="text-align: left;">数据格式标识，基本压缩加密功能。</td>
+</tr>
+<tr>
+<td style="text-align: center;">应用层</td>
+<td style="text-align: left;">各种应用软件；包括Web应用。</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-1.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-1.png"></a></p>
+<h3 id="12">1.2说明<a class="headerlink" href="#12" title="Permanent link">¶</a></h3>
+<ul>
+<li>物理层：利用传输介质为数据链路层提供物理连接，实现比特流的透明传输。</li>
+<li>数据链路层：接收来自物理层的位流形式的数据，并封装成帧，传送到上一层</li>
+<li>网络层：将网络地址翻译成对应的物理地址，并通过路由选择算法为分组通过通信子网选择最适当的路径。</li>
+<li>传输层：在源端与目的端之间提供可靠的透明数据传输。</li>
+<li>会话层：负责在网络中的两节点之间建立、维持和终止通信。</li>
+<li>表示层：处理用户信息的表示问题，数据的编码，压缩和解压缩，数据的加密和解密。</li>
+<li>应用层：为用户的应用进程提供网络通信服务。</li>
+</ul>
+<h3 id="13">1.3总结<a class="headerlink" href="#13" title="Permanent link">¶</a></h3>
+<ul>
+<li>传输层数据又被称作<strong>TCP报文段</strong>或<strong>UDP用户数据报（Segments）</strong></li>
+<li>网络层数据被称作<strong>包（Packages）</strong></li>
+<li>数据链路层的数据被称作<strong>帧（Frames）</strong></li>
+<li>物理层的数据被称作<strong>比特流（Bits）</strong></li>
+<li>网络七层模型是一个标准，而非实现</li>
+<li>网络四层模型是一个实现的应用模型</li>
+</ul>
+<h2 id="2">2.三次握手<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.png"></a></p>
+<h2 id="3">3.四次挥手<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-22.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-22.png"></a></p>
+<ul>
+<li>
+<p>完整HTTP请求包括哪些内容</p>
+</li>
+<li>
+<p>客户端域名解析</p>
+</li>
+<li>TCP的3次握手</li>
+<li>客户端发起HTTP请求</li>
+<li>服务器响应HTTP请求</li>
+<li>客户端浏览器接收得到HTML代码</li>
+<li>浏览器解析HTML代码，并请求HTML代码中的资源（如js、css、图片）</li>
+<li>浏览器对页面进行渲染呈现给用户</li>
+</ul>
+<h2 id="4dns">4.DNS的工作原理<a class="headerlink" href="#4dns" title="Permanent link">¶</a></h2>
+<ul>
+<li>DNS将主机名转换为IP地址，属于应用层协议，使用UDP传输。</li>
+<li>当用户输入域名时，浏览器先检查自己的缓存中是否包含这个域名映射的ip地址，1）有解析结束。 2）若没命中，则检查操作系统缓存（如Windows的hosts）中有没有解析过的结果，有解析结束。 3）若无命中，则请求本地域名服务器解析（LDNS）。 4）若LDNS没有命中就直接跳到根域名服务器请求解析。根域名服务器返回给LDNS一个 主域名服务器地址。 5）此时LDNS再发送请求给上一步返回的gTLD（ 通用顶级域）， 接受请求的gTLD查找并返回这个域名对应的Name Server的地址 。6）Name Server根据映射关系表找到目标ip，返回给LDNS。</li>
+</ul>
+<h2 id="5rpc">5.RPC<a class="headerlink" href="#5rpc" title="Permanent link">¶</a></h2>
+<h3 id="51">5.1总结<a class="headerlink" href="#51" title="Permanent link">¶</a></h3>
+<ul>
+<li>用于实现不同服务间的远程调用，如gRPC、Thrift和Dubbo。它涉及服务寻址、序列化和网络传输，简化了跨平台调用。RPC常用于大型网站的微服务架构，通过注册中心进行服务发现，并提供安全性和服务治理。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-2.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-2.png"></a></p>
+<h3 id="52">5.2概念<a class="headerlink" href="#52" title="Permanent link">¶</a></h3>
+<ul>
+<li>RPC（Remote Procedure Call Protocol） 远程过程调用协议。</li>
+<li>RPC是一种通过网络从远程计算机程序上请求服务，不需要了解底层网络技术的协议。</li>
+<li>RPC主要作用就是不同的服务间方法调用就像本地调用一样便捷。</li>
+</ul>
+<h3 id="53rpc">5.3常用RPC技术或框架<a class="headerlink" href="#53rpc" title="Permanent link">¶</a></h3>
+<ul>
+<li>应用级的服务框架：阿里的 Dubbo/Dubbox、Google gRPC、Spring Boot/Spring Cloud。</li>
+<li>远程通信协议：RMI、Socket、SOAP(HTTP XML)、REST(HTTP JSON)。</li>
+<li>通信框架：MINA 和 Netty</li>
+</ul>
+<h3 id="54grpcthriftdubbo">5.4主流的gRPC、Thrift、Dubbo<a class="headerlink" href="#54grpcthriftdubbo" title="Permanent link">¶</a></h3>
+<ul>
+<li>gRPC：gRPC是Google开源软件，gRPC是基于HTTP2.0协议，而HTTP2.0是基于二进制的HTTP协议升级版本，底层使用Netty框架支持。</li>
+<li>Thrift：Thrift是Facebook开源项目，其是一个跨语言的服务开发框架。用户只需在进行二开即可，对底层的RPC通讯透明。</li>
+<li>Dubbo：Dubbo是阿里开源组件协议和序列化框架都可以插拔，依托Spring框架开发，远程接口是基于Java接口，适用于微服务架构。</li>
+</ul>
+<h3 id="55rpc">5.5RPC作用<a class="headerlink" href="#55rpc" title="Permanent link">¶</a></h3>
+<ul>
+<li>服务化：微服务化，跨平台的服务之间远程调用；</li>
+<li>分布式系统架构：分布式服务跨机器进行远程调用；</li>
+<li>服务可重用：开发一个公共能力服务，供多个服务远程调用。</li>
+<li>系统间交互调用：两台服务器A、B，服务器A上的应用a需要调用服务器B上的应用b提供的方法，而应用a和应用b不在一个内存空间，不能直接调用，此时，需要通过网络传输来表达需要调用的语义及传输调用的数据。</li>
+</ul>
+<h3 id="56">5.6架构<a class="headerlink" href="#56" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-3.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-3.png"></a></p>
+<h3 id="57">5.7调用过程<a class="headerlink" href="#57" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-4.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-4.png"></a>
+具体调用过程：
+    1. 客户端（Client）通过本地调用的方式调用服务（以接口方式调用）；
+    2. 客户端存根（Client Stub）接收到调用请求后负责将方法、入参等信息进行组装序列化成能够进行网络传输的消息体（将消息体对象序列化为二进制流）；
+    3. 客户端存根（Client Stub）找到远程的服务地址，并且将消息通过网络发送给服务端（通过sockets发送消息）；
+    4. 服务端存根（Server Stub）收到消息后进行反序列化操作，即解码（将二进制流反序列化为消息对象）；
+    5. 服务端存根（Server Stub）通过解码结果调用本地的服务进行相关处理；
+    6. 服务端（Server）本地服务业务处理；
+    7. 服务端（Server）将处理结果返回给服务端存根；
+    8. 服务端存根（Server Stub）序列化处理结果（将结果消息对象序列化为二进制流）；
+    9. 服务端存根（Server Stub）将序列化结果通过网络发送至客户端（通过sockets发送消息）；
+    10. 客户端存根（Server Stub）接收到消息，进行反序列化解码（将结果二进制流反序列化为消息对象）；
+    11. 客户端得到最终的结果。</p>
+<h3 id="58">5.8核心功能<a class="headerlink" href="#58" title="Permanent link">¶</a></h3>
+<ul>
+<li>客户端：Client，服务调用方。</li>
+<li>客户端存根：Client Stub，存放服务端地址信息，将客户端的请求参数数据信息打包成网络消息，再通过网络传输发送给服务端。</li>
+<li>服务端存根：Server Stub，接收客户端发送过来的请求消息并进行解包，然后再调用本地服务进行处理。</li>
+<li>服务端：Server，服务的真正提供者。</li>
+<li>newtwork service：底层传输，tcp或http</li>
+</ul>
+<h3 id="59">5.9功能实现<a class="headerlink" href="#59" title="Permanent link">¶</a></h3>
+<p>功能实现主要分为服务寻址、序列化和反序列化、网络传输功能。</p>
+<h4 id="591">5.9.1服务寻址功能<a class="headerlink" href="#591" title="Permanent link">¶</a></h4>
+<ul>
+<li>本地：在本地方法调用中，函数体是直接通过函数指针来指定的，但是在远程调用中，由于两个进程的地址空间完全不一样，函数指针不起作用。</li>
+<li>远程：RPC中所有函数或方法都有自己的一个ID，在所有进程中都唯一。客户端在做远程过程调用时，必须附上这个ID，即客户端会查一下表，找出相应的Call ID，然后传给服务端，服务端也会查表，来确定客户端需要调用的函数，然后执行相应函数的代码。</li>
+<li>Call ID映射表一般是一个哈希表。</li>
+<li>需要通过服务注册中心去查询对方服务有哪些实例。</li>
+</ul>
+<h4 id="592">5.9.2序列化和反序列化功能<a class="headerlink" href="#592" title="Permanent link">¶</a></h4>
+<ul>
+<li>序列化：将消息对象转换为二进制流。</li>
+<li>反序列化：将二进制流转换为消息对象。</li>
+<li>远程调用涉及到数据的传输，在本地调用中，只需要将数据压入栈中，然后让函数去栈中读取即可。</li>
+<li>但远程的数据传输，由于客户端和服务端不在同一个服务器上，涉及不同的进程，不能通过内存传递参数，此时就需要将客户端先将请求参数转成字节流（编码），传递给服务端，服务端再将字节流转为自己可读取格式（解码），这就是序列化和反序列化的过程。反之，服务端返回值也逆向经历序列化和反序列化到客户端。</li>
+<li>序列化的优势：将消息对象转为二进制字节流，便于网络传输。可跨平台、跨语言。如Python编写的客户端请求序列化参数传输到Java编写的服务端进行反序列化。</li>
+</ul>
+<h4 id="593">5.9.3网络传输功能<a class="headerlink" href="#593" title="Permanent link">¶</a></h4>
+<ul>
+<li>客户端将Call ID和序列化后的参数字节流传输给服务端。</li>
+<li>服务端将序列化后的调用结果回传给客户端。</li>
+<li>协议：主要有TCP、UDP、HTTP协议。</li>
+<li>基于TCP协议<ul>
+<li>客户端和服务端建立Socket连接。</li>
+<li>客户端通过Socket将需要调用的接口名称、方法名称及参数序列化后传递给服务端。</li>
+<li>服务端反序列化后再利用反射调用对应的方法，将结果返回给客户端。</li>
+</ul>
+</li>
+<li>基于HTTP协议<ul>
+<li>客户端向服务端发送请求，如GET、POST、PUT、DELETE等请求。</li>
+<li>服务端根据不同的请求参数和请求URL进行方法调用，返回JSON或者XML数据结果。</li>
+</ul>
+</li>
+<li>TCP和HTTP对比：<ul>
+<li>基于TCP协议实现的RPC调用，由于是底层协议栈，更佳灵活的对协议字段进行定制，可减少网络开销，提高性能，实现更大的吞吐量和并发数。但，底层复杂，实现代价高。</li>
+<li>基于HTTP协议实现的RPC调用，已封装实现序列化，但HTTP属于应用层协议，HTTP传输所占用的字节数比TCP更高，传输效率对比TCP较低。</li>
+</ul>
+</li>
+</ul>
+<h2 id="6mqtt">6.mqtt<a class="headerlink" href="#6mqtt" title="Permanent link">¶</a></h2>
+<h3 id="61">6.1总结<a class="headerlink" href="#61" title="Permanent link">¶</a></h3>
+<ul>
+<li>MQTT是一种轻量级的物联网通信协议，基于发布/订阅模式，支持QoS级别。它具有精简的协议设计，开放的消息协议，以及广泛应用于物联网、M2M通信、消息推送和智能设备等领域。MQTT协议涉及发布者、订阅者和消息代理（Broker）的角色，以及连接、订阅、发布消息的过程，并包含会话保持和心跳机制，确保消息的可靠传输。</li>
+<li>MQTT(Message Queuing Telemetry Transport, 消息队列遥测传输协议)，是一种基于发布/订阅(publish/subscribe)模式的"轻量级"通讯协议，该协议构建于TCP/IP协议上，由IBM在1999年发布。MQTT最大优点在于，可以以极少的代码和有限的带宽，为远程连接设备提供实时可靠的消息服务，作为一种低开销、低带宽占用的即时通讯协议，使其在物联网、小型设备、移动应用等方面有较广泛的应用</li>
+<li>MQTT是一个基于客户端-服务器的消息发布/订阅传输协议。MQTT协议是轻量、简单、开放和易于实现的，这些特点使它适用范围非常广泛。在很多情况下，包括受限的环境中，如:机器与机器（M2M）通信和物联网(loT)。其在，通过卫星链路通信传感器、偶尔拨号的医疗设备、智能家居、及一些小型化设备中已广泛使用。</li>
+</ul>
+<h3 id="62mqtt">6.2MQTT特点<a class="headerlink" href="#62mqtt" title="Permanent link">¶</a></h3>
+<ul>
+<li>基于Publish/Subscribe(发布/订阅)模式的物联网通信协议</li>
+<li>简单易实现</li>
+<li>支持Qos(服务质量)</li>
+<li>报文精简</li>
+<li>基于TCP/IP</li>
+</ul>
+<h3 id="63">6.3设计规范<a class="headerlink" href="#63" title="Permanent link">¶</a></h3>
+<ul>
+<li>精简，不添加可有可无的功能；</li>
+<li>发布/订阅(Pub/Sub)模式，方便消息在传感器之间传递，解耦Client/Server模式，带来的好处在于不必预先知道对方的存在(ip/port), 不必同时运行</li>
+<li>允许用户动态创建主题(不需要预先创建主题)，零运维成本；</li>
+<li>把传输量降到最低以提高传输效率</li>
+<li>把低带宽、高延迟、不稳定的网络等因素考虑在内；</li>
+<li>支持连续的会话保持和控制(心跳协议)</li>
+<li>理解客户端计算能力可能很低</li>
+<li>提供服务质量( quality of service level: QoS)管理:</li>
+<li>不强求传输数据的类型与格式，保持灵活性(指的使应用层业务数据)</li>
+</ul>
+<h3 id="64">6.4主要特性<a class="headerlink" href="#64" title="Permanent link">¶</a></h3>
+<ul>
+<li>开放消息协议，简单易实现。</li>
+<li>使用发布/订阅消息模式，提供一对多的消息发布，解除应用程序耦合。</li>
+<li>对负载（协议携带的应用数据）内容屏蔽的消息传输。</li>
+<li>基于TCP/IP网络连接,提供有序，无损，双向连接。主流的MQTT是基于TCP连接进行数据推送的，但是同样有基于UDP的版本，叫做MQTT-SN。这两种版本由于基于不同的连接方式，优缺点自然也就各有不同了。由于基于不同的连接方式，优缺点自然也就各有不同了。</li>
+<li>消息服务质量(QoS）支持，可靠传输保证;有三种消息发布服务质量:<ul>
+<li>QoS0:“至多一次”，消息发布完全依赖底层TCP/IP网络。会发生消息丢失或重复。这一级别可用于如下情况，环境传感器数据，丢失一次读记录无所谓，因为不久后还会有第二次发送。这一种方式主要普通APP的推送，倘若你的智能设备在消息推送时未联网，推送过去没收到，再次联网也就收不到了。</li>
+<li>QoS1:“至少—次”，确保消息到达，但消息重复可能会发生。</li>
+<li>QoS2:“只有一次”，确保消息到达一次。在一些要求比较严格的计费系统中，可以使用此级别。在计费系统中，消息重复或丢失会导致不正确的结果。这种最高质量的消息发布服务还可以用于即时通讯类的APP的推送，确保用户收到且只会收到一次。</li>
+</ul>
+</li>
+<li>1字节固定报头，2字节心跳报文，最小化传输开销和协议交换，有效减少网络流量。这就是为什么在介绍里说它非常适合"在物联网领域，传感器与服务器的通信，信息的收集，要知道嵌入式设备的运算能力和带宽都相对薄弱，使用这种协议来传递消息再适合不过了。</li>
+<li>在线状态感知:使用Last Will和Testament特性通知有关各方客户端异常中断的机制。<ul>
+<li>Last Will:即遗言机制，用于通知同一主题下的其他设备，发送遗言的设备已经断开了连接。</li>
+<li>Testament:遗嘱机制，功能类似于Last Will。</li>
+</ul>
+</li>
+</ul>
+<h3 id="65">6.5主题订阅<a class="headerlink" href="#65" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-7.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-7.png"></a></p>
+<h4 id="651">6.5.1发布订阅模式<a class="headerlink" href="#651" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-5.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-5.png"></a></p>
+<p>客户端只需要订阅这个主题，当有其他客户端向这个服务端发布消息时，这个客户端就可以收到这个消息</p>
+<h4 id="652">6.5.2请求响应模式<a class="headerlink" href="#652" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-6.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-6.png"></a></p>
+<p>请求响应模式: 客户端向服务端发送请求，服务端收到请求后，向客户端返回响应</p>
+<h3 id="66">6.6协议原理<a class="headerlink" href="#66" title="Permanent link">¶</a></h3>
+<h4 id="661">6.6.1实现方式<a class="headerlink" href="#661" title="Permanent link">¶</a></h4>
+<ul>
+<li>实现MQTT协议需要客户端和服务器端通讯完成，在通讯过程中，MQTT协议中有三种身份:<ol>
+<li>发布者(Publish)</li>
+<li>代理(Broker)(服务器)</li>
+<li>订阅者(Subscribe)</li>
+</ol>
+</li>
+<li>其中，消息的发布者和订阅者都是客户端，消息代理是服务器，消息发布者可以同时是订阅者。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-8.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-8.png"></a></p>
+<ul>
+<li>MQTT传输的消息分为: 主题(Topic) 和 负载(payload)两部分:<ol>
+<li>Topic: 可以理解为消息的类型，订阅者订阅(Subscribe)后，就会收到该主题的消息内容(payload)\</li>
+<li>payload: 可以理解为消息的内容，是指订阅者具体要使用的内容</li>
+</ol>
+</li>
+</ul>
+<h4 id="662">6.6.2网络传输与应用消息<a class="headerlink" href="#662" title="Permanent link">¶</a></h4>
+<ul>
+<li>MQTT会构建底层网络传输: 它将建立客户端到服务器的连接，提供两者之间的一个<strong>有序的、无损的、基于字节流的双向传输。</strong></li>
+<li>当应用数据通过MQTT网络发送时，MQTT会把与之相关的服务质量(QoS)和主题名(Topic)相关联</li>
+</ul>
+<h4 id="663mqtt">6.6.3MQTT客户端<a class="headerlink" href="#663mqtt" title="Permanent link">¶</a></h4>
+<ul>
+<li>一个使用MQTT协议的应用程序或者设备，它总是建立到服务器的网络连接。客户端可以<ol>
+<li>发布其他客户端可能会订阅的信息</li>
+<li>订阅其他客户端发布的消息</li>
+<li>退定或删除应用程序的消息</li>
+<li>断开与服务器的连接</li>
+</ol>
+</li>
+</ul>
+<h4 id="664mqtt">6.6.4MQTT服务器端<a class="headerlink" href="#664mqtt" title="Permanent link">¶</a></h4>
+<ul>
+<li>MQTT服务器以称为"消息代理"(Broker), 可以是一个应用程序或一台设备，它是位于消息发布者和订阅者之间，它可以:<ol>
+<li>接受来自客户的网络连接</li>
+<li>接受客户发布的应用信息</li>
+<li>处理来自客户端的订阅和退订请求</li>
+<li>向订阅的客户转发应用程序消息</li>
+</ol>
+</li>
+</ul>
+<h4 id="665">6.6.5发布/订阅、主题、会话<a class="headerlink" href="#665" title="Permanent link">¶</a></h4>
+<ul>
+<li>MQTT是基于<strong>发布(Publish)</strong>/<strong>订阅(Subscribe)</strong>模式来进行通信及数据交换的，与HTTP的<strong>请求(Request)</strong>/<strong>应答(Response)</strong>的模式有本质的不同</li>
+<li><strong>订阅者(Subscriber)</strong>会向&nbsp;<strong>消息服务器(Broker)</strong>订阅一个<strong>主题(Topic)</strong>。成功订阅后，消息服务器会将该主题下的消息转发给所有订阅者</li>
+<li>主题(Topic)以’/‘为分隔符区分不同的层级，包含通配符’+’ 或 ‘#’的主题又称为<strong>主题过滤器(Topic Filters)</strong>; 不含通配符的成为<strong>主题名(Topic Names)</strong>&nbsp;例如:</li>
+</ul>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sensor/10/temperature
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>sensor/+/temperature
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>$SYS/broker/metrics/packets/received
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>$SYS/broker/metrics/#
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>'+' : 表示通配一个层级， 例如a/+，匹配a/x, a/y
+</code></pre></div></td></tr></tbody></table></div>
+<ul>
+<li>发布者(Publisher)只能向主题名发布消息，订阅者(Subscriber)则可以通过订阅主题过滤器来通配多个主题名称</li>
+<li><strong>会话(Session)</strong>  ：每个客户端与服务器建立连接后就是一个会话，客户端和服务器之间有状态交互。会话存在于一个网络之间，也可能在客户端和服务器之间跨越多个连续的网络连接。</li>
+</ul>
+<h4 id="666mqtt">6.6.6MQTT协议中的方法<a class="headerlink" href="#666mqtt" title="Permanent link">¶</a></h4>
+<ul>
+<li>MQTT协议中定义了一些方法(也被称为动作)，表示对确定资源进行操作。这个资源可以代表预先存在的数据或动态生成数据，这取决于服务器的实现。通常来说，资源指服务器上的文件或输出的主要方法有:<ol>
+<li>CONNECT: 客户端连接到服务器</li>
+<li>CONNACK: 连接确认</li>
+<li>PUBLISH: 发布消息</li>
+<li>PUBACK: 发布消息确认</li>
+<li>PUBREC: 发布的消息已接收</li>
+<li>PUBREL: 发布的消息已释放</li>
+<li>PUBCOMP: 发布完成</li>
+<li>SUBSCRIBE: 订阅请求</li>
+<li>SUBACK: 订阅确认</li>
+<li>UNSUBSCRIBE: 取消订阅</li>
+<li>UNSUBACK: 取消订阅确认</li>
+<li>PINGREQ: 客户端发送心跳</li>
+<li>PINGRESP: 服务端心跳响应</li>
+<li>DISCONNECT: 断开连接</li>
+<li>AUTH: 认证</li>
+</ol>
+</li>
+</ul>
+<h3 id="67">6.7数据包结构<a class="headerlink" href="#67" title="Permanent link">¶</a></h3>
+<ul>
+<li>在MQTT协议中，一个MQTT数据包由: 固定头(Fixed header)、可变头(Variable header)、消息体(payload)三部分构成。<ol>
+<li>固定头(Fixed header)。存在于所有MQTT数据包中，表示数据包类型及数据包的分组类标识，如连接，发布，订阅，心跳等。其中固定头是必须的，所有类型的MQTT协议中，都必须包含固定头。</li>
+<li>可变头(Variable header)。存在于部分MQTT数据包中，数据包类型决定了可变头是否存在及其具体内容。可变头部不是可选的意思，而是指这部分在有些协议类型中存在，在有些协议中不存在。</li>
+<li>消息体（Payload)。存在于部分MQTT数据包中，表示客户端收到的具体内容。与可变头一样,在有些协议类型中有消息内容，有些协议类型中没有消息内容。</li>
+</ol>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-9.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-9.png"></a>
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-10.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-10.png"></a></p>
+<h4 id="671">6.7.1固定头<a class="headerlink" href="#671" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-11.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-11.png"></a>
+- 固定头存在于所有MQTT数据包中，固定头包含两部分内容：
+    1. 首字节(字节1)
+    2. 剩余消息报文长度(从第二个字节开始，长度为1-4字节)。</p>
+<ul>
+<li>
+<p>数据包类型: 第一个字节(Byte 1)中的7-4个bit位(Bit[7-4]),标识4位无符号值
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-12.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-12.png"></a></p>
+</li>
+<li>
+<p>标志位: 第一个字节中的0-3个bit位(Bit[3-0])。字节位Bit[3-0]用作报文的标识。
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-13.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-13.png"></a></p>
+</li>
+<li>
+<p>其中Bit[3]为DUP字段，如果该值为1，表明这个数据包是一条重复的消息；否则该数据包就是第一次发布的消息</p>
+</li>
+<li>
+<p>Bit[2-1]为QoS字段:</p>
+<ul>
+<li>如果Bit 1 和 Bit 2都为0，表示QoS 0: 至多一次；</li>
+<li>如果Bit 1为1, 表示QoS 1: 至少一次；</li>
+<li>如果Bit 2为1，表示QoS 2：只有一次；</li>
+<li>如果同时将Bit 1 和 Bit 2都设置成1，那么客户端或服务器认为这是一条非法的消息，会关闭当前连接。</li>
+</ul>
+</li>
+<li>
+<p>QoS: 服务质量是指 客户端和服务端之间的服务质量</p>
+</li>
+<li>
+<p>MQTT消息的QoS  ：MQTT发布消息服务质量保证(QoS)不是端到端的，是客户端与服务端之间的。订阅者收到MQTT消息的QoS级别，最终取决于发布消息的QoS和主题订阅的QoS
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-14.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-14.png"></a></p>
+</li>
+<li>
+<p>QoS消息订阅(至多一次):
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-15.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-15.png"></a></p>
+</li>
+<li>QoS1消息发布订阅(至少一次)
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-16.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-16.png"></a></li>
+<li>QoS2消息发布订阅(只有一次)
+<a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-17.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-17.png"></a></li>
+</ul>
+<h4 id="672">6.7.2可变头<a class="headerlink" href="#672" title="Permanent link">¶</a></h4>
+<ul>
+<li>可变头的意思是可变化的消息头部。有些报文类型包含可变头部有些报文则不包含。可变头部在固定头部和消息内容之间，其内容根据报文类型不同而不同</li>
+</ul>
+<h4 id="673">6.7.3消息体<a class="headerlink" href="#673" title="Permanent link">¶</a></h4>
+<ul>
+<li>有些报文类型是包含Payload(消息载体)，如PUBLISH的Payload就是指消息内容(应用程序发布的消息内容)。而CONNECT的Payload则包含Client Identifier, Will Topic, Will Message, Username, Password等信息。</li>
+<li>Payload只在某些报文类型中出现，其内容和格式也根据报文类型不同而不同</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-18.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-18.png"></a></p>
+<h2 id="7">7.网络连接<a class="headerlink" href="#7" title="Permanent link">¶</a></h2>
+<h3 id="71">7.1基本定义<a class="headerlink" href="#71" title="Permanent link">¶</a></h3>
+<ul>
+<li>四个参数：IP，子网掩码，默认网关，DNS</li>
+<li>IP地址：一种逻辑地址，用来标识网络中的一个主机。<ul>
+<li>IP地址=网络地址+主机地址</li>
+<li>
+<h2 id="ip48bitipv4">IP地址是一个4*8bit的数字串（IPv4协议）<a class="headerlink" href="#ip48bitipv4" title="Permanent link">¶</a></h2>
+</li>
+</ul>
+</li>
+<li>子网掩码NETMASK：功能是将IP分为网络地址和主机地址<ul>
+<li>子网掩码可以用来判断两台电脑是否处于同一子网内</li>
+</ul>
+</li>
+<li>默认网关<ul>
+<li>连接两个不同的网络的设备都可以叫做网关设备</li>
+<li>网关的作用就是实现两个网络之间的通讯与控制</li>
+<li>网关地址就是网关设备的IP地址</li>
+</ul>
+</li>
+<li>DNS域名服务器<ul>
+<li>DNS是域名服务器，用来解析域名（域名和IP之间的解析）</li>
+<li>如果没有DNS登录网站时就必须输入网址的IP地址，有了DNS就可以输入网址</li>
+</ul>
+</li>
+<li>0和1和255一般不做普通ip用，.0是给子网的，.1一般是给网关用，.255是广播地址。</li>
+</ul>
+<blockquote>
+<p>[!NOTE] IP，子网掩码，子网ip，网关地址，广播地址，DNS</p>
+</blockquote>
+<h3 id="72">7.2网络分类<a class="headerlink" href="#72" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>根据网络覆盖范围主要分为3类：</p>
+<ol>
+<li><strong>局域网</strong>（Local Area Network，<strong>LAN</strong>）是指范围在几百米到十几公里内办公楼群或校园内的计算机相互连接所构成的计算机网络。</li>
+<li><strong>城域网</strong>（Metropolitan Area Network，<strong>MAN</strong>）所采用的技术基本上与局域网相类似，只是规模上要大一些。城域网既可以覆盖相距不远的几栋办公楼，也可以覆盖一个城。</li>
+<li><strong>广域网</strong>（Wide Area Network，<strong>WAN</strong>）通常跨接很大的物理范围，如一个国家。</li>
+</ol>
+</li>
+<li>
+<p>网络还可以按照所有者分为公网、私网这两种Internet的接入方式。</p>
+</li>
+<li>公网接入方式：上网的计算机得到的IP地址是Internet上的非保留地址，公网的计算机和Internet上的其他计算机可随意互相访问。私网则反之。</li>
+<li>IP是英文Internet Protocol的缩写，意思是“网络之间互连的协议”，也就是为计算机网络相互连接进行通信而设计的<strong>协议</strong>。</li>
+<li>IP地址类型分为：公有地址、私有地址</li>
+<li>公有地址（Public address）：由Inter NIC（Internet Network Information Center因特网信息中心）负责。这些IP地址分配给注册并向Inter NIC提出申请的组织机构。通过它直接访问因特网。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>最大网络数</th>
+<th>IP地址范围</th>
+<th>最大主机数</th>
+<th>私有IP地址范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>126（2^7-2)</td>
+<td>1.0.0.0-127.255.255.255</td>
+<td>16777214</td>
+<td>10.0.0.0-10.255.255.255</td>
+</tr>
+<tr>
+<td>B</td>
+<td>16384(2^14)</td>
+<td>128.0.0.0-191.255.255.255</td>
+<td>65534</td>
+<td>172.16.0.0-172.31.255.255</td>
+</tr>
+<tr>
+<td>C</td>
+<td>2097152(2^21)</td>
+<td>192.0.0.0-223.255.255.255</td>
+<td>254</td>
+<td>192.168.0.0-192.168.255.255</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>私有地址：私有地址（Private address）属于非注册地址，专门为组织机构内部使用。以下列出留用的内部私有地址：</li>
+</ul>
+<h3 id="73">7.3网络设备<a class="headerlink" href="#73" title="Permanent link">¶</a></h3>
+<ul>
+<li>网卡是一个网络组件，属于硬件范畴，主要负责计算机之间数据的封装和解封。</li>
+<li>MAC地址：网卡的物理地址，网卡设备的编号，<strong>默认</strong>情况是全球唯一的（16进制）。</li>
+<li>
+<p>MAC与IP对比</p>
+<ol>
+<li>长度不同。IP地址为32位，MAC地址为48位。</li>
+<li>分配依据不同。</li>
+<li>网络寻址方式不同。OSI参考模型，ip地址是基于第三层工作（网络层），mac地址是第二层（数据链路层）</li>
+</ol>
+</li>
+<li>
+<p>网线是连接局域网必不可少的。在局域网中常见的网线主要有双绞线（RJ45接口）、铜轴电缆、光缆三种。</p>
+</li>
+<li>交换机（Switch）意为“开关”，是一种用于电（光）信号转发的网络设备，交换机它可以为接入交换机的任意两个网络节点提供独享的电信号通路。</li>
+<li>路由器（Router）又称网关设备（Gateway）是用于连接多个逻辑上分开、相对独立的网络。</li>
+</ul>
+<h3 id="74">7.4网络拓扑结构图<a class="headerlink" href="#74" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>结构类型：</p>
+<ol>
+<li>星型拓扑结构</li>
+<li>总线型拓扑结构</li>
+<li>环型拓扑结构</li>
+<li>树型拓扑结构</li>
+<li>网络拓扑结构</li>
+<li>混合型拓扑结构</li>
+<li>蜂窝型结构</li>
+</ol>
+</li>
+</ul>
+<h2 id="8arp">8.ARP<a class="headerlink" href="#8arp" title="Permanent link">¶</a></h2>
+<ul>
+<li>ARP：地址解析协议，即ARP（Address Resolution Protocol），是根据IP地址获取（MAC）物理地址的协议。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-19.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-19.png"></a></p>
+<blockquote>
+<p>[!note] 当一个主机发送数据时，首先查看本机MAC地址缓存中有没有目标主机的MAC地址， 如果有就使用缓存中的结果；如果没有，ARP协议就会发出一个广播包，该广播包要求查询目标主机IP地址对应的MAC地址，拥有该IP地址的主机会发出回应，回应中包括了目标主机的MAC地址，这样发送方就得到了目标主机的MAC地址。如果目标主机不在本地子网中，则ARP解析到的MAC地址是默认网关的MAC地址。</p>
+</blockquote>
+<h2 id="9">9.加密算法<a class="headerlink" href="#9" title="Permanent link">¶</a></h2>
+<h3 id="91">9.1不可逆加密算法<a class="headerlink" href="#91" title="Permanent link">¶</a></h3>
+<ul>
+<li>可以通过数据计算加密后的结果，但是通过结果是无法计算出原加密数据</li>
+<li>应用场景<ul>
+<li>Hash算法用在不可还原的密码存储、信息完整性校验。</li>
+<li>音视频文件、软件安装包对比新旧版本是否一样。</li>
+<li>用户名和密码加密后数据库的存储（密码不能找回，只能重置）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="92">9.2对称加密算法<a class="headerlink" href="#92" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-20.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-20.png"></a>
+- 加密和解密使用相同的密钥
+- 生成密钥的算法公开，计算量小，加密速度快，加密效率高，密钥较短。
+- 双方共同拥有同一套密钥，有一方被窃取密钥，双方都受影响
+- 如果为每个客户都生成不同的密钥，则密钥的数量巨大，密钥的管理就有压力
+- 应用场景
+    - 代表算法：DES，3DES，AES，RC4，RC5
+    - 登录信息用户名和密码加密，传输加密、指令加密
+    -</p>
+<h3 id="93">9.3非对称加密算法<a class="headerlink" href="#93" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="90%" data-height="auto" href="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-21.png" data-desc-position="bottom"><img alt="" src="../../assets/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-21.png"></a>
+- 需要一对密钥（2个密钥），分别是公开密钥（publickey，公钥）和私有密钥（privatekey，私钥）
+- 安全系数高，一般长度大的是私钥，长度小的是公钥
+- 加密和解密速度相对略慢，密钥长，计算量大，效率略低
+- 想收到谁发来的消息，把公钥给谁；私钥要自己揣着。
+- 应用场景
+    - 代表算法：RSA、ECC、DSA、EI Gamal
+    - HTTPS（SSL）证书制作、CRS请求证书、金融通信加密、蓝牙等硬件信息加密配对传输</p>
+<h2 id="_2">注意事项<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
+        
+          
+          <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 计算机编译">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                计算机编译
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../AIDev/Claude/" class="md-footer__link md-footer__link--next" aria-label="下一页: Claude">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Claude
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2021 Yanran
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yanran425" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
